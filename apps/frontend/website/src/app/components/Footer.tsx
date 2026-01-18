@@ -1,45 +1,88 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
-import Logo from './Logo';
+import Link from 'next/link';
 
 export default function Footer() {
-  const t = useTranslations('common.footer');
+  const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white py-8">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex flex-col items-center md:items-start justify-center">
-            <div className="mb-4">
-              <Logo variant="full" />
-            </div>
-            <p className="text-brand-primary text-base text-center md:text-left">
-              {t('tagline')}
-            </p>
-          </div>
-          <div className="flex flex-col items-center md:items-end justify-center">
-            <h3 className="text-xl font-bold mb-4 text-brand-primary text-center md:text-right">{t('connect')}</h3>
-            <div className="text-brand-primary text-base text-center md:text-right">
-              <p className="mb-1">{t('wave')}</p>
-              <p>{t('linkedin')}{' '}
-                <a 
-                  href="https://www.linkedin.com/company/tsunaimi" 
-                  className="text-brand-primary-light hover:text-brand-primary transition-colors font-medium"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn
-                </a>
-                .
+    <footer className="w-full bg-white border-t border-brand-border">
+      <div className="container">
+        <div className="px-8 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div className="col-span-1">
+              <h3 className="text-lg font-semibold text-black mb-4">Envoy</h3>
+              <p className="text-sm text-brand-gray">
+                AI-powered scheduling made simple
               </p>
             </div>
+
+            {/* Product */}
+            <div>
+              <h4 className="text-sm font-semibold text-black mb-4">Product</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/product" className="text-sm text-brand-gray hover:text-black transition-colors">
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pricing" className="text-sm text-brand-gray hover:text-black transition-colors">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/how-it-works" className="text-sm text-brand-gray hover:text-black transition-colors">
+                    How it works
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h4 className="text-sm font-semibold text-black mb-4">Company</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/about" className="text-sm text-brand-gray hover:text-black transition-colors">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="text-sm text-brand-gray hover:text-black transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-sm font-semibold text-black mb-4">Legal</h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link href="/privacy" className="text-sm text-brand-gray hover:text-black transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-sm text-brand-gray hover:text-black transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div className="mt-8 pt-8 border-t border-brand-primary-light text-center text-brand-primary">
-          <p>&copy; {new Date().getFullYear()} TsunAImi. {t('rights')}</p>
+
+          {/* Bottom Bar */}
+          <div className="mt-12 pt-8 border-t border-brand-border">
+            <p className="text-sm text-brand-gray text-center">
+              © {currentYear} Ask My Envoy. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
   );
-} 
+}

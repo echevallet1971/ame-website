@@ -1,14 +1,12 @@
-# Tsunaimi Website
+# Ask My Envoy
 
-A modern, responsive website for Tsunaimi, built with Next.js 15 and TypeScript.
+A modern, responsive website for Ask My Envoy - an intelligent AI scheduling assistant that manages your calendar.
 
 ## Tech Stack
 
-- **Framework**: Next.js 15.2.2
+- **Framework**: Next.js 15.2.6
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 3.4.1
-- **Database**: PostgreSQL
-- **Internationalization**: next-intl 4.0.2
 - **Development Tools**:
   - ESLint
   - TypeScript
@@ -17,112 +15,99 @@ A modern, responsive website for Tsunaimi, built with Next.js 15 and TypeScript.
 
 ## Prerequisites
 
-- Node.js 18 or later
-- PostgreSQL database
-- PM2 (for production deployment)
+- Docker
+- Docker Compose
 
 ## Environment Variables
 
 Create a `.env` file in the root directory with the following variables:
 
 ```env
-# Database
-POSTGRES_URL="postgres://..."
-
 # Application
 NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+
+# TsunAImi Platform Integration (for scheduling functionality)
+NEXT_PUBLIC_PLATFORM_URL="https://platform.tsunaimi.ai"
 ```
 
 ## Getting Started
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/tsunaimi-website.git
-   cd tsunaimi-website
+   git clone https://github.com/yourusername/ame-website.git
+   cd ame-website
    ```
 
-2. Install dependencies:
+2. Start the development server:
    ```bash
-   npm install
+   docker-compose up
    ```
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Development
 
-## Available Scripts
+```bash
+# Start development server
+docker-compose up
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run ESLint
-- `npm run db:test` - Test database connection
-- `npm run db:check` - Check form submissions
+# Start in detached mode (background)
+docker-compose up -d
 
-## Deployment
+# View logs
+docker-compose logs -f
 
-The website is deployed to a Synology NAS using PM2 for process management.
+# Stop the server
+docker-compose down
 
-### Deployment Process
+# Rebuild containers
+docker-compose up --build
+```
 
-1. Create a release branch:
-   ```bash
-   ./scripts/create-branches.sh
-   ```
+## Production Deployment
 
-2. Deploy to staging:
-   ```bash
-   ./scripts/deploy-staging.sh
-   ```
-
-3. Deploy to production:
-   ```bash
-   ./scripts/deploy-production.sh
-   ```
-
-### Post-Deployment Steps
-
-After deployment, you need to:
-
-1. SSH into the NAS:
-   ```bash
-   ssh -i ~/.ssh/tsunaimi_deploy_key tsnm_user@192.168.1.32
-   ```
-
-2. Navigate to the new version:
-   ```bash
-   cd /volume1/web/tsunaimi/production/tsunaimi-website-vX.X.X
-   ```
-
-3. Install dependencies and build:
-   ```bash
-   npm install
-   npm run build
-   npm prune --production
-   ```
-
-4. Start the application:
-   ```bash
-   pm2 start npm --name tsunaimi-prod -- start
-   pm2 save
-   ```
+```bash
+docker-compose -f docker-compose.yml -f docker-compose.remote.yml up -d
+```
 
 ## Project Structure
 
 ```
-tsunaimi-website/
-├── src/
-│   ├── app/           # Next.js app directory
-│   ├── components/    # React components
-│   ├── lib/          # Utility functions and database
-│   └── styles/       # Global styles
-├── public/           # Static assets
-├── scripts/         # Deployment and utility scripts
-└── types/           # TypeScript type definitions
+ame-website/
+├── apps/
+│   └── frontend/
+│       └── website/
+│           ├── src/
+│           │   ├── app/          # Next.js app directory
+│           │   │   ├── components/  # React components
+│           │   │   ├── layout.tsx   # Root layout
+│           │   │   └── page.tsx     # Homepage
+│           │   ├── lib/          # Utility functions
+│           │   └── messages/     # Content
+│           ├── public/           # Static assets
+│           └── Dockerfile        # Container configuration
+├── docs/                         # Documentation
+├── system-manifests/            # Deployment configurations
+└── docker-compose.yml           # Docker configuration
 ```
+
+## Brand Colors
+
+The website uses a vibrant color palette that can be easily updated in `tailwind.config.ts`:
+
+- **Royal Blue**: `#0A32B4` - Primary brand color
+- **Teal**: `#1496B4` - Secondary accent
+- **Mint Green**: `#28B496` - Accent highlights
+- **Green**: `#1EAA32` - Success states
+- **Gold**: `#C8A00A` - Premium features
+- **Purple**: `#8C1EB4` - Alternative accent
+
+## Platform Integration
+
+Ask My Envoy is built on top of the TsunAImi agentic AI platform. The website integrates with the platform for:
+- Scheduling functionality
+- Calendar management
+- AI agent interactions
 
 ## Contributing
 

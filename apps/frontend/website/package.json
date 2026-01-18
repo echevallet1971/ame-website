@@ -1,5 +1,5 @@
 {
-  "name": "tsunaimi-website",
+  "name": "ame-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "next": "^15.2.6",
-    "next-intl": "^4.0.2",
     "react": "^18",
     "react-dom": "^18"
   },

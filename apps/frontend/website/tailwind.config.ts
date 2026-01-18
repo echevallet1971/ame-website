@@ -9,44 +9,36 @@ const config = {
   theme: {
     extend: {
       colors: {
+        // Ask My Envoy Brand Colors - Easy to update!
         brand: {
-          primary: 'var(--color-brand-primary)',
-          'primary-light': 'var(--color-brand-primary-light)',
-          'primary-medium': 'var(--color-brand-primary-medium)',
-          'primary-dark': 'var(--color-brand-primary-dark)',
+          'royal-blue': '#0A32B4',      // RGB(10, 50, 180)
+          'teal': '#1496B4',             // RGB(20, 150, 180)
+          'mint': '#28B496',             // RGB(40, 180, 150)
+          'green': '#1EAA32',            // RGB(30, 170, 50)
+          'gold': '#C8A00A',             // RGB(200, 160, 10)
+          'purple': '#8C1EB4',           // RGB(140, 30, 180)
+          // Base colors from Figma
+          'black': '#000000',
+          'white': '#FFFFFF',
+          'gray': '#404040',
+          'border': '#E5E5E5',
         },
-        tsunaimi: {
-          gray: {
-            light: 'var(--color-gray-light)',
-            dark: 'var(--color-gray-dark)',
-          },
-          background: {
-            light: 'var(--color-background-light)',
-          },
-        },
+        // Semantic colors - point to brand colors for easy updating
+        primary: '#0A32B4',              // Royal Blue
+        secondary: '#1496B4',            // Teal
+        accent: '#28B496',               // Mint
+        success: '#1EAA32',              // Green
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      maxWidth: {
+        'container': '1280px',
       },
     },
   },
   plugins: [
     require('@tailwindcss/forms'),
-    function ({ addBase }: { addBase: (styles: Record<string, any>) => void }) {
-      addBase({
-        ':root': {
-          /* Tsunaimi Brand Colors */
-          '--color-brand-primary': '#251c6b',
-          '--color-brand-primary-light': '#7057a0',
-          '--color-brand-primary-medium': '#5b4b8a',
-          '--color-brand-primary-dark': '#362658',
-          /* Supporting Colors */
-          '--color-gray-light': '#e5e7eb',
-          '--color-gray-dark': '#374151',
-          '--color-background-light': '#f9fafb',
-        },
-      });
-    },
   ],
 } satisfies Config;
 
