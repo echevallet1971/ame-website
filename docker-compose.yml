@@ -1,5 +1,5 @@
 services:
-  website:
+  ame-website:
     build:
       context: ./apps/frontend/website
       dockerfile: Dockerfile
