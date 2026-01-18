@@ -1,5 +1,5 @@
 services:
-  ame-website:
+  askmyenvoy-website:
     build:
       context: ./apps/frontend/website
       dockerfile: Dockerfile
