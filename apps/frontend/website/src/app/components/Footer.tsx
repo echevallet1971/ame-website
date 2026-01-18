@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="col-span-1">
-              <h3 className="text-lg font-semibold text-black mb-4">Envoy</h3>
+              <h3 className="text-lg font-semibold text-brand-royal-blue-dark mb-4">Envoy</h3>
               <p className="text-sm text-brand-gray">
                 AI-powered scheduling made simple
               </p>
@@ -20,20 +20,20 @@ export default function Footer() {
 
             {/* Product */}
             <div>
-              <h4 className="text-sm font-semibold text-black mb-4">Product</h4>
+              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Product</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/product" className="text-sm text-brand-gray hover:text-black transition-colors">
+                  <Link href="/product" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Features
                   </Link>
                 </li>
                 <li>
-                  <Link href="/pricing" className="text-sm text-brand-gray hover:text-black transition-colors">
+                  <Link href="/pricing" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link href="/how-it-works" className="text-sm text-brand-gray hover:text-black transition-colors">
+                  <Link href="/how-it-works" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     How it works
                   </Link>
                 </li>
@@ -42,15 +42,15 @@ export default function Footer() {
 
             {/* Company */}
             <div>
-              <h4 className="text-sm font-semibold text-black mb-4">Company</h4>
+              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Company</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/about" className="text-sm text-brand-gray hover:text-black transition-colors">
+                  <Link href="/about" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-sm text-brand-gray hover:text-black transition-colors">
+                  <Link href="/contact" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -59,15 +59,15 @@ export default function Footer() {
 
             {/* Legal */}
             <div>
-              <h4 className="text-sm font-semibold text-black mb-4">Legal</h4>
+              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Legal</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/privacy" className="text-sm text-brand-gray hover:text-black transition-colors">
+                  <Link href="/privacy" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="text-sm text-brand-gray hover:text-black transition-colors">
+                  <Link href="/terms" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Terms of Service
                   </Link>
                 </li>
