@@ -17,6 +17,8 @@ services:
     environment:
       - NEXT_PUBLIC_APP_ENV=production  # Explicitly set the app environment
       - HOST=0.0.0.0 # Allow Next.js server to be accessed from outside the container
+      - PORT=${FRONTEND_PORT_INTERNAL}  # Next.js server.js reads PORT
+      - FRONTEND_PORT_INTERNAL=${FRONTEND_PORT_INTERNAL}  # For package.json scripts
       - NEXT_PUBLIC_PLATFORM_URL=${NEXT_PUBLIC_PLATFORM_URL}  # Runtime platform URL
     ports:
       - "${FRONTEND_PORT_EXTERNAL}:${FRONTEND_PORT_INTERNAL}"

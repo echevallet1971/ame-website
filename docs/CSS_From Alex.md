@@ -4813,7 +4813,7 @@ order: 0;
 flex-grow: 0;
 
 
-/* "When I had an executive assistant, her name was Anya... She knew exactly when to ask me. She knew when it was important. This is all gone." */
+/* "When I had an executive assistant, her name was Anja... She knew exactly when to ask me. She knew when it was important. This is all gone." */
 
 width: 251.34px;
 height: 120px;
