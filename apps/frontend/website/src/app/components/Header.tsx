@@ -13,7 +13,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-normal text-black">
+              <span className="text-2xl font-bold text-black">
                 Envoy
               </span>
             </Link>
