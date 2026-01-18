@@ -13,8 +13,7 @@ RUN npm ci
 COPY . .
 
 ENV NODE_ENV=development
-ENV PORT=3000
-EXPOSE 3000
+# PORT and FRONTEND_PORT_INTERNAL will be set by docker-compose from env file
 
 # Start development server
 CMD ["npm", "run", "dev"]
@@ -61,9 +60,8 @@ USER nextjs
 
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
-ENV FRONTEND_PORT_INTERNAL=3000
+# FRONTEND_PORT_INTERNAL will be set at runtime via docker-compose from env file
 # Platform URL will be set at runtime via docker-compose
-EXPOSE ${FRONTEND_PORT_INTERNAL}
 
 # Use dumb-init for proper signal handling
 ENTRYPOINT ["dumb-init", "--"]
