@@ -23,7 +23,7 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Product</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/product" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Features
                   </Link>
                 </li>
@@ -33,7 +33,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/how-it-works" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     How it works
                   </Link>
                 </li>
@@ -50,7 +50,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Contact
                   </Link>
                 </li>
@@ -62,12 +62,12 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Legal</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/privacy" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/terms" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Terms of Service
                   </Link>
                 </li>

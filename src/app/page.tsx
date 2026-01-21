@@ -26,7 +26,7 @@ export default function Home() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
-              <Button href="#">
+              <Button href="/coming-soon">
                 Start free trial
               </Button>
               <Button href="#how-it-works" variant="secondary" className="gap-2">
@@ -504,7 +504,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <Button href="#" className="w-full justify-center">
+                  <Button href="/coming-soon" className="w-full justify-center">
                     Start free trial
                   </Button>
                 </div>
@@ -543,7 +543,7 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <Button href="#" className="w-full justify-center">
+                  <Button href="/coming-soon" className="w-full justify-center">
                     Start free trial
                   </Button>
                 </div>
@@ -644,7 +644,7 @@ export default function Home() {
             Get your 4+ hours back every week. Envoy handles the scheduling complexity 
             so you can focus on work that matters.
             </p>
-              <Button href="#" variant="light" className="px-10">
+              <Button href="/coming-soon" variant="light" className="px-10">
                 Start free trial
               </Button>
           </div>

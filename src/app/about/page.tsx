@@ -57,7 +57,7 @@ export default function AboutPage() {
                   
                   <p>
                     Scheduling is my personal enemy: endless back-and-forth, context switching, and low-value emails. 
-                    Ask My Envoy fixes it by taking coordination off your plate—synchronously, not through yet another form.
+                    Ask My Envoy fixes it by taking coordination off your plate, synchronously, not through yet another form.
                   </p>
                   
                   <h3 className="text-xl font-normal text-brand-royal-blue-dark pt-4">
@@ -65,9 +65,9 @@ export default function AboutPage() {
                   </h3>
                   
                   <p>
-                    TsunAImi was the venture name—a nod to the wave Agentic AI is about to unleash. But over 12 months 
+                    TsunAImi was the venture name, a nod to the wave Agentic AI is about to unleash. But over 12 months 
                     of building and talking to users, one thing became clear: the assistant was the product people actually wanted. 
-                    So TsunAImi became the engine—and Ask My Envoy became the brand.
+                    So TsunAImi became the engine, and Ask My Envoy became the brand.
                   </p>
                 </div>
 
@@ -275,10 +275,10 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-6">
-              <Button href="#">
+              <Button href="/coming-soon">
                 Start free trial
               </Button>
-              <Button href="#" variant="secondary">
+              <Button href="/coming-soon" variant="secondary">
                 Get in touch
               </Button>
             </div>
