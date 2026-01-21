@@ -1884,7 +1884,7 @@ order: 2;
 flex-grow: 0;
 
 
-/* Built for inbound.  You need outbound. */
+/* Built for inbound. You need outbound. */
 
 width: 218.09px;
 height: 40px;
@@ -2031,7 +2031,7 @@ order: 2;
 flex-grow: 0;
 
 
-/* Passive exposure.  Zero coordination intelligence. */
+/* Passive exposure. Zero coordination intelligence. */
 
 width: 195.98px;
 height: 40px;
@@ -3310,7 +3310,7 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Link your Google or Microsoft calendar. Envoy updates your availability in real time.  It keeps your full schedule private. */
+/* Link your Google or Microsoft calendar. Envoy updates your availability in real time. It keeps your full schedule private. */
 
 width: 737.21px;
 height: 48px;
@@ -3538,7 +3538,7 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Write a short professional summary (like a LinkedIn About section).  This helps your Envoy grasp who you are, how you work, and how to represent you well. */
+/* Write a short professional summary (like a LinkedIn About section). This helps your Envoy grasp who you are, how you work, and how to represent you well. */
 
 width: 719.84px;
 height: 48px;
@@ -3766,7 +3766,7 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Define your working hours, lunch breaks, and focus time.  Your Envoy respects your rhythm and only offers times that work for you. */
+/* Define your working hours, lunch breaks, and focus time. Your Envoy respects your rhythm and only offers times that work for you. */
 
 width: 748.59px;
 height: 48px;
@@ -3994,7 +3994,7 @@ align-self: stretch;
 flex-grow: 0;
 
 
-/* Share your Envoy link or QR code with clients, prospects, or anyone you need to meet.  Your Envoy coordinates when they make contact. Professionally, and on privacy. */
+/* Share your Envoy link or QR code with clients, prospects, or anyone you need to meet. Your Envoy coordinates when they make contact. Professionally, and on privacy. */
 
 width: 736.67px;
 height: 48px;

@@ -74,21 +74,23 @@ docker-compose -f docker-compose.yml -f docker-compose.remote.yml up -d
 
 ```
 ame-website/
-├── apps/
-│   └── frontend/
-│       └── website/
-│           ├── src/
-│           │   ├── app/          # Next.js app directory
-│           │   │   ├── components/  # React components
-│           │   │   ├── layout.tsx   # Root layout
-│           │   │   └── page.tsx     # Homepage
-│           │   ├── lib/          # Utility functions
-│           │   └── messages/     # Content
-│           ├── public/           # Static assets
-│           └── Dockerfile        # Container configuration
-├── docs/                         # Documentation
+├── src/
+│   ├── app/                     # Next.js app directory
+│   │   ├── about/               # About page
+│   │   ├── components/          # React components
+│   │   ├── api/                 # API routes
+│   │   ├── layout.tsx           # Root layout
+│   │   └── page.tsx             # Homepage
+│   ├── lib/                     # Utility functions
+│   ├── messages/                # Internationalization
+│   └── types/                   # TypeScript types
+├── public/                      # Static assets
+├── docs/                        # Documentation
 ├── system-manifests/            # Deployment configurations
-└── docker-compose.yml           # Docker configuration
+├── Dockerfile                   # Container configuration
+├── docker-compose.yml           # Docker orchestration
+├── package.json                 # Dependencies
+└── tailwind.config.ts           # Tailwind configuration
 ```
 
 ## Brand Colors

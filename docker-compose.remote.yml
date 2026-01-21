@@ -8,7 +8,7 @@
 services:
   askmyenvoy-website:
     build:
-      context: ./apps/frontend/website
+      context: .
       dockerfile: Dockerfile
       target: production
       args:
