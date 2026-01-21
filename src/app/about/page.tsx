@@ -153,7 +153,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Mission */}
             <div className="flex flex-col items-center text-center gap-6">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-brand-royal-blue-dark rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <circle cx="12" cy="12" r="10" strokeWidth="2"/>
                   <circle cx="12" cy="12" r="6" strokeWidth="2"/>
@@ -171,7 +171,7 @@ export default function AboutPage() {
 
             {/* Vision */}
             <div className="flex flex-col items-center text-center gap-6">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-brand-royal-blue-dark rounded-full flex items-center justify-center">
                 <EyeIcon className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-normal text-brand-royal-blue-dark">
@@ -185,7 +185,7 @@ export default function AboutPage() {
 
             {/* Values */}
             <div className="flex flex-col items-center text-center gap-6">
-              <div className="w-16 h-16 bg-black rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-brand-royal-blue-dark rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" fill="none"/>
                   <path d="M12 2 L12 6 M12 18 L12 22 M2 12 L6 12 M18 12 L22 12" stroke="currentColor" strokeWidth="1.5" fill="none"/>

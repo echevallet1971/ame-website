@@ -434,12 +434,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* EA-quality Coordination Section */}
+      {/* Pricing Teaser Section */}
       <section className="w-full bg-white py-24">
         <div className="max-w-4xl mx-auto px-8">
-          <div className="flex flex-col items-center gap-16">
+          <div className="flex flex-col items-center gap-8 text-center">
             {/* Section Heading */}
-            <h2 className="text-3xl md:text-4xl font-normal text-center text-brand-royal-blue-dark">
+            <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark">
               EA-quality coordination. Fraction of the cost.
             </h2>
             
@@ -464,96 +464,25 @@ export default function Home() {
                 {/* Row 3: Envoy */}
                 <div className="flex justify-between items-center">
                   <span className="text-base text-brand-royal-blue-dark font-normal">Envoy</span>
-                  <span className="text-3xl text-brand-royal-blue-dark font-normal">$15-129/mo</span>
+                  <span className="text-3xl text-brand-royal-blue-dark font-normal">Starting at $24.99/mo</span>
                 </div>
               </div>
             </Card>
 
-            {/* Pricing Tiers */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl">
-              {/* Individual Plan */}
-              <Card className="bg-white">
-                <div className="flex flex-col gap-6">
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-2xl font-normal text-brand-royal-blue-dark">Individual</h3>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-normal text-brand-royal-blue">$49</span>
-                      <span className="text-base text-gray-500">/month</span>
-                    </div>
-                    <p className="text-sm text-gray-600 mt-2">
-                      For fractional executives & independent professionals
-                    </p>
-                  </div>
-                  
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Unlimited coordination</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Google + Outlook integration</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Multi-party scheduling</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Timezone optimization</span>
-                    </div>
-                  </div>
-                  
-                  <Button href="/coming-soon" className="w-full justify-center">
-                    Start free trial
-                  </Button>
-                </div>
-              </Card>
-
-              {/* Team Plan */}
-              <Card className="bg-white border-2 border-brand-teal">
-                <div className="flex flex-col gap-6">
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-2xl font-normal text-brand-royal-blue-dark">Team</h3>
-                    <div className="flex items-baseline gap-1">
-                      <span className="text-4xl font-normal text-brand-teal">$129</span>
-                      <span className="text-base text-gray-500">/month</span>
-                    </div>
-                    <p className="text-sm text-gray-600 mt-2">
-                      For boutique consultancies (up to 10 users)
-                    </p>
-                  </div>
-                  
-                  <div className="flex flex-col gap-3">
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Everything in Individual</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Team coordination</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Shared preferences</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-700">Priority support</span>
-                    </div>
-                  </div>
-                  
-                  <Button href="/coming-soon" className="w-full justify-center">
-                    Start free trial
-                  </Button>
-                </div>
-              </Card>
-            </div>
-
-            {/* Bottom Text */}
-            <p className="text-xl text-gray-700 text-center max-w-2xl">
-              50x+ return on investment vs. your current coordination cost.
+            {/* Value Proposition */}
+            <p className="text-xl text-gray-700 max-w-2xl">
+              Get EA-quality coordination for less than 1% of the cost. Choose from flexible plans designed for independent consultants, growing teams, and enterprises.
             </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
+              <Button href="/pricing" className="px-10">
+                View pricing plans
+              </Button>
+              <Button href="/coming-soon" variant="secondary" className="px-10">
+                Start free trial
+              </Button>
+            </div>
           </div>
         </div>
       </section>

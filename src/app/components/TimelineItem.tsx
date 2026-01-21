@@ -33,7 +33,7 @@ export default function TimelineItem({
 
       {/* Content - Add top padding to center with box */}
       <div className="flex-1 md:pt-4">
-        <h3 className="text-2xl font-normal text-brand-royal-blue-dark mb-3">
+        <h3 className={`text-2xl font-normal mb-3 ${isCurrentPhase ? 'text-brand-gold' : 'text-brand-royal-blue-dark'}`}>
           {title}
         </h3>
         <p className="text-base text-gray-600 leading-relaxed">

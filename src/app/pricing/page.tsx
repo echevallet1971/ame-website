@@ -131,7 +131,7 @@ export default function PricingPage() {
                   {plan.monthlyPrice ? (
                     <>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-5xl font-normal text-black">
+                        <span className={`text-5xl font-normal ${plan.highlighted ? 'text-brand-gold' : 'text-black'}`}>
                           ${billingPeriod === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
                         </span>
                         <span className="text-gray-600">
