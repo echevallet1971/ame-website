@@ -268,7 +268,7 @@ export default function AboutPage() {
             </h2>
             
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl">
-              We're building the coordination infrastructure for professional services. If you're a consultant 
+              We're building the coordination infrastructure for professional services. If you're a professional 
               who needs this, or an investor who sees the opportunity, let's talk.
             </p>
 

@@ -222,7 +222,7 @@ export default function Home() {
             
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-center text-gray-300 max-w-3xl">
-              Envoy is the coordination engine for consultants who can't send Calendly to clients and 
+              Envoy is the coordination engine for professionals who can't send Calendly to clients and 
               can't afford a $70K executive assistant.
             </p>
             

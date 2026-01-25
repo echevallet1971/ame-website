@@ -1,9 +1,11 @@
-system_version: v0.1.5
+system_version: v0.1.6
 date: 2026-01-25
 components:
   frontend:
-    askmyenvoy-website: v0.1.5
+    askmyenvoy-website: v0.1.6
 notes: |
+  Release Notes 0.1.6
+   - Removed "consultants" from the website
   Release Notes 0.1.5
    - Reworked content and CTA
    - Added product page
