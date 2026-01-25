@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Button from './Button';
+import LoginButton from './LoginButton';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -50,12 +51,7 @@ export default function Header() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link 
-              href="/coming-soon" 
-              className="text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark transition-colors"
-            >
-              Log in
-            </Link>
+            <LoginButton />
             <Button href="/coming-soon" className="!px-6 !py-2 !text-base">
               Start free trial
             </Button>
@@ -110,12 +106,12 @@ export default function Header() {
               >
                 About
               </Link>
-              <Link 
-                href="/coming-soon" 
-                className="block text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark pt-3 border-t border-gray-200"
-              >
-                Log in
-              </Link>
+              <div className="pt-3 border-t border-gray-200">
+                <LoginButton 
+                  className="block w-full text-left"
+                  onClick={() => setMobileMenuOpen(false)}
+                />
+              </div>
               <Button href="/coming-soon" className="w-full !px-6 !py-2 !text-base text-center">
                 Start free trial
               </Button>

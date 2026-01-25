@@ -5,8 +5,29 @@ import Card from './components/Card';
 import Button from './components/Button';
 import Quote from './components/Quote';
 import { ArrowRightIcon, LockClosedIcon, UserGroupIcon, CheckIcon } from '@heroicons/react/24/solid';
+import { getPlatformUrl } from '@/lib/platform-config';
 
 export default function Home() {
+  const handleContactClick = async () => {
+    try {
+      const platformContactUrl = await getPlatformUrl('contact');
+      window.open(platformContactUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get contact URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
+
+  const handleGetStarted = async () => {
+    try {
+      const platformSigninUrl = await getPlatformUrl('signin');
+      window.open(platformSigninUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get platform URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -464,14 +485,19 @@ export default function Home() {
                 {/* Row 3: Envoy */}
                 <div className="flex justify-between items-center">
                   <span className="text-base text-brand-royal-blue-dark font-normal">Envoy</span>
-                  <span className="text-3xl text-brand-royal-blue-dark font-normal">Starting at $24.99/mo</span>
+                  <span className="text-3xl text-brand-royal-blue-dark font-normal">Starting at $24.99/mo*</span>
                 </div>
               </div>
             </Card>
 
             {/* Value Proposition */}
             <p className="text-xl text-gray-700 max-w-2xl">
-              Get EA-quality coordination for less than 1% of the cost. Choose from flexible plans designed for independent consultants, growing teams, and enterprises.
+              Get EA-quality coordination for less than 1% of the cost.
+            </p>
+            
+            {/* Footnote */}
+            <p className="text-sm text-gray-500 max-w-2xl">
+              * Early adopters discount applied
             </p>
 
             {/* CTA Buttons */}
@@ -479,9 +505,12 @@ export default function Home() {
               <Button href="/pricing" className="px-10">
                 View pricing plans
               </Button>
-              <Button href="/coming-soon" variant="secondary" className="px-10">
-                Start free trial
-              </Button>
+              <button
+                onClick={handleGetStarted}
+                className="inline-flex items-center justify-center px-10 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-brand-royal-blue-dark border border-gray-300 hover:bg-gray-50"
+              >
+                Get started
+              </button>
             </div>
           </div>
         </div>
@@ -562,6 +591,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Still Have Questions - Contact Section */}
+      <section className="w-full bg-white py-16">
+        <div className="max-w-3xl mx-auto px-8">
+          <Card className="text-center">
+            <div className="flex flex-col items-center gap-6 py-8">
+              <h3 className="text-2xl md:text-3xl font-normal text-brand-royal-blue-dark">
+                Still have questions?
+              </h3>
+              <p className="text-base md:text-lg text-gray-600 max-w-xl">
+                We're here to help. Get in touch with our team and we'll answer any questions you have about Envoy.
+              </p>
+              <button
+                onClick={handleContactClick}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
+              >
+                Contact us
+              </button>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       {/* Final CTA Section */}
       <section className="w-full bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900 py-24">
         <div className="max-w-4xl mx-auto px-8">
@@ -573,9 +624,12 @@ export default function Home() {
             Get your 4+ hours back every week. Envoy handles the scheduling complexity 
             so you can focus on work that matters.
             </p>
-              <Button href="/coming-soon" variant="light" className="px-10">
-                Start free trial
-              </Button>
+              <button
+                onClick={handleGetStarted}
+                className="inline-flex items-center justify-center px-10 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-brand-royal-blue bg-white hover:bg-gray-50 border border-brand-teal"
+              >
+                Get started
+              </button>
           </div>
         </div>
       </section>

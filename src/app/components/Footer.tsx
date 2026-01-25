@@ -1,9 +1,21 @@
 'use client';
 
 import Link from 'next/link';
+import { getPlatformUrl } from '@/lib/platform-config';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const handleContactClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      const platformContactUrl = await getPlatformUrl('contact');
+      window.open(platformContactUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get contact URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
 
   return (
     <footer className="w-full bg-white border-t border-brand-border">
@@ -50,9 +62,13 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <a 
+                    href="#" 
+                    onClick={handleContactClick}
+                    className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors cursor-pointer"
+                  >
                     Contact
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
