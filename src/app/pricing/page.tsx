@@ -2,56 +2,65 @@
 
 import { useState } from 'react';
 import Button from '../components/Button';
+import LoginButton from '../components/LoginButton';
 import { CheckIcon } from '@heroicons/react/24/solid';
+import { getPlatformUrl } from '@/lib/platform-config';
 
 export default function PricingPage() {
   const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly');
 
+  const handleContactSales = async () => {
+    try {
+      const platformContactUrl = await getPlatformUrl('contact');
+      window.open(platformContactUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get contact URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
+
   const plans = [
     {
       name: 'Solo',
-      description: 'For independent consultants',
-      monthlyPrice: 24.99,
-      annualPrice: 19.99,
-      features: [
-        'Multi-party scheduling (up to 5)',
-        'Unlimited coordination requests',
-        'Calendar sync',
-        'Email integration',
-        'Basic support',
+      monthlyPrice: 49,
+      annualPrice: 39,
+      recommendedFor: [
+        'You coordinate 5-10 client meetings per week',
+        'You need calendar privacy when scheduling across organizations',
+        'You\'re tired of email ping-pong with C-suite contacts',
+        'You want EA-quality coordination without the EA cost',
       ],
-      cta: 'Start free trial',
+      cta: 'Get started',
       highlighted: false,
+      isCustom: false,
     },
     {
       name: 'Professional',
-      description: 'For growing teams',
-      monthlyPrice: 34.99,
-      annualPrice: 27.99,
-      features: [
-        'Unlimited multi-party scheduling',
-        'Custom scheduling preferences',
-        'Priority support',
-        'Advanced calendar management',
-        'Team collaboration',
+      monthlyPrice: 99,
+      annualPrice: 79,
+      recommendedFor: [
+        'You regularly coordinate complex multi-party meetings',
+        'Your clients have their own EAs you need to work with',
+        'You need custom scheduling preferences and boundaries',
+        'Priority support matters when coordination gets complex',
       ],
-      cta: 'Start free trial',
+      cta: 'Get started',
       highlighted: true,
+      isCustom: false,
     },
     {
       name: 'Enterprise',
-      description: 'Custom solution',
-      monthlyPrice: 69.99,
-      annualPrice: 55.99,
-      features: [
-        'Team coordination (10+ users)',
-        'Dedicated account manager',
-        'Custom integrations',
-        'SLA & security review',
-        'On-premise deployment option',
+      monthlyPrice: null,
+      annualPrice: null,
+      recommendedFor: [
+        'You have your own EA and need Envoy to escalate to them',
+        'Your team shares scheduling workflows and preferences',
+        'You need custom integrations with your existing tools',
+        'Dedicated support and account management matter to you',
       ],
       cta: 'Contact sales',
       highlighted: false,
+      isCustom: true,
     },
   ];
 
@@ -117,18 +126,17 @@ export default function PricingPage() {
                 }`}
               >
                 {/* Plan Name */}
-                <h3 className="text-2xl font-normal text-brand-royal-blue-dark mb-2">
+                <h3 className="text-2xl font-normal text-brand-royal-blue-dark mb-6">
                   {plan.name}
                 </h3>
 
-                {/* Description */}
-                <p className="text-sm text-gray-600 mb-6">
-                  {plan.description}
-                </p>
-
                 {/* Price */}
-                <div className="mb-6">
-                  {plan.monthlyPrice ? (
+                <div className="mb-8">
+                  {plan.isCustom ? (
+                    <div className="text-5xl font-normal text-black">
+                      Custom
+                    </div>
+                  ) : (
                     <>
                       <div className="flex items-baseline gap-1">
                         <span className={`text-5xl font-normal ${plan.highlighted ? 'text-brand-gold' : 'text-black'}`}>
@@ -144,33 +152,47 @@ export default function PricingPage() {
                         </p>
                       )}
                     </>
-                  ) : (
-                    <div className="text-5xl font-normal text-black">
-                      Custom
-                    </div>
                   )}
                 </div>
 
-                {/* CTA Button */}
-                <Button 
-                  href="/coming-soon" 
-                  className="w-full justify-center mb-8"
-                  variant={plan.highlighted ? 'primary' : 'secondary'}
-                >
-                  {plan.cta}
-                </Button>
+                {/* Recommended For List */}
+                <div className="flex-grow mb-8">
+                  <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4 uppercase tracking-wide">
+                    Recommended if:
+                  </h4>
+                  <ul className="space-y-4">
+                    {plan.recommendedFor.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start gap-3">
+                        <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                        <span className="text-base text-gray-600">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                {/* Features List */}
-                <ul className="space-y-4 flex-grow">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-3">
-                      <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                      <span className="text-base text-gray-600">
-                        {feature}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                {/* CTA Button - Now at bottom */}
+                {plan.isCustom ? (
+                  <button
+                    onClick={handleContactSales}
+                    className={`w-full justify-center inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+                      plan.highlighted
+                        ? 'text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800'
+                        : 'text-brand-royal-blue-dark border border-gray-300 hover:bg-gray-50'
+                    }`}
+                  >
+                    {plan.cta}
+                  </button>
+                ) : (
+                  <LoginButton
+                    size="large"
+                    variant={plan.highlighted ? 'primary' : 'secondary'}
+                    className="w-full"
+                  >
+                    {plan.cta}
+                  </LoginButton>
+                )}
               </div>
             ))}
           </div>
@@ -340,9 +362,9 @@ export default function PricingPage() {
             <p className="text-lg text-gray-600 max-w-2xl">
               No credit card required. Start coordinating smarter today.
             </p>
-            <Button href="/coming-soon" className="px-10">
+            <LoginButton size="large" className="px-10">
               Start free trial
-            </Button>
+            </LoginButton>
           </div>
         </div>
       </section>
