@@ -48,7 +48,7 @@ export default function LoginButton({
       onClick={handleClick}
       className={`${baseStyles} ${sizeStyles} ${variantStyles[variant]} ${className}`}
     >
-      {children || 'Get started'}
+      {children || 'Sign in'}
     </button>
   );
 }

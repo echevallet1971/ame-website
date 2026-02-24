@@ -30,7 +30,7 @@ export default function PricingPage() {
         'You\'re tired of email ping-pong with C-suite contacts',
         'You want EA-quality coordination without the EA cost',
       ],
-      cta: 'Get started',
+      cta: 'Request beta access',
       highlighted: false,
       isCustom: false,
     },
@@ -44,7 +44,7 @@ export default function PricingPage() {
         'You need custom scheduling preferences and boundaries',
         'Priority support matters when coordination gets complex',
       ],
-      cta: 'Get started',
+      cta: 'Request beta access',
       highlighted: true,
       isCustom: false,
     },
@@ -140,7 +140,7 @@ export default function PricingPage() {
                     <>
                       <div className="flex items-baseline gap-1">
                         <span className={`text-5xl font-normal ${plan.highlighted ? 'text-brand-gold' : 'text-black'}`}>
-                          ${billingPeriod === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
+                          €{billingPeriod === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
                         </span>
                         <span className="text-gray-600">
                           /month
@@ -226,7 +226,7 @@ export default function PricingPage() {
                 <tr className="border-b border-gray-200">
                   <td className="py-4 px-4">Calendar integrations</td>
                   <td className="py-4 px-4 text-center">Google, Outlook</td>
-                  <td className="py-4 px-4 text-center">Google, Outlook, iCloud</td>
+                  <td className="py-4 px-4 text-center">Google, Outlook</td>
                   <td className="py-4 px-4 text-center">All + Custom</td>
                 </tr>
                 <tr className="border-b border-gray-200">
@@ -363,7 +363,7 @@ export default function PricingPage() {
               No credit card required. Start coordinating smarter today.
             </p>
             <LoginButton size="large" className="px-10">
-              Start free trial
+              Reserve your Envoy URL
             </LoginButton>
           </div>
         </div>

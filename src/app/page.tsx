@@ -49,7 +49,7 @@ export default function Home() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
               <LoginButton size="large">
-                Start free trial
+                Reserve your Envoy URL
               </LoginButton>
               <Button href="/how-it-works" variant="secondary" className="gap-2">
                 See how it works
@@ -123,7 +123,7 @@ export default function Home() {
               {/* Card 3 */}
               <Card>
                 <div className="flex flex-col gap-4">
-                  <div className="text-5xl font-normal text-brand-gold">$30k+</div>
+                  <div className="text-5xl font-normal text-brand-gold">€30k+</div>
                   <h3 className="text-xl font-normal text-brand-royal-blue-dark">The Hidden Cost</h3>
                   <p className="text-base text-gray-500 leading-relaxed">
                     At senior consultant rates, that email ping-pong costs more than a junior hire's salary. 
@@ -183,7 +183,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <h3 className="text-xl font-normal text-brand-royal-blue-dark">Human EAs</h3>
                   <p className="text-base text-gray-500 leading-relaxed">
-                  A great EA costs $50K-$80K a year. Finding skilled ones is tough. 
+                  A great EA costs €50K-€80K a year. Finding skilled ones is tough. 
                   Companies no longer offer this support, so you're on your own.
                   </p>
                   <div className="pt-2">
@@ -471,13 +471,13 @@ export default function Home() {
                 {/* Row 1: Human EA */}
                 <div className="flex justify-between items-center">
                   <span className="text-base text-gray-700">Human EA</span>
-                  <span className="text-xl text-gray-400">$50,000-$80,000</span>
+                  <span className="text-xl text-gray-400">€50,000-€80,000</span>
                 </div>
                 
                 {/* Row 2: Lost billable time */}
                 <div className="flex justify-between items-center">
                   <span className="text-base text-gray-700">Lost billable time</span>
-                  <span className="text-xl text-gray-400">$30,000+</span>
+                  <span className="text-xl text-gray-400">€30,000+</span>
                 </div>
                 
                 {/* Divider */}
@@ -486,7 +486,7 @@ export default function Home() {
                 {/* Row 3: Envoy */}
                 <div className="flex justify-between items-center">
                   <span className="text-base text-brand-royal-blue-dark font-normal">Envoy</span>
-                  <span className="text-3xl text-brand-royal-blue-dark font-normal">Starting at $24.99/mo*</span>
+                  <span className="text-3xl text-brand-royal-blue-dark font-normal">Starting at €29/mo*</span>
                 </div>
               </div>
             </Card>
@@ -507,7 +507,7 @@ export default function Home() {
                 View pricing plans
               </Button>
               <LoginButton size="large" variant="secondary" className="px-10">
-                Get started
+                Reserve your Envoy URL
               </LoginButton>
             </div>
           </div>
@@ -623,7 +623,7 @@ export default function Home() {
             so you can focus on work that matters.
             </p>
               <LoginButton size="large" variant="light" className="px-10">
-                Get started
+                Reserve your Envoy URL
               </LoginButton>
           </div>
         </div>

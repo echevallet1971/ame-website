@@ -78,12 +78,12 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Legal</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <Link href="/privacy" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
+                  <Link href="/terms" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Terms of Service
                   </Link>
                 </li>

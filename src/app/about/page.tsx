@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import Button from '../components/Button';
 import TimelineItem from '../components/TimelineItem';
@@ -31,13 +32,13 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             {/* Founder Image */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div className="w-full max-w-md aspect-square bg-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <svg className="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                  <p className="text-sm">Founder Photo</p>
-                </div>
+              <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden">
+                <Image
+                  src="/assets/ECh_800x800.jpg"
+                  alt="Eric Chevallet, Founder & CEO of Envoy"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -274,7 +275,7 @@ export default function AboutPage() {
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-6">
               <Button href="/coming-soon">
-                Start free trial
+                Reserve your Envoy URL
               </Button>
               <Button href="/coming-soon" variant="secondary">
                 Get in touch
