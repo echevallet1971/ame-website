@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import Button from '../components/Button';
 import TimelineItem from '../components/TimelineItem';
@@ -31,13 +32,13 @@ export default function AboutPage() {
           <div className="flex flex-col lg:flex-row items-center gap-16">
             {/* Founder Image */}
             <div className="w-full lg:w-1/2 flex justify-center">
-              <div className="w-full max-w-md aspect-square bg-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <svg className="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                  <p className="text-sm">Founder Photo</p>
-                </div>
+              <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden">
+                <Image
+                  src="/assets/ECh_800x800.jpg"
+                  alt="Eric Chevallet, Founder & CEO of Envoy"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
 
@@ -50,24 +51,29 @@ export default function AboutPage() {
                 
                 <div className="text-base text-gray-600 leading-relaxed space-y-4">
                   <p>
-                    I've spent decades in consulting, from boutique to big firms, and launched a few ventures along the way. 
-                    In 2025, I decided to build again because Agentic AI felt too big to ignore, and this time I'm doing it 
-                    my way: hands-on, product-first, no "armchair advice." So I learned to code and built it myself.
+                    I spent decades in consulting, working in environments where meetings aren't "appointments", 
+                    they're the engine of decisions. 
+                    And yet scheduling still eats time: endless back-and-forth, 
+                    too many emails, and constant context switching.
                   </p>
                   
                   <p>
-                    Scheduling is my personal enemy: endless back-and-forth, context switching, and low-value emails. 
-                    Ask My Envoy fixes it by taking coordination off your plate, synchronously, not through yet another form.
+                    Traditional tools help inside a company. But once you're coordinating across clients, 
+                    partners, and busy stakeholders, the burden falls back on you.
                   </p>
                   
-                  <h3 className="text-xl font-normal text-brand-royal-blue-dark pt-4">
-                    Why TsunAImi became Ask My Envoy
-                  </h3>
+                  <p>
+                    In 2025, Agentic AI made it possible to build something different: 
+                    an assistant that coordinates like a great Executive Assistant would. 
+                    I built Envoy hands-on, shaped by years of doing this the hard way.
+                  </p>
                   
                   <p>
-                    TsunAImi was the venture name, a nod to the wave Agentic AI is about to unleash. But over 12 months 
-                    of building and talking to users, one thing became clear: the assistant was the product people actually wanted. 
-                    So TsunAImi became the engine, and Ask My Envoy became the brand.
+                    That's Envoy. You brief it, you trust it, and it handles the back-and-forth for you.
+                  </p>
+                  
+                  <p>
+                    Not everyone can have an EA, but everyone can have an Envoy.
                   </p>
                 </div>
 
@@ -101,38 +107,31 @@ export default function AboutPage() {
               <div className="absolute left-16 top-32 bottom-32 w-0.5 bg-brand-royal-blue-dark opacity-20 hidden md:block" />
               
               <TimelineItem
-                period="Q1 2025"
+                period="Feb 2025"
                 phase="Start"
-                title="The leap into Agentic AI"
-                description="GenAI augments individuals. Agentic AI can execute work. I learned to build so I could test that belief in the real world, not as a demo, but as something shippable."
-              />
-
-              <TimelineItem
-                period="Q2 2025"
-                phase="Build"
-                title="TsunAImi foundations"
-                description="I launched TsunAImi and built a multi-tenant foundation, because scaling agents isn't about prompts, it's mostly infrastructure: orchestration, boundaries, tooling, and deployment discipline."
+                title="A better way to coordinate"
+                description="GenAI helped people write faster. The real opportunity was agents that help do the work. The goal became clear: eliminate scheduling friction, not just draft emails about it."
               />
 
               <TimelineItem
                 period="Jun 2025"
-                phase="Prove"
-                title="First calendar agent PoC"
-                description="The first working agent could book a meeting in my Google Calendar from natural language. Scheduling was the perfect proving ground: universal pain, real constraints, no shortcuts."
+                phase="Feasibility"
+                title="Can an agent actually book meetings?"
+                description="A first working agent booked meetings from natural language in a real calendar. Scheduling was the perfect technical stress test: multiple people, constraints, time zones, and zero tolerance for &quot;demo magic.&quot;"
               />
 
               <TimelineItem
                 period="Sep 2025"
                 phase="Alpha"
-                title="Mini MVP, real coordination"
-                description="The agent started coordinating multiple calendars end-to-end. It worked, but only if you followed the 'happy path.' The execution was there; the product experience wasn't."
+                title="Multi-calendar coordination"
+                description="Coordination expanded across multiple calendars end-to-end. It worked, but only on the &quot;happy path.&quot; The challenge wasn't intelligence, it was reliability and a user experience you could trust."
               />
 
               <TimelineItem
-                period="Nov 2025"
-                phase="Pivot"
-                title="Assistant -> platform"
-                description="At Web Summit Lisbon, conversations made it clear: the assistant was the value, not the plumbing. A market study confirmed the pain point—time to turn the agent into a real product."
+                period="Dec 2025"
+                phase="Validation"
+                title="The need is confirmed"
+                description="User interviews confirmed the intuition: people are tired of &quot;tools,&quot; but open to an EA-like experience at a fraction of the cost. The focus shifted to building the assistant people actually want."
               />
 
               <TimelineItem
@@ -270,13 +269,13 @@ export default function AboutPage() {
             </h2>
             
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl">
-              We're building the coordination infrastructure for professional services. If you're a consultant 
+              We're building the coordination infrastructure for professional services. If you're a professional 
               who needs this, or an investor who sees the opportunity, let's talk.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-6">
               <Button href="/coming-soon">
-                Start free trial
+                Reserve your Envoy URL
               </Button>
               <Button href="/coming-soon" variant="secondary">
                 Get in touch

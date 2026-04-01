@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Button from './Button';
+import LoginButton from './LoginButton';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
-              href="/coming-soon" 
+              href="/product" 
               className="text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark transition-colors"
             >
               Product
@@ -35,7 +36,7 @@ export default function Header() {
               Pricing
             </Link>
             <Link 
-              href="/coming-soon" 
+              href="/how-it-works" 
               className="text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark transition-colors"
             >
               How it works
@@ -48,17 +49,9 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Link 
-              href="/coming-soon" 
-              className="text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark transition-colors"
-            >
-              Log in
-            </Link>
-            <Button href="/coming-soon" className="!px-6 !py-2 !text-base">
-              Start free trial
-            </Button>
+          {/* CTA Button */}
+          <div className="hidden md:flex items-center">
+            <LoginButton />
           </div>
 
           {/* Mobile menu button */}
@@ -87,7 +80,7 @@ export default function Header() {
           <div className="md:hidden border-t border-gray-200">
             <div className="px-4 py-4 space-y-3">
               <Link 
-                href="/coming-soon" 
+                href="/product" 
                 className="block text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark"
               >
                 Product
@@ -99,7 +92,7 @@ export default function Header() {
                 Pricing
               </Link>
               <Link 
-                href="/coming-soon" 
+                href="/how-it-works" 
                 className="block text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark"
               >
                 How it works
@@ -110,15 +103,12 @@ export default function Header() {
               >
                 About
               </Link>
-              <Link 
-                href="/coming-soon" 
-                className="block text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark pt-3 border-t border-gray-200"
-              >
-                Log in
-              </Link>
-              <Button href="/coming-soon" className="w-full !px-6 !py-2 !text-base text-center">
-                Start free trial
-              </Button>
+              <div className="pt-3 border-t border-gray-200">
+                <LoginButton 
+                  className="w-full"
+                  onClick={() => setMobileMenuOpen(false)}
+                />
+              </div>
             </div>
           </div>
         )}

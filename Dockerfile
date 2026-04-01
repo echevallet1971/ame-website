@@ -60,6 +60,7 @@ USER nextjs
 
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0
+ENV HOSTNAME=0.0.0.0
 # FRONTEND_PORT_INTERNAL will be set at runtime via docker-compose from env file
 # Platform URL will be set at runtime via docker-compose
 
