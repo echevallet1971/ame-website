@@ -44,6 +44,15 @@ We do not sell personal data. We may share data with:
 - **Service providers** (hosting, monitoring, email delivery) acting as processors.
 - **Calendar providers** (Google/Microsoft) when you connect your calendar.
 
+### Security & sensitive data protection
+Calendar and scheduling-related information may be sensitive depending on context. We apply the following safeguards:
+- **Encryption in transit:** We use TLS/HTTPS for user-facing traffic and external calendar provider integrations. Internal service-to-service traffic runs on a private network and is restricted to trusted services.
+- **Credential protection at rest:** Calendar OAuth credentials (such as access/refresh tokens) are encrypted before being stored in our database.
+- **Access controls:** Authenticated user endpoints require user tokens; internal service endpoints are protected with internal service authentication. **Access to production systems is restricted.**
+- **Least-privilege processing:** We request and process calendar data needed for enabled features, and use reduced-detail views in non-owner contexts where applicable.
+- **Logging and abuse detection:** We maintain operational and security logging to detect failures and abuse, and actively reduce verbose payload logging to limit sensitive data exposure.
+- **Retention and user control:** Calendar connection credentials are stored while the integration is active and can be revoked by the user. **Other operational data is retained as needed to operate and secure the Services.** We are implementing automated retention cleanup and deletion workflows for aging operational data.
+
 ### International transfers
 Some providers may process data outside your country/region. Where required, we use appropriate safeguards.
 

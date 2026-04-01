@@ -100,13 +100,50 @@ export default function PrivacyPage() {
 
             {/* Section 6 */}
             <div>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Security & sensitive data protection</h2>
+              <p>
+                Calendar and scheduling-related information may be sensitive depending on context.
+                We apply the following safeguards:
+              </p>
+              <ul className="mt-3 space-y-3 list-none pl-0">
+                <li className="pl-4 border-l-2 border-gray-200">
+                  <strong>Encryption in transit:</strong> We use TLS/HTTPS for user-facing traffic and external calendar provider integrations.
+                  Internal service-to-service traffic runs on a private network and is restricted to trusted services.
+                </li>
+                <li className="pl-4 border-l-2 border-gray-200">
+                  <strong>Credential protection at rest:</strong> Calendar OAuth credentials (such as access/refresh tokens)
+                  are encrypted before being stored in our database.
+                </li>
+                <li className="pl-4 border-l-2 border-gray-200">
+                  <strong>Access controls:</strong> Authenticated user endpoints require user tokens; internal service endpoints
+                  are protected with internal service authentication. <strong>Access to production systems is restricted.</strong>
+                </li>
+                <li className="pl-4 border-l-2 border-gray-200">
+                  <strong>Least-privilege processing:</strong> We request and process calendar data needed for enabled features,
+                  and use reduced-detail views in non-owner contexts where applicable.
+                </li>
+                <li className="pl-4 border-l-2 border-gray-200">
+                  <strong>Logging and abuse detection:</strong> We maintain operational and security logging to detect failures
+                  and abuse, and actively reduce verbose payload logging to limit sensitive data exposure.
+                </li>
+                <li className="pl-4 border-l-2 border-gray-200">
+                  <strong>Retention and user control:</strong> Calendar connection credentials are stored while the integration
+                  is active and can be revoked by the user. <strong>Other operational data is retained as needed to operate
+                  and secure the Services.</strong> We are implementing automated retention cleanup and deletion workflows
+                  for aging operational data.
+                </li>
+              </ul>
+            </div>
+
+            {/* Section 7 */}
+            <div>
               <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">International transfers</h2>
               <p>
                 Some providers may process data outside your country/region. Where required, we use appropriate safeguards.
               </p>
             </div>
 
-            {/* Section 7 */}
+            {/* Section 8 */}
             <div>
               <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Retention</h2>
               <p>
@@ -115,7 +152,7 @@ export default function PrivacyPage() {
               </p>
             </div>
 
-            {/* Section 8 */}
+            {/* Section 9 */}
             <div>
               <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Your rights</h2>
               <p>
@@ -130,7 +167,7 @@ export default function PrivacyPage() {
               </p>
             </div>
 
-            {/* Section 9 */}
+            {/* Section 10 */}
             <div>
               <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Changes</h2>
               <p>
