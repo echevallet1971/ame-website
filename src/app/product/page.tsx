@@ -2,9 +2,19 @@
 
 import Card from '../components/Card';
 import Button from '../components/Button';
-import LoginButton from '../components/LoginButton';
+import { getPlatformUrl } from '@/lib/platform-config';
 
 export default function ProductPage() {
+  const handleApplyForEarlyAccess = async () => {
+    try {
+      const platformReserveUrl = await getPlatformUrl('reserve');
+      window.open(platformReserveUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get reserve URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -273,9 +283,12 @@ export default function ProductPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <LoginButton size="large" variant="light">
-                Get started
-              </LoginButton>
+              <button
+                onClick={handleApplyForEarlyAccess}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-brand-royal-blue bg-white hover:bg-gray-50 border border-brand-teal"
+              >
+                Apply for early access
+              </button>
               <Button href="/how-it-works" variant="light">
                 See it in action
               </Button>

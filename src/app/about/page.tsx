@@ -1,12 +1,31 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import Button from '../components/Button';
 import TimelineItem from '../components/TimelineItem';
 import { EyeIcon } from '@heroicons/react/24/solid';
+import { getPlatformUrl } from '@/lib/platform-config';
 
 export default function AboutPage() {
+  const handleApplyForEarlyAccess = async () => {
+    try {
+      const platformReserveUrl = await getPlatformUrl('reserve');
+      window.open(platformReserveUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get reserve URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
+
+  const handleContactClick = async () => {
+    try {
+      const platformContactUrl = await getPlatformUrl('contact');
+      window.open(platformContactUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get contact URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -141,6 +160,13 @@ export default function AboutPage() {
                 description="Envoy is live: your personal Executive Assistant. Not a scheduling tool, an Envoy that handles the back-and-forth for you. Not everyone can have an EA, but everyone can have an Envoy."
                 isCurrentPhase={true}
               />
+
+              <TimelineItem
+                period="May 2026"
+                phase="V3"
+                title="Less form. More assistant."
+                description="Envoy V3 made scheduling feel more natural. Users can now share details step by step, or all at once. Less like a form. More like an assistant."
+              />
             </div>
           </div>
         </div>
@@ -274,12 +300,18 @@ export default function AboutPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-6">
-              <Button href="/coming-soon">
-                Reserve your Envoy URL
-              </Button>
-              <Button href="/coming-soon" variant="secondary">
+              <button
+                onClick={handleApplyForEarlyAccess}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
+              >
+                Apply for early access
+              </button>
+              <button
+                onClick={handleContactClick}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-brand-royal-blue-dark border border-gray-300 hover:bg-gray-50"
+              >
                 Get in touch
-              </Button>
+              </button>
             </div>
           </div>
         </div>

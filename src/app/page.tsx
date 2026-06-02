@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Card from './components/Card';
 import Button from './components/Button';
-import LoginButton from './components/LoginButton';
 import Quote from './components/Quote';
 import { ArrowRightIcon, LockClosedIcon, UserGroupIcon, CheckIcon } from '@heroicons/react/24/solid';
 import { getPlatformUrl } from '@/lib/platform-config';
@@ -21,8 +20,8 @@ export default function Home() {
 
   const handleGetStarted = async () => {
     try {
-      const platformSigninUrl = await getPlatformUrl('signin');
-      window.open(platformSigninUrl, '_blank', 'noopener,noreferrer');
+      const platformReserveUrl = await getPlatformUrl('reserve');
+      window.open(platformReserveUrl, '_blank', 'noopener,noreferrer');
     } catch (error) {
       console.error('Failed to get platform URL:', error);
       alert('Unable to connect to platform. Please try again.');
@@ -48,9 +47,12 @@ export default function Home() {
             
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
-              <LoginButton size="large">
-                Reserve your Envoy URL
-              </LoginButton>
+              <button
+                onClick={handleGetStarted}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
+              >
+                Apply for early access
+              </button>
               <Button href="/how-it-works" variant="secondary" className="gap-2">
                 See how it works
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -486,7 +488,7 @@ export default function Home() {
                 {/* Row 3: Envoy */}
                 <div className="flex justify-between items-center">
                   <span className="text-base text-brand-royal-blue-dark font-normal">Envoy</span>
-                  <span className="text-3xl text-brand-royal-blue-dark font-normal">Starting at €29/mo*</span>
+                  <span className="text-3xl text-brand-royal-blue-dark font-normal">€29/ seat/ month*</span>
                 </div>
               </div>
             </Card>
@@ -506,9 +508,12 @@ export default function Home() {
               <Button href="/pricing" className="px-10">
                 View pricing plans
               </Button>
-              <LoginButton size="large" variant="secondary" className="px-10">
-                Reserve your Envoy URL
-              </LoginButton>
+              <button
+                onClick={handleGetStarted}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-brand-royal-blue-dark border border-gray-300 hover:bg-gray-50 px-10"
+              >
+                Apply for early access
+              </button>
             </div>
           </div>
         </div>
@@ -622,9 +627,12 @@ export default function Home() {
             Get your 4+ hours back every week. Envoy handles the scheduling complexity 
             so you can focus on work that matters.
             </p>
-              <LoginButton size="large" variant="light" className="px-10">
-                Reserve your Envoy URL
-              </LoginButton>
+              <button
+                onClick={handleGetStarted}
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-brand-royal-blue bg-white hover:bg-gray-50 border border-brand-teal px-10"
+              >
+                Apply for early access
+              </button>
           </div>
         </div>
       </section>

@@ -11,6 +11,7 @@ export interface PlatformConfig {
   consoleCalendarUrl: string;
   contactUrl: string;
   releaseNotesUrl: string;
+  reserveUrl: string;
 }
 
 // Cache for runtime configuration
@@ -42,6 +43,7 @@ async function fetchRuntimeConfig(): Promise<PlatformConfig> {
       consoleCalendarUrl: `${baseUrl}/console/calendar`,
       contactUrl: `${baseUrl}/contact`,
       releaseNotesUrl: `${baseUrl}/knowledge/release-notes`,
+      reserveUrl: `${baseUrl}/reserve`,
     };
   } catch (error) {
     console.error('Failed to fetch runtime config:', error);
@@ -65,7 +67,7 @@ export async function getPlatformConfig(): Promise<PlatformConfig> {
 /**
  * Get platform URL for different actions (async)
  */
-export async function getPlatformUrl(type: 'signin' | 'dashboard' | 'demo' | 'console-calendar' | 'contact' | 'release-notes'): Promise<string> {
+export async function getPlatformUrl(type: 'signin' | 'dashboard' | 'demo' | 'console-calendar' | 'contact' | 'release-notes' | 'reserve'): Promise<string> {
   const config = await getPlatformConfig();
   
   switch(type) {
@@ -81,6 +83,8 @@ export async function getPlatformUrl(type: 'signin' | 'dashboard' | 'demo' | 'co
       return config.contactUrl;
     case 'release-notes':
       return config.releaseNotesUrl;
+    case 'reserve':
+      return config.reserveUrl;
     default:
       return config.baseUrl;
   }

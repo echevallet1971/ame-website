@@ -1,68 +1,18 @@
 'use client';
 
-import { useState } from 'react';
-import Button from '../components/Button';
-import LoginButton from '../components/LoginButton';
 import { CheckIcon } from '@heroicons/react/24/solid';
 import { getPlatformUrl } from '@/lib/platform-config';
 
 export default function PricingPage() {
-  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'annual'>('monthly');
-
-  const handleContactSales = async () => {
+  const handleApplyForEarlyAccess = async () => {
     try {
-      const platformContactUrl = await getPlatformUrl('contact');
-      window.open(platformContactUrl, '_blank', 'noopener,noreferrer');
+      const platformReserveUrl = await getPlatformUrl('reserve');
+      window.open(platformReserveUrl, '_blank', 'noopener,noreferrer');
     } catch (error) {
-      console.error('Failed to get contact URL:', error);
+      console.error('Failed to get reserve URL:', error);
       alert('Unable to connect to platform. Please try again.');
     }
   };
-
-  const plans = [
-    {
-      name: 'Solo',
-      monthlyPrice: 49,
-      annualPrice: 39,
-      recommendedFor: [
-        'You coordinate 5-10 client meetings per week',
-        'You need calendar privacy when scheduling across organizations',
-        'You\'re tired of email ping-pong with C-suite contacts',
-        'You want EA-quality coordination without the EA cost',
-      ],
-      cta: 'Request beta access',
-      highlighted: false,
-      isCustom: false,
-    },
-    {
-      name: 'Professional',
-      monthlyPrice: 99,
-      annualPrice: 79,
-      recommendedFor: [
-        'You regularly coordinate complex multi-party meetings',
-        'Your clients have their own EAs you need to work with',
-        'You need custom scheduling preferences and boundaries',
-        'Priority support matters when coordination gets complex',
-      ],
-      cta: 'Request beta access',
-      highlighted: true,
-      isCustom: false,
-    },
-    {
-      name: 'Enterprise',
-      monthlyPrice: null,
-      annualPrice: null,
-      recommendedFor: [
-        'You have your own EA and need Envoy to escalate to them',
-        'Your team shares scheduling workflows and preferences',
-        'You need custom integrations with your existing tools',
-        'Dedicated support and account management matter to you',
-      ],
-      cta: 'Contact sales',
-      highlighted: false,
-      isCustom: true,
-    },
-  ];
 
   return (
     <div className="min-h-screen">
@@ -77,206 +27,78 @@ export default function PricingPage() {
             
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-center text-gray-500 max-w-3xl">
-              Let Envoy handle scheduling ping-pong. Choose the plan that fits your workflow. Focus on what matters.
+              Envoy Manage is our beta launch package. It includes the core lifecycle capabilities we believe professionals need first: scheduling, cancellation, and rescheduling.
             </p>
+          </div>
+        </div>
+      </section>
 
-            {/* Billing Toggle */}
-            <div className="flex items-center gap-0 pt-4">
-              <button
-                onClick={() => setBillingPeriod('monthly')}
-                className={`px-6 py-2 text-base rounded-l-md border transition-colors ${
-                  billingPeriod === 'monthly'
-                    ? 'bg-gray-100 border-gray-300 text-black'
-                    : 'bg-white border-gray-300 text-gray-600'
-                }`}
-              >
-                Monthly
-              </button>
-              <button
-                onClick={() => setBillingPeriod('annual')}
-                className={`px-6 py-2 text-base rounded-r-md border border-l-0 transition-colors ${
-                  billingPeriod === 'annual'
-                    ? 'bg-gray-100 border-gray-300 text-black'
-                    : 'bg-white border-gray-300 text-gray-600'
-                }`}
-              >
-                Annual
-              </button>
+      {/* Pricing Card */}
+      <section className="w-full bg-gray-50 py-16">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="bg-white rounded-lg p-8 md:p-10 flex flex-col border-2 border-brand-royal-blue-dark shadow-lg">
+            <h3 className="text-2xl font-normal text-brand-royal-blue-dark mb-6">
+              Envoy Manage
+            </h3>
+
+            <div className="mb-2">
+              <div className="flex items-baseline gap-1">
+                <span className="text-5xl font-normal text-brand-gold">€49</span>
+                <span className="text-gray-600">/ seat / month</span>
+              </div>
+              <p className="text-base text-gray-600 mt-2">
+                Founding Envoys: €29 / month for 12 months
+              </p>
             </div>
 
-            {/* Savings Text */}
-            <p className="text-sm text-gray-600">
-              Save 20% with annual billing
+            <p className="text-base text-gray-600 leading-relaxed mt-4 mb-8">
+              Your Envoy schedules, cancels, and reschedules meetings across people, calendars, and companies.
             </p>
-          </div>
-        </div>
-      </section>
 
-      {/* Pricing Cards */}
-      <section className="w-full bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <div
-                key={plan.name}
-                className={`bg-white rounded-lg p-8 flex flex-col transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                  plan.highlighted
-                    ? 'border-2 border-brand-royal-blue-dark shadow-lg'
-                    : 'border-2 border-gray-200'
-                }`}
-              >
-                {/* Plan Name */}
-                <h3 className="text-2xl font-normal text-brand-royal-blue-dark mb-6">
-                  {plan.name}
-                </h3>
+            <div className="mb-8">
+              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4 uppercase tracking-wide">
+                Recommended if:
+              </h4>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-600">
+                    You coordinate client meetings every week
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-600">
+                    You deal with several calendars, companies, and stakeholders
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-600">
+                    You are tired of email ping-pong just to find a time
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-600">
+                    You want EA-quality coordination without hiring an EA
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                  <span className="text-base text-gray-600">
+                    You need meeting lifecycle support, not just booking links
+                  </span>
+                </li>
+              </ul>
+            </div>
 
-                {/* Price */}
-                <div className="mb-8">
-                  {plan.isCustom ? (
-                    <div className="text-5xl font-normal text-black">
-                      Custom
-                    </div>
-                  ) : (
-                    <>
-                      <div className="flex items-baseline gap-1">
-                        <span className={`text-5xl font-normal ${plan.highlighted ? 'text-brand-gold' : 'text-black'}`}>
-                          €{billingPeriod === 'monthly' ? plan.monthlyPrice : plan.annualPrice}
-                        </span>
-                        <span className="text-gray-600">
-                          /month
-                        </span>
-                      </div>
-                      {billingPeriod === 'annual' && (
-                        <p className="text-sm text-gray-500 mt-1">
-                          Billed annually
-                        </p>
-                      )}
-                    </>
-                  )}
-                </div>
-
-                {/* Recommended For List */}
-                <div className="flex-grow mb-8">
-                  <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4 uppercase tracking-wide">
-                    Recommended if:
-                  </h4>
-                  <ul className="space-y-4">
-                    {plan.recommendedFor.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                        <span className="text-base text-gray-600">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* CTA Button - Now at bottom */}
-                {plan.isCustom ? (
-                  <button
-                    onClick={handleContactSales}
-                    className={`w-full justify-center inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                      plan.highlighted
-                        ? 'text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800'
-                        : 'text-brand-royal-blue-dark border border-gray-300 hover:bg-gray-50'
-                    }`}
-                  >
-                    {plan.cta}
-                  </button>
-                ) : (
-                  <LoginButton
-                    size="large"
-                    variant={plan.highlighted ? 'primary' : 'secondary'}
-                    className="w-full"
-                  >
-                    {plan.cta}
-                  </LoginButton>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compare Features Section */}
-      <section className="w-full bg-white py-24">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-3xl font-normal text-center text-brand-royal-blue-dark mb-12">
-            Compare features across plans
-          </h2>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
-              <thead>
-                <tr className="border-b-2 border-gray-300">
-                  <th className="text-left py-4 px-4 font-bold text-gray-900">Features</th>
-                  <th className="text-center py-4 px-4 font-bold text-gray-900">Solo</th>
-                  <th className="text-center py-4 px-4 font-bold text-gray-900">Professional</th>
-                  <th className="text-center py-4 px-4 font-bold text-gray-900">Enterprise</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-700">
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">Coordination requests per month</td>
-                  <td className="py-4 px-4 text-center">Unlimited</td>
-                  <td className="py-4 px-4 text-center">Unlimited</td>
-                  <td className="py-4 px-4 text-center">Unlimited</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">Calendar integrations</td>
-                  <td className="py-4 px-4 text-center">Google, Outlook</td>
-                  <td className="py-4 px-4 text-center">Google, Outlook</td>
-                  <td className="py-4 px-4 text-center">All + Custom</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">Multi-party scheduling</td>
-                  <td className="py-4 px-4 text-center">Up to 5</td>
-                  <td className="py-4 px-4 text-center">Unlimited</td>
-                  <td className="py-4 px-4 text-center">Unlimited</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">Custom scheduling preferences</td>
-                  <td className="py-4 px-4 text-center">Basic</td>
-                  <td className="py-4 px-4 text-center">
-                    <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark mx-auto" />
-                  </td>
-                  <td className="py-4 px-4 text-center">
-                    <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">EA coordination support</td>
-                  <td className="py-4 px-4 text-center">—</td>
-                  <td className="py-4 px-4 text-center">
-                    <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark mx-auto" />
-                  </td>
-                  <td className="py-4 px-4 text-center">
-                    <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">Support level</td>
-                  <td className="py-4 px-4 text-center">Email</td>
-                  <td className="py-4 px-4 text-center">Priority</td>
-                  <td className="py-4 px-4 text-center">Dedicated manager</td>
-                </tr>
-                <tr className="border-b border-gray-200">
-                  <td className="py-4 px-4">Team coordination</td>
-                  <td className="py-4 px-4 text-center">—</td>
-                  <td className="py-4 px-4 text-center">Up to 5 users</td>
-                  <td className="py-4 px-4 text-center">10+ users</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-4">Custom integrations</td>
-                  <td className="py-4 px-4 text-center">—</td>
-                  <td className="py-4 px-4 text-center">—</td>
-                  <td className="py-4 px-4 text-center">
-                    <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark mx-auto" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <button
+              onClick={handleApplyForEarlyAccess}
+              className="w-full inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
+            >
+              Apply for early access
+            </button>
           </div>
         </div>
       </section>
@@ -362,9 +184,12 @@ export default function PricingPage() {
             <p className="text-lg text-gray-600 max-w-2xl">
               No credit card required. Start coordinating smarter today.
             </p>
-            <LoginButton size="large" className="px-10">
-              Reserve your Envoy URL
-            </LoginButton>
+            <button
+              onClick={handleApplyForEarlyAccess}
+              className="inline-flex items-center justify-center px-10 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
+            >
+              Apply for early access
+            </button>
           </div>
         </div>
       </section>

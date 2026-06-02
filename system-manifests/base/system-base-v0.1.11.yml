@@ -1,9 +1,11 @@
-system_version: v0.1.10
-date: 2026-02-24
+system_version: v0.1.11
+date: 2026-06-02
 components:
   frontend:
-    askmyenvoy-website: v0.1.10
+    askmyenvoy-website: v0.1.11
 notes: |
+  Release Notes 0.1.11
+   - Updated CTA and offerings to reflect launch strategy
   Release Notes 0.1.10
    - Patched typo
   Release Notes 0.1.9

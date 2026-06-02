@@ -2,10 +2,19 @@
 
 import Image from 'next/image';
 import Button from '../components/Button';
-import LoginButton from '../components/LoginButton';
 import { getPlatformUrl } from '@/lib/platform-config';
 
 export default function HowItWorksPage() {
+  const handleApplyForEarlyAccess = async () => {
+    try {
+      const platformReserveUrl = await getPlatformUrl('reserve');
+      window.open(platformReserveUrl, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error('Failed to get reserve URL:', error);
+      alert('Unable to connect to platform. Please try again.');
+    }
+  };
+
   const handleContactClick = async () => {
     try {
       const platformContactUrl = await getPlatformUrl('contact');
@@ -42,7 +51,7 @@ export default function HowItWorksPage() {
             {/* Demo Image */}
             <div className="w-full bg-white rounded-lg shadow-2xl overflow-hidden">
               <Image 
-                src="/assets/images/envoy-conversation-demo.png"
+                src="/assets/images/LinkedIn_20260512.png"
                 alt="Envoy conversation demonstration showing how the AI assistant coordinates meeting scheduling"
                 width={1200}
                 height={800}
@@ -116,9 +125,12 @@ export default function HowItWorksPage() {
                 Ready to send your own Envoy?
               </h2>
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                <LoginButton size="large">
-                  Get started
-                </LoginButton>
+                <button
+                  onClick={handleApplyForEarlyAccess}
+                  className="inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
+                >
+                  Apply for early access
+                </button>
                 <Button href="/pricing" variant="secondary">
                   View pricing
                 </Button>
