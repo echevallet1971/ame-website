@@ -9,7 +9,7 @@ export default function PrivacyPage() {
             <h1 className="text-4xl md:text-5xl font-normal text-brand-royal-blue-dark mb-4">
               Privacy Policy
             </h1>
-            <p className="text-sm text-gray-500">Last updated: February 2026</p>
+            <p className="text-sm text-gray-500">Last updated: August 2026</p>
           </div>
 
           <div className="prose prose-gray max-w-none space-y-10 text-base text-gray-600 leading-relaxed">
@@ -21,62 +21,73 @@ export default function PrivacyPage() {
 
             {/* Section 1 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Who is responsible for your data</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">1. Who is responsible for your data</h2>
               <p>
-                <strong>Data controller:</strong> Ask My Envoy — operated by a company in formation (France)<br />
+                <strong>Data controller:</strong> Ask My Envoy, a French SASU with share capital of €1,000, registered with the Paris Trade and Companies Register under SIREN 106 746 670, VAT number FR51 106 746 670, with its registered office at 48 rue de Moscou, 75008 Paris, France.<br />
                 <strong>Contact:</strong>{' '}
                 <a href="mailto:privacy@askmyenvoy.com" className="text-brand-royal-blue-dark underline underline-offset-2">
                   privacy@askmyenvoy.com
                 </a>
               </p>
-              <p className="mt-3">
-                Until the company is registered, the service is operated by its founder on behalf of the future entity.
-                The full legal entity details will be updated here once registration is complete.
-              </p>
             </div>
 
             {/* Section 2 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">What we collect</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">2. What we collect</h2>
               <p>Depending on how you use the Services, we may collect:</p>
               <ul className="mt-3 space-y-3 list-none pl-0">
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Account data:</strong> email, name (if provided), authentication identifiers
-                  (e.g., Google/Microsoft sign-in ID), and basic profile details you provide.
+                  <strong>Account data:</strong> email, name, authentication identifiers such as your Google
+                  or Microsoft sign-in ID, and profile information you provide.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Calendar connection data (if you connect a calendar):</strong> We access and process
-                  calendar data as permitted by the permissions ("scopes") you grant. This may include calendar
-                  lists and availability (free/busy) and, for certain features (such as conflict resolution,
-                  escalation, or arbitration), it may also include event details (e.g., titles, times, attendees)
-                  to perform the scheduling task you requested. You control what we can access through the
-                  permissions you grant and can revoke access at any time from your calendar provider settings.
+                  <strong>Scheduling and conversation data:</strong> information you provide when interacting with
+                  your Envoy, such as meeting requests, participant names or email addresses, timing preferences,
+                  meeting titles and other instructions needed to coordinate a meeting.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Usage & log data:</strong> basic technical logs (IP address, device/browser info,
-                  timestamps, actions taken) for security and debugging.
+                  <strong>Calendar data:</strong> if you connect a calendar, the information we access depends on
+                  how you use Ask My Envoy. If you connect your calendar so that another person's Envoy can
+                  coordinate meetings with you, and you authorize that access, that Envoy can access only your
+                  free/busy availability for the relevant period. It cannot access your meeting titles,
+                  participants, descriptions, locations or other event details. If you have your own Envoy, it can
+                  access the full details of your calendar, including meeting titles, participants, descriptions,
+                  locations and other event information, as needed to schedule, reschedule or cancel meetings on
+                  your behalf.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Waitlist preferences:</strong> your opt-in choice for product news/updates.
+                  <strong>Subscription and billing data:</strong> information related to your subscription, such as
+                  your subscription status, billing status and transaction identifiers. Payment card details are
+                  processed by our payment provider and are not stored by Ask My Envoy.
+                </li>
+                <li className="pl-4 border-l-2 border-gray-200">
+                  <strong>Usage and log data:</strong> technical information such as IP address, device and browser
+                  information, timestamps and actions taken, used for security, debugging and operation of the
+                  Services.
                 </li>
               </ul>
+              <p className="mt-3">
+                You can revoke your calendar connection at any time through Ask My Envoy or your calendar provider.
+              </p>
             </div>
 
             {/* Section 3 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Why we use your data</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">3. Why we use your data</h2>
               <p>We use your data to:</p>
               <ul className="mt-3 space-y-2 list-disc list-inside">
-                <li>Provide access to the Services and run the waitlist flow (reserve your Envoy URL, connect calendar, account access).</li>
+                <li>Provide and operate the Services, including account access, calendar connections and meeting coordination.</li>
+                <li>Process scheduling requests and allow your Envoy to work on your behalf.</li>
+                <li>Manage subscriptions and billing.</li>
                 <li>Secure the Services and prevent abuse.</li>
-                <li>Operate and improve reliability (debugging, monitoring).</li>
-                <li>Send product updates <strong>only if you opt in</strong>.</li>
+                <li>Monitor, debug and improve the reliability and performance of the Services.</li>
+                <li>Send product news or updates only where you have opted in.</li>
               </ul>
             </div>
 
             {/* Section 4 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Legal bases (GDPR)</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">4. Legal bases (GDPR)</h2>
               <p>Where applicable, we rely on:</p>
               <ul className="mt-3 space-y-2 list-disc list-inside">
                 <li><strong>Contract / steps before contract</strong> (to provide the Services you request).</li>
@@ -88,88 +99,106 @@ export default function PrivacyPage() {
 
             {/* Section 5 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Sharing</h2>
-              <p>
-                We do not sell personal data. We may share data with:
-              </p>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">5. Sharing</h2>
+              <p>We do not sell personal data.</p>
+              <p className="mt-3">We may share personal data with:</p>
               <ul className="mt-3 space-y-2 list-disc list-inside">
-                <li><strong>Service providers</strong> (hosting, monitoring, email delivery) acting as processors.</li>
-                <li><strong>Calendar providers</strong> (Google/Microsoft) when you connect your calendar.</li>
+                <li><strong>Service providers:</strong> providers supporting hosting, infrastructure, monitoring, email delivery, authentication, billing and other functions required to operate the Services.</li>
+                <li><strong>Calendar providers:</strong> such as Google and Microsoft, when you connect your calendar.</li>
+                <li><strong>AI and technology providers:</strong> providers used to process requests and operate AI-powered features of the Services.</li>
+                <li><strong>Legal or regulatory authorities:</strong> where disclosure is required by law or necessary to protect our rights, users or the Services.</li>
               </ul>
+              <p className="mt-3">
+                Where applicable, providers processing personal data on our behalf act under contractual and
+                data-protection obligations.
+              </p>
             </div>
 
             {/* Section 6 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Security & sensitive data protection</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">6. Security and sensitive data protection</h2>
               <p>
-                Calendar and scheduling-related information may be sensitive depending on context.
-                We apply the following safeguards:
+                Calendar and scheduling information may be sensitive depending on context. We use technical and
+                organizational safeguards designed to protect personal data, including:
               </p>
               <ul className="mt-3 space-y-3 list-none pl-0">
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Encryption in transit:</strong> We use TLS/HTTPS for user-facing traffic and external calendar provider integrations.
-                  Internal service-to-service traffic runs on a private network and is restricted to trusted services.
+                  Encryption of data in transit using TLS/HTTPS.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Credential protection at rest:</strong> Calendar OAuth credentials (such as access/refresh tokens)
-                  are encrypted before being stored in our database.
+                  Encryption of calendar access credentials before storage.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Access controls:</strong> Authenticated user endpoints require user tokens; internal service endpoints
-                  are protected with internal service authentication. <strong>Access to production systems is restricted.</strong>
+                  Authentication and access controls restricting access to systems and data.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Least-privilege processing:</strong> We request and process calendar data needed for enabled features,
-                  and use reduced-detail views in non-owner contexts where applicable.
+                  Limited calendar access depending on how Ask My Envoy is used. Another person's Envoy is limited
+                  to authorized free/busy availability, while your own Envoy can access the calendar details
+                  required to work on your behalf.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Logging and abuse detection:</strong> We maintain operational and security logging to detect failures
-                  and abuse, and actively reduce verbose payload logging to limit sensitive data exposure.
+                  Operational and security logging used to detect failures, misuse and security issues.
                 </li>
                 <li className="pl-4 border-l-2 border-gray-200">
-                  <strong>Retention and user control:</strong> Calendar connection credentials are stored while the integration
-                  is active and can be revoked by the user. <strong>Other operational data is retained as needed to operate
-                  and secure the Services.</strong> We are implementing automated retention cleanup and deletion workflows
-                  for aging operational data.
+                  Controls allowing users to revoke calendar connections and access.
                 </li>
               </ul>
+              <p className="mt-3">
+                No system can provide absolute security, but we take reasonable measures to protect personal data
+                against unauthorized access, loss, misuse or disclosure.
+              </p>
             </div>
 
             {/* Section 7 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">International transfers</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">7. International transfers</h2>
               <p>
-                Some providers may process data outside your country/region. Where required, we use appropriate safeguards.
+                Some of our service providers may process personal data outside the European Economic Area. Where required, we use appropriate safeguards for international data transfers.
               </p>
             </div>
 
             {/* Section 8 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Retention</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">8. Retention</h2>
               <p>
-                We keep data only as long as needed to operate the Services and the waitlist, and to meet
-                security/legal needs. You can request deletion at any time.
+                We keep personal data only for as long as necessary to provide and operate the Services, maintain
+                security, comply with legal obligations and resolve disputes.
+              </p>
+              <p className="mt-3">
+                Calendar connection credentials are retained while the connection remains active and can be revoked
+                by the user at any time.
+              </p>
+              <p className="mt-3">
+                Retention periods may vary depending on the type of data and the purpose for which it is processed.
+                You may request deletion of your personal data, subject to any legal or operational retention
+                requirements.
               </p>
             </div>
 
             {/* Section 9 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Your rights</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">9. Your rights</h2>
               <p>
-                Depending on your location, you may have rights to access, correct, delete, object, restrict
-                processing, and withdraw consent.
+                Depending on your location and the applicable law, you may have rights to access, correct, delete,
+                restrict or object to the processing of your personal data, request portability of certain data,
+                and withdraw consent where processing is based on consent.
               </p>
               <p className="mt-3">
-                Contact:{' '}
+                You may exercise these rights by contacting{' '}
                 <a href="mailto:privacy@askmyenvoy.com" className="text-brand-royal-blue-dark underline underline-offset-2">
                   privacy@askmyenvoy.com
                 </a>
+                .
+              </p>
+              <p className="mt-3">
+                If you are in the European Union, you also have the right to lodge a complaint with the CNIL or
+                another competent data protection authority.
               </p>
             </div>
 
             {/* Section 10 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">Changes</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">10. Changes</h2>
               <p>
                 We may update this policy. We'll post the latest version on this page and update the date above.
               </p>

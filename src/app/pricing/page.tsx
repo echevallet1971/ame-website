@@ -1,195 +1,180 @@
 'use client';
 
 import { CheckIcon } from '@heroicons/react/24/solid';
-import { getPlatformUrl } from '@/lib/platform-config';
+import Card from '../components/Card';
+import LoginButton from '../components/LoginButton';
+import ContactButton from '../components/ContactButton';
 
 export default function PricingPage() {
-  const handleApplyForEarlyAccess = async () => {
-    try {
-      const platformReserveUrl = await getPlatformUrl('reserve');
-      window.open(platformReserveUrl, '_blank', 'noopener,noreferrer');
-    } catch (error) {
-      console.error('Failed to get reserve URL:', error);
-      alert('Unable to connect to platform. Please try again.');
-    }
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="w-full bg-white py-24">
         <div className="max-w-4xl mx-auto px-8">
           <div className="flex flex-col items-center gap-6">
-            {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl font-normal text-center text-brand-royal-blue-dark leading-tight">
-              Stop coordinating. Start delivering.
+            <h1 className="text-4xl md:text-5xl lg:text-5xl font-normal text-center text-brand-royal-blue-dark leading-tight">
+              Get your Envoy.
             </h1>
-            
-            {/* Subheadline */}
+
             <p className="text-lg md:text-xl text-center text-gray-500 max-w-3xl">
-              Envoy Manage is our beta launch package. It includes the core lifecycle capabilities we believe professionals need first: scheduling, cancellation, and rescheduling.
+              One simple subscription. Everything your Envoy needs to handle your scheduling.
             </p>
           </div>
         </div>
       </section>
 
       {/* Pricing Card */}
-      <section className="w-full bg-gray-50 py-16">
+      <section className="w-full bg-gray-50 py-20">
         <div className="max-w-4xl mx-auto px-8">
-          <div className="bg-white rounded-lg p-8 md:p-10 flex flex-col border-2 border-brand-royal-blue-dark shadow-lg">
-            <h3 className="text-2xl font-normal text-brand-royal-blue-dark mb-6">
-              Envoy Manage
-            </h3>
+          <div className="bg-white rounded-2xl p-8 md:p-10 flex flex-col border border-brand-border shadow-sm">
+            <h2 className="text-3xl font-normal text-brand-royal-blue-dark mb-6">
+              Your Envoy
+            </h2>
 
-            <div className="mb-2">
-              <div className="flex items-baseline gap-1">
-                <span className="text-5xl font-normal text-brand-gold">€49</span>
-                <span className="text-gray-600">/ seat / month</span>
+            <div className="mb-6">
+              <div className="flex items-baseline gap-2">
+                <span className="text-5xl font-normal text-brand-gold">€29</span>
+                <span className="text-3xl text-gray-600">/ seat / month</span>
               </div>
-              <p className="text-base text-gray-600 mt-2">
-                Founding Envoys: €29 / month for 12 months
-              </p>
             </div>
 
-            <p className="text-base text-gray-600 leading-relaxed mt-4 mb-8">
-              Your Envoy schedules, cancels, and reschedules meetings across people, calendars, and companies.
+            <p className="text-base text-gray-600 leading-relaxed mb-8">
+              14 days free. Card required, nothing charged until your trial ends.
             </p>
 
-            <div className="mb-8">
-              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4 uppercase tracking-wide">
-                Recommended if:
-              </h4>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-gray-600">
-                    You coordinate client meetings every week
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-gray-600">
-                    You deal with several calendars, companies, and stakeholders
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-gray-600">
-                    You are tired of email ping-pong just to find a time
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-gray-600">
-                    You want EA-quality coordination without hiring an EA
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
-                  <span className="text-base text-gray-600">
-                    You need meeting lifecycle support, not just booking links
-                  </span>
-                </li>
-              </ul>
-            </div>
+            <h3 className="text-sm font-semibold text-brand-royal-blue-dark mb-4 uppercase tracking-wide">
+              Included:
+            </h3>
 
-            <button
-              onClick={handleApplyForEarlyAccess}
-              className="w-full inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
-            >
-              Apply for early access
-            </button>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                <span className="text-base text-gray-600">Schedule meetings</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                <span className="text-base text-gray-600">Reschedule meetings</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                <span className="text-base text-gray-600">Cancel meetings</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                <span className="text-base text-gray-600">Coordinate across Google Calendar and Microsoft Outlook</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                <span className="text-base text-gray-600">Work across companies, participants and time zones</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckIcon className="w-5 h-5 text-brand-royal-blue-dark flex-shrink-0 mt-0.5" />
+                <span className="text-base text-gray-600">Control who can access your availability through the Trust Center</span>
+              </li>
+            </ul>
+
+            <div className="mt-10 flex flex-col items-center gap-2">
+              <LoginButton size="large" className="px-10">
+                Get your Envoy
+              </LoginButton>
+              <p className="text-sm text-gray-500">Cancel anytime.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Reassurance */}
+      <section className="w-full bg-white py-16">
+        <div className="max-w-4xl mx-auto px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-normal text-brand-royal-blue-dark mb-4">
+              Start with one. Add more when you need them.
+            </h2>
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              Your subscription is based on the number of Envoys you use. Get one for yourself, or add more for people you manage or work with.
+            </p>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="w-full bg-gray-50 py-24">
-        <div className="max-w-3xl mx-auto px-8">
-          <h2 className="text-4xl font-normal text-center text-brand-royal-blue-dark mb-12">
+        <div className="max-w-4xl mx-auto px-8">
+          <h2 className="text-3xl md:text-4xl font-normal text-center text-brand-royal-blue-dark mb-12">
             Frequently asked questions
           </h2>
-          
-          <div className="flex flex-col gap-8">
-            {/* FAQ 1 */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h3 className="text-xl font-normal text-black mb-3">
-                Can I switch plans at any time?
-              </h3>
-              <p className="text-base text-gray-600 leading-relaxed">
-                Yes. Upgrade or downgrade whenever you need. Changes take effect on your next billing cycle.
-              </p>
-            </div>
 
-            {/* FAQ 2 */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h3 className="text-xl font-normal text-black mb-3">
+          <div className="flex flex-col gap-6">
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="text-xl font-normal text-brand-royal-blue-dark mb-3">
                 Is there a free trial?
               </h3>
               <p className="text-base text-gray-600 leading-relaxed">
-                Yes. 14 days free on the Professional plan, no credit card required.
+                Yes. You can try your Envoy free for 14 days. A payment method is required when you subscribe, but you won&apos;t be charged until the trial ends.
               </p>
-            </div>
+            </Card>
 
-            {/* FAQ 3 */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h3 className="text-xl font-normal text-black mb-3">
-                What payment methods do you accept?
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="text-xl font-normal text-brand-royal-blue-dark mb-3">
+                Can I cancel anytime?
               </h3>
               <p className="text-base text-gray-600 leading-relaxed">
-                All major credit cards (Visa, Mastercard, Amex) and PayPal. Processed securely via Stripe.
+                Yes. There is no long-term commitment.
               </p>
-            </div>
+            </Card>
 
-            {/* FAQ 4 */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h3 className="text-xl font-normal text-black mb-3">
-                How does annual billing work?
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="text-xl font-normal text-brand-royal-blue-dark mb-3">
+                Can I get more than one Envoy?
               </h3>
               <p className="text-base text-gray-600 leading-relaxed">
-                Pay upfront for 12 months and save 20%. You can cancel anytime, but refunds only apply within the first 30 days.
+                Yes. You can subscribe to as many Envoys as you need.
               </p>
-            </div>
+            </Card>
 
-            {/* FAQ 5 */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h3 className="text-xl font-normal text-black mb-3">
-                What happens if I exceed my plan limits?
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="text-xl font-normal text-brand-royal-blue-dark mb-3">
+                Does it work with Google and Microsoft calendars?
               </h3>
               <p className="text-base text-gray-600 leading-relaxed">
-                We'll notify you before you hit the limit. You can upgrade or we'll pause coordination until the next cycle. No surprise charges.
+                Yes. Ask My Envoy works across Google Calendar and Microsoft Outlook.
               </p>
-            </div>
+            </Card>
 
-            {/* FAQ 6 */}
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h3 className="text-xl font-normal text-black mb-3">
-                What about refunds?
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="text-xl font-normal text-brand-royal-blue-dark mb-3">
+                Do people I schedule with need their own Envoy?
               </h3>
               <p className="text-base text-gray-600 leading-relaxed">
-                If Envoy isn't right for you within the first 30 days, we'll refund you in full. No questions asked.
+                No. But they do need to connect their calendar and accept your invitation so your Envoy can access their availability. If they don&apos;t connect their calendar, your Envoy won&apos;t be able to coordinate the meeting automatically.
               </p>
-            </div>
+            </Card>
+
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="text-xl font-normal text-brand-royal-blue-dark mb-3">
+                How do I invite people I work with?
+              </h3>
+              <p className="text-base text-gray-600 leading-relaxed">
+                Go to the Trust Center and invite them directly. Once they accept and connect their calendar, your Envoy can see whether it has access to their availability and coordinate meetings with them.
+              </p>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="w-full bg-white py-24">
+      {/* Contact CTA */}
+      <section className="w-full bg-white py-20">
         <div className="max-w-4xl mx-auto px-8">
-          <div className="flex flex-col items-center gap-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark">
-              All plans include a 14-day free trial
+          <div className="max-w-3xl mx-auto rounded-2xl border border-brand-border bg-gray-50 p-8 md:p-10 text-center transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
+            <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark mb-4">
+              Still have a question?
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
-              No credit card required. Start coordinating smarter today.
+            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+              If the FAQ didn&apos;t cover it, get in touch and we&apos;ll help.
             </p>
-            <button
-              onClick={handleApplyForEarlyAccess}
-              className="inline-flex items-center justify-center px-10 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800"
-            >
-              Apply for early access
-            </button>
+            <ContactButton size="large">
+              Contact us
+            </ContactButton>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ export default function TermsPage() {
             <h1 className="text-4xl md:text-5xl font-normal text-brand-royal-blue-dark mb-4">
               Terms of Service
             </h1>
-            <p className="text-sm text-gray-500">Last updated: February 2026</p>
+            <p className="text-sm text-gray-500">Last updated: August 2026</p>
           </div>
 
           <div className="prose prose-gray max-w-none space-y-10 text-base text-gray-600 leading-relaxed">
@@ -23,24 +23,22 @@ export default function TermsPage() {
             <div>
               <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">1. Provider</h2>
               <p>
-                Ask My Envoy is provided by <strong>a company in formation (France)</strong> ("we", "us").
-                Until registration is complete, the service is operated by its founder on behalf of the future
-                entity. We will update these Terms with full legal entity details once registration is complete.
+                Ask My Envoy is operated by Ask My Envoy, a French SASU with share capital of €1,000, registered with the Paris Trade and Companies Register under SIREN 106 746 670, VAT number FR51 106 746 670, with its registered office at 48 rue de Moscou, 75008 Paris, France ("we", "us").
               </p>
             </div>
 
             {/* Section 2 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">2. Access, waitlist, beta</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">2. Access and subscriptions</h2>
               <ul className="space-y-2 list-disc list-inside">
-                <li>The Services are in <strong>beta</strong>. Beta access is invitation-only. Other users may be placed in a staged rollout.</li>
-                <li>Features may change, break, or be removed as we improve reliability.</li>
-                <li>We may grant, limit, or revoke access during beta.</li>
+                <li>The Services may still evolve as we improve features, reliability and performance.</li>
+                <li>We may update, modify or discontinue features where necessary.</li>
+                <li>Access to certain features may depend on your subscription and account configuration.</li>
               </ul>
               <p className="mt-4">
-                <strong>Paid plans.</strong> Some users may access the Services under beta arrangements. Any paid
-                subscription (if applicable) will start only once billing is enabled and the legal entity is
-                registered, with pricing and billing terms presented before payment.
+                <strong>Paid subscriptions.</strong> Access to paid features is subject to the pricing and billing
+                terms presented when you subscribe. Where a free trial is offered, the applicable trial period and
+                billing terms will be shown before payment details are submitted.
               </p>
             </div>
 
@@ -68,19 +66,31 @@ export default function TermsPage() {
             <div>
               <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">5. Calendar connections</h2>
               <p>
-                If you connect a calendar provider (e.g., Google/Microsoft), you authorize us to access and
-                process calendar data <strong>as permitted by the scopes you grant</strong> to provide scheduling
-                features. Depending on the feature you use, this may include availability (free/busy) and event
-                details needed to resolve conflicts, escalation, arbitration, or coordinate across participants.
+                If you connect a calendar provider such as Google Calendar or Microsoft Outlook, you authorize Ask
+                My Envoy to access and process calendar data as permitted by the permissions you grant.
+              </p>
+              <p className="mt-4">
+                If you connect your calendar so that another person&apos;s Envoy can coordinate meetings with you, and
+                you authorize that access, that Envoy can access only your free/busy availability for the relevant
+                period. It cannot access your meeting titles, participants, descriptions, locations or other event
+                details.
+              </p>
+              <p className="mt-4">
+                If you have your own Envoy, it can access the full details of your calendar, including meeting
+                titles, participants, descriptions, locations and other event information, as needed to schedule,
+                reschedule or cancel meetings on your behalf.
+              </p>
+              <p className="mt-4">
+                You remain responsible for managing the permissions and access you grant through Ask My Envoy and
+                your calendar provider.
               </p>
             </div>
 
             {/* Section 6 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">6. "As is"</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">6. Availability of the Services</h2>
               <p>
-                The Services are provided <strong>as is</strong> and <strong>as available</strong>.
-                We don't guarantee uninterrupted service, especially during beta.
+                The Services are provided as is and as available. We do not guarantee uninterrupted or error-free operation or continuous availability.
               </p>
             </div>
 
@@ -88,23 +98,40 @@ export default function TermsPage() {
             <div>
               <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">7. Liability</h2>
               <p>
-                To the maximum extent permitted by law, we are not liable for indirect or consequential damages
-                (including loss of data, revenue, or profits). You use the beta at your own risk.
+                To the maximum extent permitted by applicable law, we are not liable for indirect or consequential damages, including loss of data, revenue or profits.
               </p>
             </div>
 
             {/* Section 8 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">8. Termination</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">8. Billing and cancellation</h2>
               <p>
-                You can stop using the Services at any time. We may suspend access if needed for security,
-                abuse prevention, or legal reasons.
+                Subscriptions are billed in advance at the price and frequency shown when you subscribe. Unless
+                otherwise stated, subscriptions renew automatically until cancelled.
+              </p>
+              <p className="mt-4">
+                You may cancel your subscription at any time. Cancellation takes effect at the end of the current
+                billing period unless otherwise stated.
+              </p>
+              <p className="mt-4">
+                If a free trial is offered, you will not be charged until the trial ends. Unless you cancel before
+                the end of the trial, your subscription will automatically become paid at the price shown when you
+                subscribed.
               </p>
             </div>
 
             {/* Section 9 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">9. Contact</h2>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">9. Governing law</h2>
+              <p>
+                These Terms are governed by French law, without prejudice to any mandatory consumer protection
+                rights that may apply under the laws of your country of residence.
+              </p>
+            </div>
+
+            {/* Section 10 */}
+            <div>
+              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">10. Contact</h2>
               <p>
                 Questions:{' '}
                 <a href="mailto:legal@askmyenvoy.com" className="text-brand-royal-blue-dark underline underline-offset-2">

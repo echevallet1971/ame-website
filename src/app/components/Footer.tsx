@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { getPlatformUrl } from '@/lib/platform-config';
 
@@ -21,46 +22,24 @@ export default function Footer() {
     <footer className="w-full bg-white border-t border-brand-border">
       <div className="container">
         <div className="px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
             {/* Company Info */}
-            <div className="col-span-1">
-              <h3 className="text-lg font-semibold text-brand-royal-blue-dark mb-4">Envoy</h3>
-              <p className="text-sm text-brand-gray">
-                AI-powered scheduling made simple
-              </p>
+            <div className="col-span-1 max-w-sm">
+              <div className="mb-4">
+                <Image
+                  src="/logo/ask-my-envoy-logo.png"
+                  alt="Ask My Envoy"
+                  width={375}
+                  height={170}
+                  className="h-10 w-auto"
+                />
+              </div>
             </div>
 
-            {/* Product */}
-            <div>
-              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Product</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/pricing" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
-                    Pricing
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/coming-soon" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
-                    How it works
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Company</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/about" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
-                    About
-                  </Link>
-                </li>
+            {/* Legal */}
+            <div className="md:justify-self-end">
+              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Legal</h4>
+              <ul className="space-y-2">
                 <li>
                   <a 
                     href="#" 
@@ -70,13 +49,6 @@ export default function Footer() {
                     Contact
                   </a>
                 </li>
-              </ul>
-            </div>
-
-            {/* Legal */}
-            <div>
-              <h4 className="text-sm font-semibold text-brand-royal-blue-dark mb-4">Legal</h4>
-              <ul className="space-y-3">
                 <li>
                   <Link href="/privacy" className="text-sm text-brand-gray hover:text-brand-royal-blue-dark transition-colors">
                     Privacy Policy
