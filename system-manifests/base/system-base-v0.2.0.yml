@@ -1,5 +1,5 @@
-system_version: v0.1.12
-date: 2026-08-18
+system_version: v0.2.0
+date: 2026-08-20
 components:
   frontend:
     askmyenvoy-website: v0.2.0
