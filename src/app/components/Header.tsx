@@ -1,8 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import Button from './Button';
 import LoginButton from './LoginButton';
 
 export default function Header() {
@@ -15,19 +15,24 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-brand-royal-blue-dark">
-                Envoy
-              </span>
+              <Image
+                src="/logo/ask-my-envoy-logo.png"
+                alt="Ask My Envoy"
+                width={375}
+                height={170}
+                className="h-12 w-auto"
+                priority
+              />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
-              href="/product" 
+              href="/how-it-works" 
               className="text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark transition-colors"
             >
-              Product
+              How it works
             </Link>
             <Link 
               href="/pricing" 
@@ -36,10 +41,10 @@ export default function Header() {
               Pricing
             </Link>
             <Link 
-              href="/how-it-works" 
+              href="/getting-started" 
               className="text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark transition-colors"
             >
-              How it works
+              Getting started
             </Link>
             <Link 
               href="/about" 
@@ -80,10 +85,10 @@ export default function Header() {
           <div className="md:hidden border-t border-gray-200">
             <div className="px-4 py-4 space-y-3">
               <Link 
-                href="/product" 
+                href="/how-it-works" 
                 className="block text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark"
               >
-                Product
+                How it works
               </Link>
               <Link 
                 href="/pricing" 
@@ -92,10 +97,10 @@ export default function Header() {
                 Pricing
               </Link>
               <Link 
-                href="/how-it-works" 
+                href="/getting-started" 
                 className="block text-base font-normal text-gray-600 hover:text-brand-royal-blue-dark"
               >
-                How it works
+                Getting started
               </Link>
               <Link 
                 href="/about" 

@@ -11,6 +11,15 @@ const nextConfig = {
     unoptimized: true,
   },
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/product',
+        destination: '/how-it-works',
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
