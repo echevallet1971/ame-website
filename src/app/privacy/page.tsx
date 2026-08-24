@@ -1,18 +1,18 @@
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="w-full py-24">
-        <div className="max-w-3xl mx-auto px-8">
+      <section className="section-standard">
+        <div className="container-3xl">
 
           {/* Header */}
           <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-normal text-brand-royal-blue-dark mb-4">
+            <h1 className="hero-heading text-brand-royal-blue-dark mb-4">
               Privacy Policy
             </h1>
-            <p className="text-sm text-gray-500">Last updated: August 2026</p>
+            <p className="text-meta text-gray-500">Last updated: August 2026</p>
           </div>
 
-          <div className="prose prose-gray max-w-none space-y-10 text-base text-gray-600 leading-relaxed">
+          <div className="prose prose-gray max-w-none stack-xl text-body text-gray-600">
 
             <p>
               This Privacy Policy explains how <strong>Ask My Envoy</strong> ("we", "us") handles personal data
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
 
             {/* Section 1 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">1. Who is responsible for your data</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">1. Who is responsible for your data</h2>
               <p>
                 <strong>Data controller:</strong> Ask My Envoy, a French SASU with share capital of €1,000, registered with the Paris Trade and Companies Register under SIREN 106 746 670, VAT number FR51 106 746 670, with its registered office at 48 rue de Moscou, 75008 Paris, France.<br />
                 <strong>Contact:</strong>{' '}
@@ -33,9 +33,9 @@ export default function PrivacyPage() {
 
             {/* Section 2 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">2. What we collect</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">2. What we collect</h2>
               <p>Depending on how you use the Services, we may collect:</p>
-              <ul className="mt-3 space-y-3 list-none pl-0">
+              <ul className="mt-3 stack-tight list-none pl-0">
                 <li className="pl-4 border-l-2 border-gray-200">
                   <strong>Account data:</strong> email, name, authentication identifiers such as your Google
                   or Microsoft sign-in ID, and profile information you provide.
@@ -73,9 +73,9 @@ export default function PrivacyPage() {
 
             {/* Section 3 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">3. Why we use your data</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">3. Why we use your data</h2>
               <p>We use your data to:</p>
-              <ul className="mt-3 space-y-2 list-disc list-inside">
+              <ul className="mt-3 stack-xs list-disc list-inside">
                 <li>Provide and operate the Services, including account access, calendar connections and meeting coordination.</li>
                 <li>Process scheduling requests and allow your Envoy to work on your behalf.</li>
                 <li>Manage subscriptions and billing.</li>
@@ -87,9 +87,9 @@ export default function PrivacyPage() {
 
             {/* Section 4 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">4. Legal bases (GDPR)</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">4. Legal bases (GDPR)</h2>
               <p>Where applicable, we rely on:</p>
-              <ul className="mt-3 space-y-2 list-disc list-inside">
+              <ul className="mt-3 stack-xs list-disc list-inside">
                 <li><strong>Contract / steps before contract</strong> (to provide the Services you request).</li>
                 <li><strong>Legitimate interests</strong> (security, preventing abuse, improving reliability).</li>
                 <li><strong>Consent</strong> (marketing/news opt-in; you can unsubscribe anytime).</li>
@@ -99,10 +99,10 @@ export default function PrivacyPage() {
 
             {/* Section 5 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">5. Sharing</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">5. Sharing</h2>
               <p>We do not sell personal data.</p>
               <p className="mt-3">We may share personal data with:</p>
-              <ul className="mt-3 space-y-2 list-disc list-inside">
+              <ul className="mt-3 stack-xs list-disc list-inside">
                 <li><strong>Service providers:</strong> providers supporting hosting, infrastructure, monitoring, email delivery, authentication, billing and other functions required to operate the Services.</li>
                 <li><strong>Calendar providers:</strong> such as Google and Microsoft, when you connect your calendar.</li>
                 <li><strong>AI and technology providers:</strong> providers used to process requests and operate AI-powered features of the Services.</li>
@@ -116,12 +116,12 @@ export default function PrivacyPage() {
 
             {/* Section 6 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">6. Security and sensitive data protection</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">6. Security and sensitive data protection</h2>
               <p>
                 Calendar and scheduling information may be sensitive depending on context. We use technical and
                 organizational safeguards designed to protect personal data, including:
               </p>
-              <ul className="mt-3 space-y-3 list-none pl-0">
+              <ul className="mt-3 stack-tight list-none pl-0">
                 <li className="pl-4 border-l-2 border-gray-200">
                   Encryption of data in transit using TLS/HTTPS.
                 </li>
@@ -151,7 +151,7 @@ export default function PrivacyPage() {
 
             {/* Section 7 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">7. International transfers</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">7. International transfers</h2>
               <p>
                 Some of our service providers may process personal data outside the European Economic Area. Where required, we use appropriate safeguards for international data transfers.
               </p>
@@ -159,7 +159,7 @@ export default function PrivacyPage() {
 
             {/* Section 8 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">8. Retention</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">8. Retention</h2>
               <p>
                 We keep personal data only for as long as necessary to provide and operate the Services, maintain
                 security, comply with legal obligations and resolve disputes.
@@ -177,7 +177,7 @@ export default function PrivacyPage() {
 
             {/* Section 9 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">9. Your rights</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">9. Your rights</h2>
               <p>
                 Depending on your location and the applicable law, you may have rights to access, correct, delete,
                 restrict or object to the processing of your personal data, request portability of certain data,
@@ -198,7 +198,7 @@ export default function PrivacyPage() {
 
             {/* Section 10 */}
             <div>
-              <h2 className="text-xl font-normal text-brand-royal-blue-dark mb-3">10. Changes</h2>
+              <h2 className="item-heading text-brand-royal-blue-dark mb-3">10. Changes</h2>
               <p>
                 We may update this policy. We'll post the latest version on this page and update the date above.
               </p>

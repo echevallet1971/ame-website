@@ -8,20 +8,20 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="w-full bg-white flex justify-center items-center py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="flex flex-col items-center gap-6">
+      <section className="section-hero bg-white flex justify-center items-center">
+        <div className="container-4xl">
+          <div className="flow-md items-center">
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-normal text-center text-brand-royal-blue-dark leading-tight">
+            <h1 className="hero-heading text-center text-brand-royal-blue-dark">
               Why I built Ask My Envoy
             </h1>
             
             {/* Subheadline */}
-            <div className="max-w-3xl text-center text-gray-500 space-y-4">
-              <p className="text-lg md:text-xl">
+            <div className="max-w-3xl text-center text-gray-500 stack-sm">
+              <p className="text-lead">
                 The time and cognitive load required to schedule a meeting between people who have already agreed to meet has always made no sense to me.
               </p>
-              <p className="text-lg md:text-xl">
+              <p className="text-lead">
                 With AI, I could see a better way to do it. So I decided to build it.
               </p>
             </div>
@@ -30,9 +30,9 @@ export default function AboutPage() {
       </section>
 
       {/* Founder Story Section */}
-      <section className="w-full bg-gray-50 py-24">
-        <div className="max-w-6xl mx-auto px-8 md:px-16">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
+      <section className="section-standard bg-gray-50">
+        <div className="container-6xl">
+          <div className="split-layout">
             {/* Founder Image */}
             <div className="w-full lg:w-1/2 flex justify-center">
               <div className="relative w-full max-w-md aspect-square rounded-full overflow-hidden">
@@ -47,12 +47,12 @@ export default function AboutPage() {
 
             {/* Founder Story */}
             <div className="w-full lg:w-1/2">
-              <div className="flex flex-col gap-6">
-                <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark">
+              <div className="flow-md">
+                <h2 className="section-subheading text-brand-royal-blue-dark">
                   Hi, I'm Eric.
                 </h2>
                 
-                <div className="text-base text-gray-600 leading-relaxed space-y-4">
+                <div className="text-body text-gray-600 stack-sm">
                   <p>
                     I spent my entire career working with clients, teams and partners across companies, countries and time zones. Which also means I&apos;ve spent far too much time either sending &quot;Are you available next Tuesday?&quot; messages or receiving them. And frankly, I hated that part of the job.
                   </p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="flex flex-col gap-1 pt-2">
+                <div className="flow-2xs pt-2">
                   <p className="text-sm font-bold text-gray-600">Eric Chevallet</p>
                   <p className="text-sm text-gray-600">Founder & CEO, Envoy</p>
                 </div>
@@ -85,9 +85,9 @@ export default function AboutPage() {
       </section>
 
       {/* Join Us CTA */}
-      <section className="w-full bg-white py-24">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <section className="section-standard bg-white">
+        <div className="container-4xl">
+          <div className="cta-row justify-center">
             <LoginButton size="large" className="px-10">
               Get your Envoy
             </LoginButton>

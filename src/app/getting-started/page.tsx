@@ -4,14 +4,14 @@ export default function GettingStartedPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="w-full bg-white flex justify-center items-center py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="flex flex-col items-center gap-6">
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-normal text-center text-brand-royal-blue-dark leading-tight">
+      <section className="section-hero bg-white flex justify-center items-center">
+        <div className="container-4xl">
+          <div className="flow-md items-center">
+            <h1 className="hero-heading text-center text-brand-royal-blue-dark">
               Getting started
             </h1>
 
-            <p className="text-lg md:text-xl text-center text-gray-500 max-w-3xl">
+            <p className="text-lead text-center text-gray-500 max-w-3xl">
               Set up your account, connect your calendar, and get your Envoy ready to work.
             </p>
           </div>
@@ -19,9 +19,9 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 1 */}
-      <section className="w-full bg-gray-50 py-24">
-        <div className="max-w-6xl mx-auto px-8 md:px-16">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <section className="section-standard bg-gray-50">
+        <div className="container-6xl">
+          <div className="split-layout">
             <div className="w-full lg:w-1/2">
               <div className="w-full rounded-2xl border border-brand-border bg-white p-2 shadow-sm">
                 <Image
@@ -36,11 +36,11 @@ export default function GettingStartedPage() {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark">
+              <div className="flow-sm">
+                <h2 className="section-subheading text-brand-royal-blue-dark">
                   1. Sign in to Ask My Envoy
                 </h2>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
+                <p className="text-body text-gray-600 max-w-xl">
                   Use your Google or Microsoft account, or sign in with email.
                 </p>
               </div>
@@ -50,15 +50,15 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 2 */}
-      <section className="w-full bg-white py-24">
-        <div className="max-w-6xl mx-auto px-8 md:px-16">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <section className="section-standard bg-white">
+        <div className="container-6xl">
+          <div className="split-layout">
             <div className="w-full lg:w-1/2">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark">
+              <div className="flow-sm">
+                <h2 className="section-subheading text-brand-royal-blue-dark">
                   2. Choose how you want to start
                 </h2>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
+                <p className="text-body text-gray-600 max-w-xl">
                   Get your own Envoy, or simply connect your calendar so someone else&apos;s Envoy can coordinate with you.
                 </p>
               </div>
@@ -80,9 +80,9 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 3 */}
-      <section className="w-full bg-gray-50 py-24">
-        <div className="max-w-6xl mx-auto px-8 md:px-16">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <section className="section-standard bg-gray-50">
+        <div className="container-6xl">
+          <div className="split-layout">
             <div className="w-full lg:w-1/2">
               <div className="w-full rounded-2xl border border-brand-border bg-white p-2 shadow-sm">
                 <Image
@@ -96,11 +96,11 @@ export default function GettingStartedPage() {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark">
+              <div className="flow-sm">
+                <h2 className="section-subheading text-brand-royal-blue-dark">
                   3. Connect your calendar
                 </h2>
-                <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl">
+                <p className="text-body text-gray-600 max-w-xl">
                   Choose Google Calendar or Microsoft Outlook and make your availability accessible for scheduling through Ask My Envoy.
                 </p>
               </div>
@@ -110,15 +110,15 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 4 */}
-      <section className="w-full bg-white py-24">
-        <div className="max-w-6xl mx-auto px-8 md:px-16">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+      <section className="section-standard bg-white">
+        <div className="container-6xl">
+          <div className="split-layout">
             <div className="w-full lg:w-1/2">
-              <div className="flex flex-col gap-4">
-                <h2 className="text-3xl md:text-4xl font-normal text-brand-royal-blue-dark">
+              <div className="flow-sm">
+                <h2 className="section-subheading text-brand-royal-blue-dark">
                   4. Control who can coordinate with you
                 </h2>
-                <div className="text-base md:text-lg text-gray-600 leading-relaxed max-w-xl space-y-4">
+                <div className="text-body text-gray-600 max-w-xl stack-sm">
                   <p>
                     Open the menu, then go to <strong>My Space -&gt; Trust Center</strong>.
                   </p>

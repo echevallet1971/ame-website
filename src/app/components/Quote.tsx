@@ -12,11 +12,11 @@ export default function Quote({ quote, author, className = '' }: QuoteProps) {
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-royal-blue via-brand-teal to-brand-mint rounded-full"></div>
         
         {/* Quote content */}
-        <div className="space-y-4">
-          <p className="text-lg md:text-xl italic text-gray-700 leading-relaxed">
+        <div className="stack-sm">
+          <p className="text-lead italic text-gray-700">
             "{quote}"
           </p>
-          <p className="text-base text-gray-500">
+          <p className="text-meta text-gray-500">
             {author}
           </p>
         </div>

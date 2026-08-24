@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 
 export default function Button({ href, children, variant = 'primary', className = '' }: ButtonProps) {
-  const baseStyles = "inline-flex items-center justify-center px-8 py-4 text-lg font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl";
+  const baseStyles = "inline-flex items-center justify-center px-8 py-4 button-text rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl";
   
   const variantStyles = {
     // Gradient button - main CTAs (matching dark section aesthetic)

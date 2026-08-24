@@ -30,12 +30,12 @@ export default function ContactButton({
 
   const sizeStyles =
     size === 'large'
-      ? 'px-8 py-4 text-lg'
+      ? 'px-8 py-4 button-text'
       : size === 'small'
-        ? 'px-0 py-0 text-sm'
-        : 'px-6 py-2 text-base';
+        ? 'px-0 py-0 text-sm font-semibold'
+        : 'px-6 py-2 text-base font-semibold';
 
-  const baseStyles = 'inline-flex items-center justify-center font-normal rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl';
+  const baseStyles = 'inline-flex items-center justify-center rounded-md transition-all duration-300 hover:scale-105 hover:shadow-xl';
 
   const variantStyles = {
     primary: 'text-white bg-gradient-to-br from-blue-900 via-brand-royal-blue to-blue-900 hover:from-blue-800 hover:via-blue-700 hover:to-blue-800',
