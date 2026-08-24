@@ -9,14 +9,14 @@ export default function Quote({ quote, author, className = '' }: QuoteProps) {
     <div className={`max-w-4xl mx-auto ${className}`}>
       <div className="relative pl-6 py-8">
         {/* Left border accent */}
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-brand-royal-blue via-brand-teal to-brand-mint rounded-full"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-action-primary to-action-hover rounded-full"></div>
         
         {/* Quote content */}
-        <div className="space-y-4">
-          <p className="text-lg md:text-xl italic text-gray-700 leading-relaxed">
+        <div className="stack-sm">
+          <p className="text-lead italic text-copy-primary">
             "{quote}"
           </p>
-          <p className="text-base text-gray-500">
+          <p className="text-meta text-copy-muted">
             {author}
           </p>
         </div>

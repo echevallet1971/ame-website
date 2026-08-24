@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-gray-900;
+    @apply bg-surface-base text-copy-primary;
   }
 }
 
@@ -12,17 +12,141 @@
   .container {
     @apply max-w-container mx-auto px-4 sm:px-6 lg:px-8;
   }
+
+  .container-3xl {
+    @apply max-w-3xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-4xl {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-5xl {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-6xl {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-7xl {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
   
   .btn-primary {
-    @apply bg-brand-black hover:bg-gray-800 text-white font-normal py-2 px-6 rounded-md transition-colors;
+    @apply bg-action-primary hover:bg-action-hover text-copy-inverse font-semibold py-2 px-6 rounded-md transition-colors;
   }
   
   .btn-secondary {
-    @apply bg-transparent border border-brand-gray hover:bg-gray-50 text-brand-gray font-normal py-2 px-6 rounded-md transition-colors;
+    @apply bg-transparent border border-line-default hover:bg-surface-soft text-copy-primary font-semibold py-2 px-6 rounded-md transition-colors;
   }
   
   .section {
     @apply py-16 md:py-24;
+  }
+
+  .section-hero {
+    @apply w-full py-16 md:py-24;
+  }
+
+  .section-standard {
+    @apply w-full py-16;
+  }
+
+  .section-loose {
+    @apply w-full py-20;
+  }
+
+  .flow-sm {
+    @apply flex flex-col gap-4;
+  }
+
+  .flow-2xs {
+    @apply flex flex-col gap-1;
+  }
+
+  .flow-xs {
+    @apply flex flex-col gap-2;
+  }
+
+  .flow-md {
+    @apply flex flex-col gap-6;
+  }
+
+  .flow-lg {
+    @apply flex flex-col gap-8;
+  }
+
+  .flow-xl {
+    @apply flex flex-col gap-10;
+  }
+
+  .stack-xs {
+    @apply space-y-2;
+  }
+
+  .stack-tight {
+    @apply space-y-3;
+  }
+
+  .stack-sm {
+    @apply space-y-4;
+  }
+
+  .stack-md {
+    @apply space-y-6;
+  }
+
+  .stack-lg {
+    @apply space-y-8;
+  }
+
+  .stack-xl {
+    @apply space-y-12;
+  }
+
+  .cta-row {
+    @apply flex flex-col sm:flex-row items-center gap-4;
+  }
+
+  .split-layout {
+    @apply flex flex-col lg:flex-row items-center gap-12 lg:gap-16;
+  }
+
+  .split-layout-wide {
+    @apply flex flex-col xl:flex-row items-start gap-8 xl:gap-10;
+  }
+
+  .cluster-center {
+    @apply flex flex-wrap items-center justify-center gap-4 md:gap-6;
+  }
+
+  .row-inline-sm {
+    @apply flex items-center gap-2;
+  }
+
+  .row-inline-xs {
+    @apply flex items-baseline gap-2;
+  }
+
+  .row-start {
+    @apply flex items-start gap-4;
+  }
+
+  .row-start-tight {
+    @apply flex items-start gap-3;
+  }
+
+  .grid-two {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+
+  .grid-footer {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16;
+  }
+
+  .split-timeline {
+    @apply flex flex-col md:flex-row items-start gap-8;
   }
   
   .heading-1 {
@@ -35,5 +159,42 @@
   
   .heading-3 {
     @apply text-2xl md:text-3xl font-bold mb-3;
+  }
+
+  /* Shared landing typography */
+  .hero-heading {
+    @apply text-4xl md:text-5xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight;
+  }
+
+  .section-subheading {
+    @apply text-2xl md:text-3xl font-bold leading-tight;
+  }
+
+  .item-heading {
+    @apply text-xl md:text-2xl font-semibold leading-tight;
+  }
+
+  .text-lead {
+    @apply text-xl md:text-2xl leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  .text-meta {
+    @apply text-sm leading-relaxed;
+  }
+
+  .nav-text {
+    @apply text-base font-medium leading-tight;
+  }
+
+  .button-text {
+    @apply text-base md:text-lg font-semibold leading-tight;
   }
 }
