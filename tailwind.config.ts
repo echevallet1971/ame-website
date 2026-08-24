@@ -9,27 +9,35 @@ const config = {
   theme: {
     extend: {
       colors: {
-        // Ask My Envoy Brand Colors - Easy to update!
-        brand: {
-          'royal-blue': '#0A32B4',      // RGB(10, 50, 180)
-          'royal-blue-dark': '#051954',  // Darker for backgrounds/text
-          'royal-blue-deeper': '#02102D', // Even darker
-          'teal': '#1496B4',             // RGB(20, 150, 180)
-          'mint': '#28B496',             // RGB(40, 180, 150)
-          'green': '#1EAA32',            // RGB(30, 170, 50)
-          'gold': '#C8A00A',             // RGB(200, 160, 10)
-          'purple': '#8C1EB4',           // RGB(140, 30, 180)
-          // Base colors from Figma
-          'black': '#000000',
-          'white': '#FFFFFF',
-          'gray': '#404040',
-          'border': '#E5E5E5',
+        action: {
+          primary: '#4B3FBF',
+          hover: '#3C3198',
         },
-        // Semantic colors - point to brand colors for easy updating
-        primary: '#0A32B4',              // Royal Blue
-        secondary: '#1496B4',            // Teal
-        accent: '#28B496',               // Mint
-        success: '#1EAA32',              // Green
+        ink: {
+          primary: '#292363',
+        },
+        copy: {
+          primary: '#50576A',
+          muted: '#50576A',
+          inverse: '#FFFFFF',
+        },
+        surface: {
+          base: '#FFFFFF',
+          soft: '#F7F6FC',
+        },
+        line: {
+          default: '#E4E2EF',
+        },
+        emphasis: {
+          primary: '#C8A00A',
+        },
+        gray: {
+          50: '#F7F6FC',
+          200: '#E4E2EF',
+          300: '#E4E2EF',
+          500: '#50576A',
+          600: '#50576A',
+        },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

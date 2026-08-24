@@ -5,8 +5,15 @@ components:
     askmyenvoy-website: v0.2.1
 notes: |
   Release Notes 0.2.1
-   - Updated homepage
-   - Fixed minor issues
+   - Improved mobile navigation UX by auto-closing the hamburger menu after link selection
+   - Reworked homepage hero copy and removed the temporary hero image
+   - Moved Trust content from homepage to a dedicated page and added a new menu entry: Trust & Control
+   - Added a new homepage section to frame scheduling costs by Time, Attention, and Momentum with icons
+   - Standardized typography system across pages/components using shared global tokens
+   - Standardized spacing and layout rhythm across pages/components using shared global spacing tokens
+   - Refactored color system to semantic design tokens (action, ink, copy, surface, line, emphasis)
+   - Applied updated brand palette through tokenized theming from a single Tailwind configuration source
+   - Increased header and footer logo sizes for stronger brand visibility
 
   Release Notes 0.2.0
    - Rewrite the content to show a real maturity in the platform

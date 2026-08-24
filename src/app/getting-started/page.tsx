@@ -4,14 +4,14 @@ export default function GettingStartedPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-hero bg-white flex justify-center items-center">
+      <section className="section-hero bg-surface-base flex justify-center items-center">
         <div className="container-4xl">
           <div className="flow-md items-center">
-            <h1 className="hero-heading text-center text-brand-royal-blue-dark">
+            <h1 className="hero-heading text-center text-ink-primary">
               Getting started
             </h1>
 
-            <p className="text-lead text-center text-gray-500 max-w-3xl">
+            <p className="text-lead text-center text-copy-muted max-w-3xl">
               Set up your account, connect your calendar, and get your Envoy ready to work.
             </p>
           </div>
@@ -19,11 +19,11 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 1 */}
-      <section className="section-standard bg-gray-50">
+      <section className="section-standard bg-surface-soft">
         <div className="container-6xl">
           <div className="split-layout">
             <div className="w-full lg:w-1/2">
-              <div className="w-full rounded-2xl border border-brand-border bg-white p-2 shadow-sm">
+              <div className="w-full rounded-2xl border border-line-default bg-surface-base p-2 shadow-sm">
                 <Image
                   src="/assets/images/getting-started/getting-started_1.png"
                   alt="Sign in screen for Ask My Envoy"
@@ -37,10 +37,10 @@ export default function GettingStartedPage() {
 
             <div className="w-full lg:w-1/2">
               <div className="flow-sm">
-                <h2 className="section-subheading text-brand-royal-blue-dark">
+                <h2 className="section-subheading text-ink-primary">
                   1. Sign in to Ask My Envoy
                 </h2>
-                <p className="text-body text-gray-600 max-w-xl">
+                <p className="text-body text-copy-primary max-w-xl">
                   Use your Google or Microsoft account, or sign in with email.
                 </p>
               </div>
@@ -50,22 +50,22 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 2 */}
-      <section className="section-standard bg-white">
+      <section className="section-standard bg-surface-base">
         <div className="container-6xl">
           <div className="split-layout">
             <div className="w-full lg:w-1/2">
               <div className="flow-sm">
-                <h2 className="section-subheading text-brand-royal-blue-dark">
+                <h2 className="section-subheading text-ink-primary">
                   2. Choose how you want to start
                 </h2>
-                <p className="text-body text-gray-600 max-w-xl">
+                <p className="text-body text-copy-primary max-w-xl">
                   Get your own Envoy, or simply connect your calendar so someone else&apos;s Envoy can coordinate with you.
                 </p>
               </div>
             </div>
 
             <div className="w-full lg:w-1/2">
-              <div className="w-full rounded-2xl border border-brand-border bg-white p-2 shadow-sm">
+              <div className="w-full rounded-2xl border border-line-default bg-surface-base p-2 shadow-sm">
                 <Image
                   src="/assets/images/getting-started/getting-started_2.png"
                   alt="Choose how to start in Ask My Envoy"
@@ -80,11 +80,11 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 3 */}
-      <section className="section-standard bg-gray-50">
+      <section className="section-standard bg-surface-soft">
         <div className="container-6xl">
           <div className="split-layout">
             <div className="w-full lg:w-1/2">
-              <div className="w-full rounded-2xl border border-brand-border bg-white p-2 shadow-sm">
+              <div className="w-full rounded-2xl border border-line-default bg-surface-base p-2 shadow-sm">
                 <Image
                   src="/assets/images/getting-started/getting-started_3.png"
                   alt="Connect your calendar in Ask My Envoy"
@@ -97,10 +97,10 @@ export default function GettingStartedPage() {
 
             <div className="w-full lg:w-1/2">
               <div className="flow-sm">
-                <h2 className="section-subheading text-brand-royal-blue-dark">
+                <h2 className="section-subheading text-ink-primary">
                   3. Connect your calendar
                 </h2>
-                <p className="text-body text-gray-600 max-w-xl">
+                <p className="text-body text-copy-primary max-w-xl">
                   Choose Google Calendar or Microsoft Outlook and make your availability accessible for scheduling through Ask My Envoy.
                 </p>
               </div>
@@ -110,15 +110,15 @@ export default function GettingStartedPage() {
       </section>
 
       {/* Step 4 */}
-      <section className="section-standard bg-white">
+      <section className="section-standard bg-surface-base">
         <div className="container-6xl">
           <div className="split-layout">
             <div className="w-full lg:w-1/2">
               <div className="flow-sm">
-                <h2 className="section-subheading text-brand-royal-blue-dark">
+                <h2 className="section-subheading text-ink-primary">
                   4. Control who can coordinate with you
                 </h2>
-                <div className="text-body text-gray-600 max-w-xl stack-sm">
+                <div className="text-body text-copy-primary max-w-xl stack-sm">
                   <p>
                     Open the menu, then go to <strong>My Space -&gt; Trust Center</strong>.
                   </p>
@@ -130,7 +130,7 @@ export default function GettingStartedPage() {
             </div>
 
             <div className="w-full lg:w-1/2">
-              <div className="w-full rounded-2xl border border-brand-border bg-white p-2 shadow-sm">
+              <div className="w-full rounded-2xl border border-line-default bg-surface-base p-2 shadow-sm">
                 <Image
                   src="/assets/images/getting-started/getting-started_4.webp"
                   alt="Access request controls in Ask My Envoy"

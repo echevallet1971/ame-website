@@ -8,14 +8,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-hero bg-white flex justify-center items-center">
+      <section className="section-hero bg-surface-base flex justify-center items-center">
         <div className="container-4xl">
           <div className="flow-md items-center">
-            <h1 className="hero-heading text-center text-brand-royal-blue-dark max-w-3xl">
+            <h1 className="hero-heading text-center text-ink-primary max-w-3xl">
               It&apos;s 2026. We shouldn&apos;t still be asking people when they&apos;re available.
             </h1>
 
-            <div className="text-lead text-center text-gray-500 max-w-3xl stack-sm">
+            <div className="text-lead text-center text-copy-muted max-w-3xl stack-sm">
               <p>
                 Everyone&apos;s availability is already in their calendar. Yet someone still has to collect it, compare it, negotiate a time, and keep the meeting moving when things change.
               </p>
@@ -31,7 +31,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <div className="cluster-center pt-2 text-gray-500">
+            <div className="cluster-center pt-2 text-copy-muted">
               <span className="text-base">Works with:</span>
               <div className="row-inline-sm">
                 <svg className="w-5 h-5" viewBox="0 0 48 48">
@@ -40,7 +40,7 @@ export default function Home() {
                   <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
                   <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
                 </svg>
-                <span className="text-base text-gray-600">Google Calendar</span>
+                <span className="text-base text-copy-primary">Google Calendar</span>
               </div>
               <div className="row-inline-sm">
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
@@ -49,7 +49,7 @@ export default function Home() {
                   <rect x="1" y="13" width="10" height="10" fill="#00A4EF"/>
                   <rect x="13" y="13" width="10" height="10" fill="#FFB900"/>
                 </svg>
-                <span className="text-base text-gray-600">Microsoft Outlook</span>
+                <span className="text-base text-copy-primary">Microsoft Outlook</span>
               </div>
             </div>
 
@@ -58,43 +58,43 @@ export default function Home() {
       </section>
 
       {/* Friction Cost Section */}
-      <section className="section-standard bg-gray-50">
+      <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <div className="flow-xl items-center">
-            <h2 className="section-heading text-brand-royal-blue-dark">
+            <h2 className="section-heading text-ink-primary">
               We got used to the friction. That doesn&apos;t make it free.
             </h2>
 
-            <p className="text-lead text-center text-gray-600 max-w-3xl">
+            <p className="text-lead text-center text-copy-primary max-w-3xl">
               Scheduling rarely feels like a major problem because the cost is spread across dozens of small interruptions.
             </p>
 
-            <div className="w-full max-w-3xl divide-y divide-gray-200 border-y border-gray-200">
+            <div className="w-full max-w-3xl divide-y divide-line-default border-y border-line-default">
               <div className="row-start py-6">
-                <ClockIcon className="h-7 w-7 text-brand-royal-blue shrink-0 mt-1" aria-hidden="true" />
+                <ClockIcon className="h-7 w-7 text-action-primary shrink-0 mt-1" aria-hidden="true" />
                 <div>
-                  <p className="item-heading text-brand-royal-blue-dark">Time</p>
-                  <p className="text-lead text-gray-600">
+                  <p className="item-heading text-ink-primary">Time</p>
+                  <p className="text-lead text-copy-primary">
                     Calendar checks, availability messages, and reschedules quietly consume hours every week.
                   </p>
                 </div>
               </div>
 
               <div className="row-start py-6">
-                <EyeIcon className="h-7 w-7 text-brand-royal-blue shrink-0 mt-1" aria-hidden="true" />
+                <EyeIcon className="h-7 w-7 text-action-primary shrink-0 mt-1" aria-hidden="true" />
                 <div>
-                  <p className="item-heading text-brand-royal-blue-dark">Attention</p>
-                  <p className="text-lead text-gray-600">
+                  <p className="item-heading text-ink-primary">Attention</p>
+                  <p className="text-lead text-copy-primary">
                     Each interruption breaks focus and pulls people away from the decisions that matter.
                   </p>
                 </div>
               </div>
 
               <div className="row-start py-6">
-                <ArrowTrendingUpIcon className="h-7 w-7 text-brand-royal-blue shrink-0 mt-1" aria-hidden="true" />
+                <ArrowTrendingUpIcon className="h-7 w-7 text-action-primary shrink-0 mt-1" aria-hidden="true" />
                 <div>
-                  <p className="item-heading text-brand-royal-blue-dark">Momentum</p>
-                  <p className="text-lead text-gray-600">
+                  <p className="item-heading text-ink-primary">Momentum</p>
+                  <p className="text-lead text-copy-primary">
                     Delays cool leads, slow decisions, and leave projects waiting for everyone to align.
                   </p>
                 </div>
@@ -105,13 +105,13 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="section-standard bg-gradient-to-br from-gray-900 via-blue-950 to-gray-900">
+      <section className="section-standard bg-gradient-to-br from-ink-primary via-action-hover to-ink-primary">
         <div className="container-4xl">
           <div className="flow-lg items-center text-center">
             <h2 className="section-heading text-white max-w-3xl">
               Stop spending time scheduling meetings.
             </h2>
-            <p className="text-lead text-gray-300 max-w-2xl">
+            <p className="text-lead text-copy-inverse/80 max-w-2xl">
               Get your Envoy and let it handle the coordination.
             </p>
 
