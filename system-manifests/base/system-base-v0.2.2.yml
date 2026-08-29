@@ -7,6 +7,8 @@ notes: |
   Release Notes 0.2.2
    - Added a dedicated hero section on the Trust & Control page with updated trust-and-permissions messaging
    - Added a global footer version label sourced from the system manifest (displayed as "version v0.2.2")
+   - Stabilized lint tooling by migrating from deprecated `next lint` to ESLint CLI with shared Next.js core-web-vitals rules
+   - Reduced build-time toolchain warnings by pinning the Next.js tracing root and refreshing Browserslist metadata
 
   Release Notes 0.2.1
    - Improved mobile navigation UX by auto-closing the hamburger menu after link selection
