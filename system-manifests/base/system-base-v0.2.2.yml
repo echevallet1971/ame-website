@@ -1,0 +1,73 @@
+system_version: v0.2.2
+date: 2026-08-29
+components:
+  frontend:
+    askmyenvoy-website: v0.2.2
+notes: |
+  Release Notes 0.2.2
+   - Added a dedicated hero section on the Trust & Control page with updated trust-and-permissions messaging
+   - Added a global footer version label sourced from the system manifest (displayed as "version v0.2.2")
+   - Stabilized lint tooling by migrating from deprecated `next lint` to ESLint CLI with shared Next.js core-web-vitals rules
+   - Reduced build-time toolchain warnings by pinning the Next.js tracing root and refreshing Browserslist metadata
+
+  Release Notes 0.2.1
+   - Improved mobile navigation UX by auto-closing the hamburger menu after link selection
+   - Reworked homepage hero copy and removed the temporary hero image
+   - Moved Trust content from homepage to a dedicated page and added a new menu entry: Trust & Control
+   - Added a new homepage section to frame scheduling costs by Time, Attention, and Momentum with icons
+   - Standardized typography system across pages/components using shared global tokens
+   - Standardized spacing and layout rhythm across pages/components using shared global spacing tokens
+   - Refactored color system to semantic design tokens (action, ink, copy, surface, line, emphasis)
+   - Applied updated brand palette through tokenized theming from a single Tailwind configuration source
+   - Increased header and footer logo sizes for stronger brand visibility
+
+  Release Notes 0.2.0
+   - Rewrite the content to show a real maturity in the platform
+   - Redesigned homepage
+   - Redesigned and simplified how it works page
+   - Redesigned and simplified pricing page
+   - Redesigned and simplified about page
+   - Updated terms of service and privacy policy
+   - Removed product page
+
+  Release Notes 0.1.11
+   - Updated CTA and offerings to reflect launch strategy
+
+  Release Notes 0.1.10
+   - Patched typo
+
+  Release Notes 0.1.9
+   - Fixed healthcheck issue
+
+  Release Notes 0.1.8
+   - Added healthcheck to the website
+
+  Release Notes 0.1.7
+   - Updated content and CTA with waiting list
+
+  Release Notes 0.1.6
+   - Removed "consultants" from the website
+
+  Release Notes 0.1.5
+   - Reworked content and CTA
+   - Added product page
+
+  Release Notes 0.1.4
+   - Added Sign in button to reach the platform
+   - Reworked content and CTA
+
+  Release Notes 0.1.3
+   - Added Microsoft Identity integration
+
+  Release Notes 0.1.2
+   - Added About section to the website
+   - Flattened folder structure
+
+  Release Notes 0.1.1
+   - Fixed port mapping issue
+
+  Release Notes 0.1.0
+   - Initial release of Ask My Envoy website
+   - Removed multilingual support (EN-only)
+   - Updated branding to Ask My Envoy
+   - Simplified architecture
