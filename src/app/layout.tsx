@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Metadata } from 'next';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { getWebsiteVersionLabel } from '@/lib/system-version';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -43,11 +44,13 @@ export const viewport = {
   userScalable: true,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const versionLabel = await getWebsiteVersionLabel();
+
   return (
     <html className="scroll-smooth" lang="en">
       <body className={inter.className}>
@@ -55,7 +58,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <Footer />
+        <Footer versionLabel={versionLabel} />
       </body>
     </html>
   );

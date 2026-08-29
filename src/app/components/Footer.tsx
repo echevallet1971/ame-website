@@ -4,7 +4,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPlatformUrl } from '@/lib/platform-config';
 
-export default function Footer() {
+type FooterProps = {
+  versionLabel: string;
+};
+
+export default function Footer({ versionLabel }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   const handleContactClick = async (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -65,9 +69,12 @@ export default function Footer() {
 
           {/* Bottom Bar */}
           <div className="mt-12 pt-8 border-t border-line-default">
-            <p className="text-meta text-copy-primary text-center">
-              © {currentYear} Ask My Envoy. All rights reserved.
-            </p>
+            <div className="stack-xs items-center">
+              <p className="text-meta text-copy-primary text-center">
+                © {currentYear} Ask My Envoy. All rights reserved.
+              </p>
+              <p className="text-meta text-copy-muted text-center">{versionLabel}</p>
+            </div>
           </div>
         </div>
       </div>
