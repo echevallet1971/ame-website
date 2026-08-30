@@ -1,5 +1,10 @@
-import Link from 'next/link';
+import type { Metadata } from 'next';
 import Button from '../components/Button';
+
+export const metadata: Metadata = {
+  title: 'Coming soon',
+  robots: 'noindex, follow',
+};
 
 export default function ComingSoonPage() {
   return (

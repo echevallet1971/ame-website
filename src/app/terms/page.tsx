@@ -1,3 +1,15 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Terms of service',
+  description:
+    'Read the Ask My Envoy terms of service governing use of the platform, accounts, subscriptions, and related services.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/terms',
+  },
+  robots: 'index, follow',
+};
+
 export default function TermsPage() {
   return (
     <div className="min-h-screen bg-surface-base">

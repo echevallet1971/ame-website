@@ -1,6 +1,15 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Card from '../components/Card';
+
+export const metadata: Metadata = {
+  title: 'Private meeting coordination with built-in access control',
+  description:
+    'See how Ask My Envoy limits calendar access, controls what others can discover, and coordinates meetings without exposing more information than necessary.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/trust-and-control',
+  },
+  robots: 'index, follow',
+};
 
 export default function TrustAndControlPage() {
   return (

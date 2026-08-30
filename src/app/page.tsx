@@ -1,8 +1,17 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { ArrowTrendingUpIcon, ClockIcon, EyeIcon } from '@heroicons/react/24/outline';
 import Button from './components/Button';
 import LoginButton from './components/LoginButton';
+
+export const metadata: Metadata = {
+  title: 'AI meeting coordination without the back-and-forth | Ask My Envoy',
+  description:
+    'Ask My Envoy coordinates meetings across calendars and organizations, handling availability, participants and the back-and-forth so you don’t have to.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/',
+  },
+  robots: 'index, follow',
+};
 
 export default function Home() {
   return (

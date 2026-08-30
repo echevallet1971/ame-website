@@ -1,8 +1,17 @@
-'use client';
-
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Button from '../components/Button';
 import LoginButton from '../components/LoginButton';
+
+export const metadata: Metadata = {
+  title: 'Why Ask My Envoy exists',
+  description:
+    'Learn why Ask My Envoy was built to remove the manual coordination behind meetings and rethink how people schedule across calendars and organizations.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/about',
+  },
+  robots: 'index, follow',
+};
 
 export default function AboutPage() {
   return (

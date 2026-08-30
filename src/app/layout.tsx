@@ -8,6 +8,7 @@ import { getWebsiteVersionLabel } from '@/lib/system-version';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://askmyenvoy.com'),
   title: {
     default: 'Ask My Envoy | AI Scheduling Assistant',
     template: '%s | Ask My Envoy'
@@ -20,22 +21,23 @@ export const metadata: Metadata = {
     canonical: 'https://askmyenvoy.com',
   },
   openGraph: {
-    title: 'Ask My Envoy | AI Scheduling Assistant',
-    description: 'Intelligent meeting scheduling assistant powered by AI. Let your AI envoy handle your calendar.',
-    url: 'https://askmyenvoy.com',
+    type: 'website',
     siteName: 'Ask My Envoy',
     images: [
       {
-        url: 'https://askmyenvoy.com/og-image.jpg',
+        url: '/OG Card.png',
         width: 1200,
         height: 630,
-        alt: 'Ask My Envoy - AI Scheduling Assistant'
+        alt: 'Ask My Envoy - AI meeting coordination'
       }
     ],
     locale: 'en_US',
-    type: 'website',
-  }
-}
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/OG Card.png'],
+  },
+};
 
 export const viewport = {
   width: 'device-width',
