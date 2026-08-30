@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Ask My Envoy',
     images: [
       {
-        url: '/OG Card.png',
+        url: '/og-card.png',
         width: 1200,
         height: 630,
         alt: 'Ask My Envoy - AI meeting coordination'
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['/OG Card.png'],
+    images: ['/og-card.png'],
   },
 };
 

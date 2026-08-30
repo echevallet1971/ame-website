@@ -3,6 +3,9 @@ import Button from '../components/Button';
 
 export const metadata: Metadata = {
   title: 'Coming soon',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/coming-soon',
+  },
   robots: 'noindex, follow',
 };
 
