@@ -1,4 +1,15 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: 'Get started with Ask My Envoy',
+  description:
+    'Learn how to set up Ask My Envoy, connect your calendar, configure your preferences, and start coordinating meetings with less back-and-forth.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/getting-started',
+  },
+  robots: 'index, follow',
+};
 
 export default function GettingStartedPage() {
   return (

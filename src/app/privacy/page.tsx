@@ -1,3 +1,15 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy policy',
+  description:
+    'Read the Ask My Envoy privacy policy and learn how personal data, calendar information, and account information are handled.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/privacy',
+  },
+  robots: 'index, follow',
+};
+
 export default function PrivacyPage() {
   return (
     <div className="min-h-screen bg-surface-base">

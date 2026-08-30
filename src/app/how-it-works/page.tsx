@@ -1,5 +1,16 @@
+import type { Metadata } from 'next';
 import Image from 'next/image';
 import Button from '../components/Button';
+
+export const metadata: Metadata = {
+  title: 'How AI meeting coordination works',
+  description:
+    'See how Ask My Envoy coordinates meetings across calendars and organizations, from understanding the request to finding a time and keeping everyone aligned.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/how-it-works',
+  },
+  robots: 'index, follow',
+};
 
 export default function HowItWorksPage() {
   return (

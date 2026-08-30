@@ -1,9 +1,18 @@
-'use client';
-
+import type { Metadata } from 'next';
 import { CheckIcon } from '@heroicons/react/24/solid';
 import Card from '../components/Card';
 import LoginButton from '../components/LoginButton';
 import ContactButton from '../components/ContactButton';
+
+export const metadata: Metadata = {
+  title: 'Pricing for AI meeting coordination',
+  description:
+    'Explore Ask My Envoy pricing for meeting coordination across calendars and organizations, with plans designed to reduce scheduling back-and-forth.',
+  alternates: {
+    canonical: 'https://askmyenvoy.com/pricing',
+  },
+  robots: 'index, follow',
+};
 
 export default function PricingPage() {
   return (
