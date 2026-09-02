@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowTrendingUpIcon, ClockIcon, EyeIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 import Button from './components/Button';
 import LoginButton from './components/LoginButton';
 
@@ -28,7 +29,13 @@ export default function Home() {
               <p>
                 Everyone&apos;s availability is already in their calendar. Yet someone still has to collect it, compare it, negotiate a time, and keep the meeting moving when things change.
               </p>
-              <p>Ask My Envoy does that coordination for you.</p>
+              <p>
+                Ask My Envoy{' '}
+                <Link href="/meeting-coordination" className="text-action-primary hover:underline">
+                  does that coordination for you
+                </Link>
+                .
+              </p>
             </div>
 
             <div className="cta-row pt-4">
