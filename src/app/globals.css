@@ -45,6 +45,19 @@
     @apply py-16 md:py-24;
   }
 
+  .section-hero-main {
+    @apply w-full py-16 md:py-24;
+  }
+
+  .section-hero-compact {
+    @apply w-full py-16;
+  }
+
+  .section-hero-content {
+    @apply w-full bg-surface-base border-b border-line-default;
+  }
+
+  /* Legacy alias, keep until all pages are migrated. */
   .section-hero {
     @apply w-full py-16 md:py-24;
   }

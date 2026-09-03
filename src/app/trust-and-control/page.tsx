@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function TrustAndControlPage() {
   return (
     <div className="min-h-screen">
-      <section className="section-hero bg-surface-base">
+      <section className="section-hero-compact bg-surface-base">
         <div className="container-4xl">
           <div className="flow-md items-center">
             <h1 className="hero-heading text-center text-ink-primary max-w-4xl">

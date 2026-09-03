@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function MeetingCoordinationPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
-      <section className="bg-surface-base border-b border-line-default">
+      <section className="section-hero-content">
         <div className="container-4xl">
           <div className="py-4">
             <BackLink

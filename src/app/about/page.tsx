@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-hero bg-surface-base flex justify-center items-center">
+      <section className="section-hero-compact bg-surface-base flex justify-center items-center">
         <div className="container-4xl">
           <div className="flow-md items-center">
             {/* Main Headline */}
@@ -100,8 +100,8 @@ export default function AboutPage() {
             <LoginButton size="large" className="px-10">
               Get your Envoy
             </LoginButton>
-            <Button href="/how-it-works" variant="secondary" className="px-10">
-              See how it works
+            <Button href="/milestones" variant="secondary" className="px-10">
+              Explore our milestones
             </Button>
           </div>
         </div>
