@@ -13,8 +13,11 @@ notes: |
    - Added a new non-navigation explanation page at `/meeting-coordination` with long-form content structure and route-level SEO metadata
    - Linked homepage hero copy ("does that coordination for you") directly to `/meeting-coordination` for contextual discovery
    - Added a contextual return link (`← Back to Ask My Envoy`) at the top of the explanation page
-   - Introduced a route-specific minimal header experience for `/meeting-coordination` (logo only, no nav/sign-in actions) while keeping the standard footer
-   - Replaced placeholder content with finalized multi-section editorial copy focused on coordination across organizations and asynchronous scheduling
+   - Introduced a route-specific minimal header experience for explanation pages (`/meeting-coordination`, `/cost-of-meeting-coordination`) with logo-only header and standard footer
+   - Added a second non-navigation explanation page at `/cost-of-meeting-coordination` with matching long-form template and route metadata
+   - Linked homepage copy ("rarely feels like a major problem") directly to `/cost-of-meeting-coordination` for contextual discovery
+   - Replaced placeholder content with multi-section editorial copy on both explanation pages; `/cost-of-meeting-coordination` remains in-progress for continued refinement
+   - Tuned website header/footer shadows to match platform visual depth more closely while preserving existing border separation
 
   Release Notes 0.2.4
    - Fixed og-card naming

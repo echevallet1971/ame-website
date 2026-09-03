@@ -10,22 +10,25 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const closeMobileMenu = () => setMobileMenuOpen(false);
   const pathname = usePathname();
-  const isExplanationPage = pathname === '/meeting-coordination';
+  const isExplanationPage =
+    pathname === '/meeting-coordination' || pathname === '/cost-of-meeting-coordination';
 
   if (isExplanationPage) {
     return (
-      <header className="w-full bg-surface-base border-b border-line-default sticky top-0 z-50">
+      <header className="w-full bg-surface-base border-b border-line-default shadow-[0_3px_10px_rgba(15,23,42,0.08)] sticky top-0 z-50">
         <div className="container">
           <div className="flex items-center h-16">
             <div className="flex-shrink-0">
-              <Image
-                src="/logo/ask-my-envoy-logo.png"
-                alt="Ask My Envoy"
-                width={375}
-                height={170}
-                className="h-14 w-auto"
-                priority
-              />
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/logo/ask-my-envoy-logo.png"
+                  alt="Ask My Envoy"
+                  width={375}
+                  height={170}
+                  className="h-8 w-auto"
+                  priority
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -34,7 +37,7 @@ export default function Header() {
   }
 
   return (
-    <header className="w-full bg-surface-base border-b border-line-default sticky top-0 z-50">
+    <header className="w-full bg-surface-base border-b border-line-default shadow-[0_3px_10px_rgba(15,23,42,0.08)] sticky top-0 z-50">
       <div className="container">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -45,7 +48,7 @@ export default function Header() {
                 alt="Ask My Envoy"
                 width={375}
                 height={170}
-                className="h-14 w-auto"
+                className="h-8 w-auto"
                 priority
               />
             </Link>

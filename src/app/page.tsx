@@ -77,12 +77,16 @@ export default function Home() {
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <div className="flow-xl items-center">
-            <h2 className="section-heading text-ink-primary">
+            <h2 className="section-heading text-ink-primary text-center">
               We got used to the friction. That doesn&apos;t make it free.
             </h2>
 
             <p className="text-lead text-center text-copy-primary max-w-3xl">
-              Scheduling rarely feels like a major problem because the cost is spread across dozens of small interruptions.
+              Scheduling{' '}
+              <Link href="/cost-of-meeting-coordination" className="text-action-primary hover:underline">
+                rarely feels like a major problem
+              </Link>{' '}
+              because the cost is spread across dozens of small interruptions.
             </p>
 
             <div className="w-full max-w-3xl divide-y divide-line-default border-y border-line-default">

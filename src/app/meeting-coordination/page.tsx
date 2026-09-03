@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import BackLink from '../components/BackLink';
 
 export const metadata: Metadata = {
-  title: 'Meeting coordination explained | Ask My Envoy',
+  title: 'What Is Meeting Coordination?',
   description:
-    'A plain-language explanation of meeting coordination and how Ask My Envoy handles the process from availability checks to confirmed invites.',
+    "Meeting coordination is the work required to turn everyone's availability and constraints into a time that works, especially across organizations. See how Ask My Envoy handles it.",
   alternates: {
     canonical: 'https://askmyenvoy.com/meeting-coordination',
   },
@@ -17,9 +17,10 @@ export default function MeetingCoordinationPage() {
       <section className="bg-surface-base border-b border-line-default">
         <div className="container-4xl">
           <div className="py-4">
-            <Link href="/" className="text-sm text-copy-muted hover:text-ink-primary hover:underline">
-              ← Back to Ask My Envoy
-            </Link>
+            <BackLink
+              label="Back to previous page"
+              className="text-sm text-copy-muted hover:text-ink-primary hover:underline"
+            />
           </div>
         </div>
       </section>
@@ -27,6 +28,16 @@ export default function MeetingCoordinationPage() {
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <article className="max-w-3xl mx-auto stack-md text-body text-copy-primary">
+            <h2 className="section-subheading text-ink-primary">TL;DR</h2>
+            <p className="text-copy-muted">
+              Meeting coordination is the work required to turn several people&apos;s
+              availability and constraints into a time that works, especially when they are outside
+              the same organization. Booking links such as Calendly automate self-booking, but
+              they do not solve that coordination problem. Ask My Envoy lets you delegate it in
+              natural language, using the calendars of participants who have granted permission, so
+              you can decide who you want to meet and when without working through the mechanics of
+              making it happen.
+            </p>
             <h1 className="section-subheading text-ink-primary">What meeting coordination actually means</h1>
             <p>
               Deciding who you want to meet, and when you would like that meeting to happen, is

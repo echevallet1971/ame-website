@@ -10,6 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/pricing',
     '/getting-started',
     '/about',
+    '/meeting-coordination',
+    '/cost-of-meeting-coordination',
     '/privacy',
     '/terms',
   ];
