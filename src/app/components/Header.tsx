@@ -86,6 +86,12 @@ export default function Header() {
             >
               About
             </Link>
+            <Link 
+              href="/milestones" 
+              className="nav-text text-copy-primary hover:text-ink-primary transition-colors"
+            >
+              Milestones
+            </Link>
           </nav>
 
           {/* CTA Button */}
@@ -152,6 +158,13 @@ export default function Header() {
                 onClick={closeMobileMenu}
               >
                 About
+              </Link>
+              <Link 
+                href="/milestones" 
+                className="block nav-text text-copy-primary hover:text-ink-primary"
+                onClick={closeMobileMenu}
+              >
+                Milestones
               </Link>
               <div className="pt-3 border-t border-line-default">
                 <LoginButton 

@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-hero bg-surface-base flex justify-center items-center">
+      <section className="section-hero-main bg-surface-base flex justify-center items-center">
         <div className="container-4xl">
           <div className="flow-md items-center">
             <h1 className="hero-heading text-center text-ink-primary max-w-3xl">

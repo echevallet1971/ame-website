@@ -18,7 +18,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-standard bg-surface-base">
+      <section className="section-hero-compact bg-surface-base">
         <div className="container-4xl">
           <div className="flow-md items-center">
             <h1 className="hero-heading text-center text-ink-primary">
