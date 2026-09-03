@@ -23,58 +23,43 @@ export default function Footer({ versionLabel }: FooterProps) {
   };
 
   return (
-    <footer className="w-full bg-surface-base border-t border-line-default">
+    <footer className="w-full bg-surface-base border-t border-line-default shadow-[0_-1px_6px_rgba(15,23,42,0.05)]">
       <div className="container">
-        <div className="py-12">
-          <div className="grid-footer">
-            {/* Company Info */}
-            <div className="col-span-1 max-w-sm">
-              <div className="mb-4">
-                <Image
-                  src="/logo/ask-my-envoy-logo.png"
-                  alt="Ask My Envoy"
-                  width={375}
-                  height={170}
-                  className="h-12 w-auto"
-                />
-              </div>
+        <div className="py-5 md:py-6">
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+            <div className="stack-xs text-center md:text-left">
+              <Image
+                src="/logo/ask-my-envoy-logo.png"
+                alt="Ask My Envoy"
+                width={375}
+                height={170}
+                className="h-8 w-auto mx-auto md:mx-0"
+              />
+              <p className="text-meta text-action-primary">AI meeting coordination without the back-and-forth.</p>
             </div>
 
-            {/* Legal */}
-            <div className="md:justify-self-end">
-              <h4 className="text-meta font-semibold text-ink-primary mb-4">Legal</h4>
-              <ul className="stack-xs">
-                <li>
-                  <a 
-                    href="#" 
-                    onClick={handleContactClick}
-                    className="text-meta text-copy-primary hover:text-ink-primary transition-colors cursor-pointer"
-                  >
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <Link href="/privacy" className="text-meta text-copy-primary hover:text-ink-primary transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/terms" className="text-meta text-copy-primary hover:text-ink-primary transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
+            <div className="flex flex-col gap-1 items-center md:items-end text-center md:text-right">
+              <a
+                href="#"
+                onClick={handleContactClick}
+                className="block text-meta text-action-primary hover:text-ink-primary transition-colors cursor-pointer"
+              >
+                Contact
+              </a>
+              <Link href="/privacy" className="block text-meta text-action-primary hover:text-ink-primary transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="block text-meta text-action-primary hover:text-ink-primary transition-colors">
+                Terms of Service
+              </Link>
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="mt-12 pt-8 border-t border-line-default">
-            <div className="stack-xs items-center">
-              <p className="text-meta text-copy-primary text-center">
-                © {currentYear} Ask My Envoy. All rights reserved.
-              </p>
-              <p className="text-meta text-copy-muted text-center">{versionLabel}</p>
-            </div>
+          <div className="mt-3 pt-3 border-t border-line-default">
+            <p className="text-xs text-ink-primary/70 text-center">
+              © {currentYear} Ask My Envoy. All rights reserved. {versionLabel}
+            </p>
           </div>
         </div>
       </div>

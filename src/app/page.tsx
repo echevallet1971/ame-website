@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowTrendingUpIcon, ClockIcon, EyeIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 import Button from './components/Button';
 import LoginButton from './components/LoginButton';
 
@@ -28,7 +29,13 @@ export default function Home() {
               <p>
                 Everyone&apos;s availability is already in their calendar. Yet someone still has to collect it, compare it, negotiate a time, and keep the meeting moving when things change.
               </p>
-              <p>Ask My Envoy does that coordination for you.</p>
+              <p>
+                Ask My Envoy{' '}
+                <Link href="/meeting-coordination" className="text-action-primary hover:underline">
+                  does that coordination for you
+                </Link>
+                .
+              </p>
             </div>
 
             <div className="cta-row pt-4">
@@ -70,12 +77,16 @@ export default function Home() {
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <div className="flow-xl items-center">
-            <h2 className="section-heading text-ink-primary">
+            <h2 className="section-heading text-ink-primary text-center">
               We got used to the friction. That doesn&apos;t make it free.
             </h2>
 
             <p className="text-lead text-center text-copy-primary max-w-3xl">
-              Scheduling rarely feels like a major problem because the cost is spread across dozens of small interruptions.
+              Scheduling{' '}
+              <Link href="/cost-of-meeting-coordination" className="text-action-primary hover:underline">
+                rarely feels like a major problem
+              </Link>{' '}
+              because the cost is spread across dozens of small interruptions.
             </p>
 
             <div className="w-full max-w-3xl divide-y divide-line-default border-y border-line-default">

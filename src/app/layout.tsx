@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Metadata } from 'next';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ClsProbe from './components/ClsProbe';
 import { getWebsiteVersionLabel } from '@/lib/system-version';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -56,6 +57,7 @@ export default async function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body className={inter.className}>
+        <ClsProbe />
         <Header />
         <main>
           {children}
