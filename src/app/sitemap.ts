@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/milestones',
     '/meeting-coordination',
     '/cost-of-meeting-coordination',
+    '/fr/coordination-reunions',
+    '/fr/cout-coordination-reunions',
     '/privacy',
     '/terms',
   ];

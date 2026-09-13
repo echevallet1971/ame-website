@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ClsProbe from './components/ClsProbe';
@@ -15,7 +16,6 @@ export const metadata: Metadata = {
     template: '%s | Ask My Envoy'
   },
   description: 'Intelligent meeting scheduling assistant powered by AI. Let your AI envoy handle your calendar.',
-  keywords: ['AI scheduling', 'meeting assistant', 'calendar management', 'automated scheduling'],
   authors: [{ name: 'Ask My Envoy' }],
   robots: 'index, follow',
   alternates: {
@@ -53,9 +53,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const versionLabel = await getWebsiteVersionLabel();
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') ?? '';
+  const lang = pathname.startsWith('/fr') ? 'fr' : 'en';
 
   return (
-    <html className="scroll-smooth" lang="en">
+    <html className="scroll-smooth" lang={lang}>
       <body className={inter.className}>
         <ClsProbe />
         <Header />

@@ -1,29 +1,31 @@
 import type { Metadata } from 'next';
-import BackLink from '../components/BackLink';
+import ExplanationPageHero from '../components/ExplanationPageHero';
+import {
+  buildExplanationPageAlternates,
+  buildExplanationPageOpenGraph,
+  explanationPages,
+} from '@/lib/explanation-pages';
+
+const title = 'The Hidden Cost of Meeting Coordination';
+const description =
+  'Meeting coordination looks simple because the work is fragmented across people and time. See how calendar checks, interruptions and delays create hidden costs.';
 
 export const metadata: Metadata = {
-  title: 'The Hidden Cost of Meeting Coordination',
-  description:
-    'Meeting coordination looks simple because the work is fragmented across people and time. See how calendar checks, interruptions and delays create hidden costs.',
-  alternates: {
-    canonical: 'https://askmyenvoy.com/cost-of-meeting-coordination',
-  },
+  title,
+  description,
+  alternates: buildExplanationPageAlternates('costOfMeetingCoordination', 'en'),
+  openGraph: buildExplanationPageOpenGraph('en', title, description),
   robots: 'index, follow',
 };
 
 export default function CostOfMeetingCoordinationPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
-      <section className="section-hero-content">
-        <div className="container-4xl">
-          <div className="py-4">
-            <BackLink
-              label="Back to previous page"
-              className="text-sm text-copy-muted hover:text-ink-primary hover:underline"
-            />
-          </div>
-        </div>
-      </section>
+      <ExplanationPageHero
+        backLabel="Back to previous page"
+        alternateLanguageHref={explanationPages.costOfMeetingCoordination.fr.path}
+        alternateLanguageLabel="→ Lire en Français"
+      />
 
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">

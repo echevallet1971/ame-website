@@ -5,13 +5,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import LoginButton from './LoginButton';
+import { explanationPagePaths } from '@/lib/explanation-pages';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const closeMobileMenu = () => setMobileMenuOpen(false);
   const pathname = usePathname();
-  const isExplanationPage =
-    pathname === '/meeting-coordination' || pathname === '/cost-of-meeting-coordination';
+  const isExplanationPage = explanationPagePaths.includes(
+    pathname as (typeof explanationPagePaths)[number],
+  );
 
   if (isExplanationPage) {
     return (
