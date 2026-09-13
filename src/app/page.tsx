@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { ArrowTrendingUpIcon, ClockIcon, EyeIcon } from '@heroicons/react/24/outline';
+import { ArrowTrendingUpIcon, ClockIcon, ForwardIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 import Link from 'next/link';
 import Button from './components/Button';
 import LoginButton from './components/LoginButton';
@@ -22,19 +23,61 @@ export default function Home() {
         <div className="container-4xl">
           <div className="flow-md items-center">
             <h1 className="hero-heading text-center text-ink-primary max-w-3xl">
-              It&apos;s 2026. We shouldn&apos;t still be asking people when they&apos;re available.
+              We still coordinate meetings as if we used paper planners.
             </h1>
+
+            <div className="w-full max-w-6xl">
+              <div className="overflow-hidden rounded-2xl border border-line-default shadow-sm">
+                <div className="flex flex-col md:flex-row">
+                  <div className="flex-1">
+                    <Image
+                      src="/assets/images/homepage/scheduling_1986.png"
+                      alt="Scheduling in 1986: coordinating meetings by phone and paper planner"
+                      width={877}
+                      height={887}
+                      className="w-full h-auto"
+                      priority
+                    />
+                    <figure className="flex flex-col items-center gap-2 border-t border-line-default bg-surface-soft px-3 pt-1.5 pb-2.5 text-center md:px-4 md:pt-2 md:pb-3">
+                      <p className="section-subheading text-ink-primary">1986</p>
+                      <div className="flex flex-col gap-px">
+                        <p className="text-body leading-snug text-copy-muted">Are you available next Thursday?</p>
+                        <p className="text-body leading-snug text-copy-muted">Hold on, let me check.</p>
+                      </div>
+                    </figure>
+                  </div>
+
+                  <div
+                    className="h-1.5 w-full shrink-0 bg-white md:w-1.5 md:self-stretch"
+                    aria-hidden="true"
+                  />
+
+                  <div className="flex-1">
+                    <Image
+                      src="/assets/images/homepage/scheduling_2026.png"
+                      alt="Scheduling in 2026: coordinating meetings on a smartphone in a modern office"
+                      width={876}
+                      height={887}
+                      className="w-full h-auto"
+                    />
+                    <figure className="flex flex-col items-center gap-2 border-t border-line-default bg-surface-soft px-3 pt-1.5 pb-2.5 text-center md:px-4 md:pt-2 md:pb-3">
+                      <p className="section-subheading text-ink-primary">2026</p>
+                      <div className="flex flex-col gap-px">
+                        <p className="text-body leading-snug text-copy-muted">Are you available next Thursday?</p>
+                        <p className="text-body leading-snug text-copy-muted">Hold on, let me check.</p>
+                      </div>
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div className="text-lead text-center text-copy-muted max-w-3xl stack-sm">
               <p>
-                Everyone&apos;s availability is already in their calendar. Yet someone still has to collect it, compare it, negotiate a time, and keep the meeting moving when things change.
+                When a meeting crosses company boundaries, we still ask: &ldquo;Are you available next Tuesday?&rdquo; as if we were still using paper planners.
               </p>
               <p>
-                Ask My Envoy{' '}
-                <Link href="/meeting-coordination" className="text-action-primary hover:underline">
-                  does that coordination for you
-                </Link>
-                .
+                <span className="font-bold">Ask My Envoy</span> takes meeting coordination off your plate.
               </p>
             </div>
 
@@ -73,39 +116,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Friction Cost Section */}
+      {/* Coordination Section */}
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <div className="flow-xl items-center">
-            <h2 className="section-heading text-ink-primary text-center">
-              We got used to the friction. That doesn&apos;t make it free.
+            <h2 className="section-heading text-ink-primary text-center max-w-3xl">
+              An Envoy is an AI agent that coordinates meetings on your behalf.
             </h2>
 
             <p className="text-lead text-center text-copy-primary max-w-3xl">
-              Scheduling{' '}
+              You tell it who you want to meet. It handles the{' '}
+              <Link href="/meeting-coordination" className="text-action-primary hover:underline">
+                coordination
+              </Link>{' '}
+              with the other participants and brings you back in when your input is needed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Friction Cost Section */}
+      <section className="section-standard bg-surface-base">
+        <div className="container-4xl">
+          <div className="flow-xl items-center">
+            <h2 className="section-heading text-ink-primary text-center max-w-3xl">
+              A few minutes at a time becomes a real business cost.
+            </h2>
+
+            <p className="text-lead text-center text-copy-primary max-w-3xl">
+              Meeting coordination{' '}
               <Link href="/cost-of-meeting-coordination" className="text-action-primary hover:underline">
                 rarely feels like a major problem
               </Link>{' '}
-              because the cost is spread across dozens of small interruptions.
+              because the cost is spread across dozens of small interruptions. But those minutes compound.
             </p>
 
             <div className="w-full max-w-3xl divide-y divide-line-default border-y border-line-default">
               <div className="row-start py-6">
                 <ClockIcon className="h-7 w-7 text-action-primary shrink-0 mt-1" aria-hidden="true" />
                 <div>
-                  <p className="item-heading text-ink-primary">Time</p>
+                  <p className="item-heading text-ink-primary">Productivity cost</p>
                   <p className="text-lead text-copy-primary">
-                    Calendar checks, availability messages, and reschedules quietly consume hours every week.
-                  </p>
-                </div>
-              </div>
-
-              <div className="row-start py-6">
-                <EyeIcon className="h-7 w-7 text-action-primary shrink-0 mt-1" aria-hidden="true" />
-                <div>
-                  <p className="item-heading text-ink-primary">Attention</p>
-                  <p className="text-lead text-copy-primary">
-                    Each interruption breaks focus and pulls people away from the decisions that matter.
+                    Time lost in emails, follow-ups, interruptions and context switching.
                   </p>
                 </div>
               </div>
@@ -113,9 +165,19 @@ export default function Home() {
               <div className="row-start py-6">
                 <ArrowTrendingUpIcon className="h-7 w-7 text-action-primary shrink-0 mt-1" aria-hidden="true" />
                 <div>
-                  <p className="item-heading text-ink-primary">Momentum</p>
+                  <p className="item-heading text-ink-primary">Business velocity</p>
                   <p className="text-lead text-copy-primary">
-                    Delays cool leads, slow decisions, and leave projects waiting for everyone to align.
+                    Meetings happen later, slowing decisions, projects and sales cycles.
+                  </p>
+                </div>
+              </div>
+
+              <div className="row-start py-6">
+                <ForwardIcon className="h-7 w-7 text-action-primary shrink-0 mt-1" aria-hidden="true" />
+                <div>
+                  <p className="item-heading text-ink-primary">Lost opportunity</p>
+                  <p className="text-lead text-copy-primary">
+                    When coordination takes too long, people move on.
                   </p>
                 </div>
               </div>
@@ -129,7 +191,7 @@ export default function Home() {
         <div className="container-4xl">
           <div className="flow-lg items-center text-center">
             <h2 className="section-heading text-white max-w-3xl">
-              Stop spending time scheduling meetings.
+              Stop spending time coordinating meetings.
             </h2>
             <p className="text-lead text-copy-inverse/80 max-w-2xl">
               Get your Envoy and let it handle the coordination.
