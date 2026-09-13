@@ -1,9 +1,12 @@
-system_version: v0.2.7
+system_version: v0.2.8
 date: 2026-09-13
 components:
   frontend:
-    askmyenvoy-website: v0.2.7
+    askmyenvoy-website: v0.2.8
 notes: |
+  Release Notes 0.2.8
+   - Optimized homepage hero images as WebP assets to reduce payload from ~2.4 MB (PNG) to ~160 KB
+
   Release Notes 0.2.7
    - Reworked the homepage narrative around the paper-planner vs digital-calendar contrast, with a new hero headline and updated supporting copy
    - Added a 1986/2026 comparison visual in the hero (`scheduling_1986.webp`, `scheduling_2026.webp`): side-by-side on desktop, stacked on mobile, inside the existing rounded image frame with a full-height white separator

@@ -31,7 +31,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row">
                   <div className="flex-1">
                     <Image
-                      src="/assets/images/homepage/scheduling_1986.png"
+                      src="/assets/images/homepage/scheduling_1986.webp"
                       alt="Scheduling in 1986: coordinating meetings by phone and paper planner"
                       width={877}
                       height={887}
@@ -54,7 +54,7 @@ export default function Home() {
 
                   <div className="flex-1">
                     <Image
-                      src="/assets/images/homepage/scheduling_2026.png"
+                      src="/assets/images/homepage/scheduling_2026.webp"
                       alt="Scheduling in 2026: coordinating meetings on a smartphone in a modern office"
                       width={876}
                       height={887}
