@@ -7,6 +7,7 @@ components:
 notes: |
   Release Notes 0.2.9
    - Added French explanation pages at `/fr/coordination-reunions` (translation of `/meeting-coordination`) and `/fr/cout-coordination-reunions` (translation of `/cost-of-meeting-coordination`)
+   - Updated pricing page to show a 30-day free trial.
 
   Release Notes 0.2.8
    - Optimized homepage hero images as WebP assets to reduce payload from ~2.4 MB (PNG) to ~160 KB
