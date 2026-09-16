@@ -10,6 +10,8 @@ services:
       context: .
       dockerfile: Dockerfile
       target: production
+      args:
+        - SYSTEM_VERSION=${VERSION}
     image: ${PROJECT_PREFIX}-website:v${VERSION}
     container_name: ${PROJECT_PREFIX}-website-${TARGET_ENV}-v${VERSION}
     env_file:

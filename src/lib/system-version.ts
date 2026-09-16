@@ -55,7 +55,7 @@ export async function getWebsiteVersionLabel(): Promise<string> {
     const systemVersionMatch = manifestContent.match(SYSTEM_VERSION_REGEX);
     const systemVersion = systemVersionMatch?.[1] ?? latestManifest.version;
 
-    return `version ${systemVersion}`;
+    return `Version ${systemVersion}`;
   } catch {
     return 'version unknown';
   }
