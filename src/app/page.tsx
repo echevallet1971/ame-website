@@ -191,15 +191,15 @@ export default function Home() {
         <div className="container-4xl">
           <div className="flow-lg items-center text-center">
             <h2 className="section-heading text-white max-w-3xl">
-              Stop spending time coordinating meetings.
+              Stop coordinating meetings yourself.
             </h2>
             <p className="text-lead text-copy-inverse/80 max-w-2xl">
-              Get your Envoy and let it handle the coordination.
+              Let your Envoy handle the coordination. Try it free for 30 days. No credit card required.
             </p>
 
             <div className="cta-row">
               <LoginButton size="large" className="px-10">
-                Get your Envoy
+                Start your 30-day free trial
               </LoginButton>
               <Button href="/how-it-works" variant="light" className="px-10">
                 See how it works

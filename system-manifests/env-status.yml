@@ -1,10 +1,10 @@
 environments:
   staging:
-    current_version: v0.1.10
-    promoted_at: 2026-04-01
+    current_version: v0.2.8
+    promoted_at: 2026-09-13
   preprod:
-    current_version: v0.1.10
-    promoted_at: 2026-04-01
+    current_version: v0.2.8
+    promoted_at: 2026-04-13
   production:
-    current_version: v0.1.10
-    promoted_at: 2026-04-01
+    current_version: v0.2.8
+    promoted_at: 2026-04-13

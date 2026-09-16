@@ -35,7 +35,7 @@ export default function Footer({ versionLabel }: FooterProps) {
                 height={170}
                 className="h-8 w-auto mx-auto md:mx-0"
               />
-              <p className="text-meta text-action-primary">AI meeting coordination without the back-and-forth.</p>
+              <p className="text-meta text-action-primary">Take meeting coordination off your plate.</p>
             </div>
 
             <div className="flex flex-col gap-1 items-center md:items-end text-center md:text-right">
