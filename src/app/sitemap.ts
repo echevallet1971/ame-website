@@ -2,25 +2,25 @@ import type { MetadataRoute } from 'next';
 
 const BASE_URL = 'https://askmyenvoy.com';
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = [
-    '/',
-    '/how-it-works',
-    '/trust-and-control',
-    '/pricing',
-    '/getting-started',
-    '/about',
-    '/milestones',
-    '/meeting-coordination',
-    '/cost-of-meeting-coordination',
-    '/fr/coordination-reunions',
-    '/fr/cout-coordination-reunions',
-    '/privacy',
-    '/terms',
-  ];
+const pages: Array<{ path: string; lastModified: string }> = [
+  { path: '/', lastModified: '2026-09-16' },
+  { path: '/how-it-works', lastModified: '2026-09-03' },
+  { path: '/trust-and-control', lastModified: '2026-09-03' },
+  { path: '/pricing', lastModified: '2026-09-16' },
+  { path: '/getting-started', lastModified: '2026-09-03' },
+  { path: '/about', lastModified: '2026-09-03' },
+  { path: '/milestones', lastModified: '2026-09-03' },
+  { path: '/meeting-coordination', lastModified: '2026-09-14' },
+  { path: '/cost-of-meeting-coordination', lastModified: '2026-09-14' },
+  { path: '/fr/coordination-reunions', lastModified: '2026-09-14' },
+  { path: '/fr/cout-coordination-reunions', lastModified: '2026-09-14' },
+  { path: '/privacy', lastModified: '2026-08-30' },
+  { path: '/terms', lastModified: '2026-08-30' },
+];
 
-  return routes.map((route) => ({
-    url: `${BASE_URL}${route}`,
-    lastModified: new Date(),
+export default function sitemap(): MetadataRoute.Sitemap {
+  return pages.map(({ path, lastModified }) => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: new Date(lastModified),
   }));
 }
