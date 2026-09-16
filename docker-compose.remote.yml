@@ -13,6 +13,7 @@ services:
       target: production
       args:
         - NEXT_PUBLIC_PLATFORM_URL=${NEXT_PUBLIC_PLATFORM_URL}
+        - SYSTEM_VERSION=${VERSION}
     image: ${PROJECT_PREFIX}-website:v${VERSION}
     container_name: ${PROJECT_PREFIX}-website-${TARGET_ENV}-v${VERSION}
     restart: unless-stopped

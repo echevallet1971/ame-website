@@ -49,10 +49,14 @@ RUN addgroup -g 1001 -S nodejs && \
 
 WORKDIR /app
 
+# Required at build time to select the single manifest to embed (example: 0.2.9)
+ARG SYSTEM_VERSION
+
 # Copy only the built Next.js application (standalone mode)
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
+COPY --from=builder /app/system-manifests/base/system-base-v${SYSTEM_VERSION}.yml ./system-manifests/base/system-base-v${SYSTEM_VERSION}.yml
 
 # Change ownership to non-root user
 RUN chown -R nextjs:nodejs /app
