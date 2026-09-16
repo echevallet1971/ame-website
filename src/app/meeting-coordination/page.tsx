@@ -1,29 +1,31 @@
 import type { Metadata } from 'next';
-import BackLink from '../components/BackLink';
+import ExplanationPageHero from '../components/ExplanationPageHero';
+import {
+  buildExplanationPageAlternates,
+  buildExplanationPageOpenGraph,
+  explanationPages,
+} from '@/lib/explanation-pages';
+
+const title = 'What Is Meeting Coordination?';
+const description =
+  "Meeting coordination is the work required to turn everyone's availability and constraints into a time that works, especially across organizations. See how Ask My Envoy handles it.";
 
 export const metadata: Metadata = {
-  title: 'What Is Meeting Coordination?',
-  description:
-    "Meeting coordination is the work required to turn everyone's availability and constraints into a time that works, especially across organizations. See how Ask My Envoy handles it.",
-  alternates: {
-    canonical: 'https://askmyenvoy.com/meeting-coordination',
-  },
+  title,
+  description,
+  alternates: buildExplanationPageAlternates('meetingCoordination', 'en'),
+  openGraph: buildExplanationPageOpenGraph('en', title, description),
   robots: 'index, follow',
 };
 
 export default function MeetingCoordinationPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
-      <section className="section-hero-content">
-        <div className="container-4xl">
-          <div className="py-4">
-            <BackLink
-              label="Back to previous page"
-              className="text-sm text-copy-muted hover:text-ink-primary hover:underline"
-            />
-          </div>
-        </div>
-      </section>
+      <ExplanationPageHero
+        backLabel="Back to previous page"
+        alternateLanguageHref={explanationPages.meetingCoordination.fr.path}
+        alternateLanguageLabel="→ Lire en Français"
+      />
 
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
