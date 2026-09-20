@@ -21,19 +21,26 @@ export const explanationPages = {
       url: `${BASE_URL}/fr/cout-coordination-reunions`,
     },
   },
+  bookingLinksVsMeetingCoordination: {
+    en: {
+      path: '/booking-links-vs-meeting-coordination',
+      url: `${BASE_URL}/booking-links-vs-meeting-coordination`,
+    },
+  },
 } as const;
 
-export type ExplanationPageKey = keyof typeof explanationPages;
+export type BilingualExplanationPageKey = 'meetingCoordination' | 'costOfMeetingCoordination';
 
 export const explanationPagePaths = [
   explanationPages.meetingCoordination.en.path,
   explanationPages.meetingCoordination.fr.path,
   explanationPages.costOfMeetingCoordination.en.path,
   explanationPages.costOfMeetingCoordination.fr.path,
+  explanationPages.bookingLinksVsMeetingCoordination.en.path,
 ] as const;
 
 export function buildExplanationPageAlternates(
-  page: ExplanationPageKey,
+  page: BilingualExplanationPageKey,
   locale: 'en' | 'fr',
 ) {
   const urls = explanationPages[page];

@@ -12,6 +12,7 @@ const pages: Array<{ path: string; lastModified: string }> = [
   { path: '/milestones', lastModified: '2026-09-03' },
   { path: '/meeting-coordination', lastModified: '2026-09-14' },
   { path: '/cost-of-meeting-coordination', lastModified: '2026-09-14' },
+  { path: '/booking-links-vs-meeting-coordination', lastModified: '2026-09-21' },
   { path: '/fr/coordination-reunions', lastModified: '2026-09-14' },
   { path: '/fr/cout-coordination-reunions', lastModified: '2026-09-14' },
   { path: '/privacy', lastModified: '2026-08-30' },

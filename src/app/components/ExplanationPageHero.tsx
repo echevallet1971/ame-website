@@ -3,8 +3,8 @@ import BackLink from './BackLink';
 
 type ExplanationPageHeroProps = {
   backLabel: string;
-  alternateLanguageHref: string;
-  alternateLanguageLabel: string;
+  alternateLanguageHref?: string;
+  alternateLanguageLabel?: string;
 };
 
 export default function ExplanationPageHero({
@@ -12,6 +12,8 @@ export default function ExplanationPageHero({
   alternateLanguageHref,
   alternateLanguageLabel,
 }: ExplanationPageHeroProps) {
+  const showLanguageSwitch = alternateLanguageHref && alternateLanguageLabel;
+
   return (
     <section className="section-hero-content">
       <div className="container-4xl">
@@ -20,13 +22,17 @@ export default function ExplanationPageHero({
             label={backLabel}
             className="text-sm text-copy-muted hover:text-ink-primary hover:underline"
           />
-          <Link
-            href={alternateLanguageHref}
-            replace
-            className="text-sm text-copy-muted hover:text-ink-primary hover:underline whitespace-nowrap"
-          >
-            {alternateLanguageLabel}
-          </Link>
+          {showLanguageSwitch ? (
+            <Link
+              href={alternateLanguageHref}
+              replace
+              className="text-sm text-copy-muted hover:text-ink-primary hover:underline whitespace-nowrap"
+            >
+              {alternateLanguageLabel}
+            </Link>
+          ) : (
+            <span className="shrink-0" aria-hidden="true" />
+          )}
         </div>
       </div>
     </section>

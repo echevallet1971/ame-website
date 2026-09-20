@@ -131,6 +131,15 @@ export default function Home() {
               </Link>{' '}
               with the other participants and brings you back in when your input is needed.
             </p>
+
+            <p className="text-center">
+              <Link
+                href="/booking-links-vs-meeting-coordination"
+                className="text-action-primary hover:underline"
+              >
+                Learn more about booking links vs meeting coordination →
+              </Link>
+            </p>
           </div>
         </div>
       </section>
