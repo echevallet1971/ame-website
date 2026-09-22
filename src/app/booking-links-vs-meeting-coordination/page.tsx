@@ -85,199 +85,307 @@ export default function BookingLinksVsMeetingCoordinationPage() {
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <article className="max-w-3xl mx-auto stack-md text-body text-copy-primary">
-            <h1 className="section-subheading text-ink-primary">{headline}</h1>
+            <h1 className="explanation-article-title text-ink-primary">{headline}</h1>
+            <p className="italic text-copy-muted">
+              A booking link automates a scheduling process defined in advance. Meeting coordination
+              starts from an objective and works out the path required to make the meeting happen.
+            </p>
 
-            <p>Booking links solved a real problem.</p>
+            <h2 className="explanation-article-heading explanation-article-heading--first">
+              Meeting coordination starts beyond your company
+            </h2>
             <p>
-              Before they became common, arranging a meeting often meant an exchange of emails that
-              should never have existed in the first place. Someone would suggest Tuesday afternoon,
-              the other person would say they were only free in the morning, another participant
-              would join the thread, and eventually someone would find a slot that worked.
+              Meeting coordination becomes a different problem once it crosses the boundaries of your
+              company. Inside an organization, people often share calendars, tools, working
+              conventions and a common structure. Outside it, they do not. Clients, partners,
+              suppliers, advisers and other external participants belong to different organizations,
+              use different systems and operate under different constraints.
             </p>
             <p>
-              Booking links removed a large part of that friction. The organizer defines when they
-              are available, creates a meeting type, shares a link, and the other person chooses a
-              time. The meeting is then added to the calendar automatically.
+              Several categories of scheduling tools have emerged to make those meetings easier to
+              arrange. Booking links, made familiar by products such as Calendly, let someone define
+              their availability and allow another person to choose an available time. Group polling
+              tools, such as Doodle, let an organizer propose several options and ask participants
+              which ones work. Routing and scheduling tools go further by qualifying an inbound
+              request, determining who should handle it and then offering the relevant availability.
             </p>
-            <p>That was a meaningful improvement. It still is.</p>
             <p>
-              But a booking link and{' '}
+              These approaches solve real problems, and modern scheduling products increasingly
+              combine several of them. But they do not approach the problem in the same way as{' '}
               <Link href="/meeting-coordination" className="text-action-primary hover:underline">
                 meeting coordination
-              </Link>{' '}
-              are not the same thing. They solve different parts of the same problem.
-            </p>
-            <p>
-              The distinction is not simply self-service versus delegation. It is also{' '}
+              </Link>
+              . The distinction is not simply self-service versus delegation. It is{' '}
               <strong>
                 automation around a predefined process versus coordination around an objective
               </strong>
               .
             </p>
 
-            <h2 className="section-subheading text-ink-primary pt-4">
+            <h2 className="explanation-article-heading">
               Booking links are automation around a predefined process
             </h2>
+            <p>Consider a product demo.</p>
             <p>
-              Modern booking tools are far more sophisticated than a simple public calendar link.
+              A company may decide in advance that a demo lasts thirty minutes, can be handled by
+              anyone on a particular sales team, takes place during defined hours and requires the
+              prospect to answer a few questions before booking. Once those rules exist, the rest can
+              be automated.
             </p>
             <p>
-              A company can define different meeting types, assign different hosts, create collective
-              meetings, distribute inbound requests across a team, restrict availability, add buffers,
-              route prospects according to answers, and automate reminders and follow-up actions.
+              The visitor answers the questions, the scheduling system determines who should take the
+              meeting, checks the relevant availability and presents possible times. The visitor
+              chooses one and the meeting is added to the calendars automatically. The same model
+              works for recruiting screens, consultations, onboarding calls and many other repeatable
+              meetings.
             </p>
             <p>
-              That makes them extremely effective when the meeting process is predictable.
+              Modern booking systems can make these workflows highly sophisticated. They can combine
+              calendars, distribute meetings across teams, add buffers, apply routing rules, restrict
+              availability and trigger reminders or follow-up actions. But the principle remains the
+              same: the meeting process has largely been designed before the meeting request arrives.
+              The software executes that process efficiently.
             </p>
-            <p>
-              A product demo may always last thirty minutes. A recruiting screen may always be handled
-              by one of five recruiters. A consultation may only be available on Tuesday and Thursday
-              afternoons. A sales lead may need to be routed to a specific team depending on
-              geography or company size.
-            </p>
-            <p>
-              Once those rules have been defined, a booking system can execute them very efficiently.
-            </p>
-            <p>
-              This is particularly powerful for inbound meetings. Someone arrives wanting to talk to
-              your company, and the company already knows what type of meeting should happen, how long
-              it should last, who can host it and when it can take place.
-            </p>
-            <p>
-              The automation works because much of the decision-making happened before the visitor
-              ever clicked the link.
-            </p>
-            <p>That is not a limitation of the model. It is precisely what makes it reliable.</p>
 
-            <h2 className="section-subheading text-ink-primary pt-4">
-              Predictability is what makes automation powerful
+            <h2 className="explanation-article-heading">
+              When do booking links work best?
             </h2>
             <p>
-              Automation becomes easier when the future can be described in advance.
+              This model works because repeatable meetings are predictable. The more you know in
+              advance about what should happen, the more of the process you can automate. If a meeting
+              always lasts thirty minutes, one of five people can host it and it can only happen during
+              certain hours, there is little reason to coordinate it manually every time.
             </p>
             <p>
-              If a system knows that a meeting lasts thirty minutes, that any one of three people can
-              host it, that it may only happen during a predefined set of hours, and that the invitee
-              should choose among the remaining slots, the problem becomes highly structured.
-            </p>
-            <p>The more rules you add, the more sophisticated the automation can become.</p>
-            <p>But someone has to define those rules.</p>
-            <p>
-              That setup may be simple for an individual with one meeting type. It can become
-              substantially more involved when several event types, teams, calendars, routing rules,
-              buffers, working hours and exceptions need to be maintained.
+              That is why booking automation is particularly effective for inbound and first-contact
+              meetings. At that stage, someone may primarily be trying to reach a function rather
+              than a specific person. They want to talk to Sales, speak with a recruiter or book a
+              consultation. The organization can decide beforehand who can handle the request and
+              under what conditions. From the visitor&apos;s perspective, selecting an available slot
+              with the appropriate person may be all that is required.
             </p>
             <p>
-              Again, that is not necessarily a problem. For repeatable workflows, investing in
-              configuration makes perfect sense. The configuration is what allows hundreds or thousands
-              of similar meetings to be scheduled consistently without human intervention.
+              Configuration is what makes that efficiency possible. For repeatable workflows,
+              investing in it makes perfect sense because the same process can then be executed hundreds
+              or thousands of times consistently. The difficulty appears when the relationship stops
+              being generic.
             </p>
-            <p>
-              The important point is that the system is automating a process that has already been
-              designed.
-            </p>
-            <p>Meeting coordination starts from a different place.</p>
 
-            <h2 className="section-subheading text-ink-primary pt-4">
-              Meeting coordination starts with an objective
+            <h2 className="explanation-article-heading">
+              Collaboration changes the coordination problem
             </h2>
-            <p>A meeting does not always begin with a predefined meeting type.</p>
-            <p>It may begin with a sentence:</p>
-            <p>&ldquo;Find thirty minutes with Sarah next week.&rdquo;</p>
-            <p>&ldquo;Arrange a follow-up with the client after the workshop.&rdquo;</p>
-            <p>&ldquo;Set up lunch with Paul while I&apos;m in New York.&rdquo;</p>
-            <p>At that point, the process may not yet be defined.</p>
             <p>
-              Which Sarah? Who else should attend? Is thirty minutes really fixed? What does
-              &ldquo;next week&rdquo; mean across time zones? Does the meeting need to happen before
-              another event? Is one participant essential while another is optional? What happens if
-              no common availability exists?
+              Imagine the product demo went well and the prospect became a client. There is now a
+              project underway involving Sarah from the client team, Paul from yours, perhaps a
+              specialist who joins when a particular topic comes up, and an executive who only needs
+              to attend certain decisions.
             </p>
             <p>
-              That is why meeting coordination is better understood as a workflow than as a booking
-              action.
+              The scheduling problem has changed. You are no longer trying to route an unknown
+              visitor to the right representative of a company. You are working with people you know,
+              and the relationship itself matters.
             </p>
             <p>
-              The objective is known, but the path to achieve it may need to be worked out.
+              A particular meeting may still involve only two people, but the broader relationship is
+              now organization-to-organization. Different combinations of people may need to meet
+              depending on what needs to be accomplished. One meeting might require Sarah and Paul.
+              Another may also need a technical specialist. A third may need to happen before a
+              steering committee on Thursday. Someone may be optional, someone else essential. Thirty
+              minutes may normally be enough, but an hour may be necessary this time. One participant
+              may be travelling while another is only available during part of the week.
             </p>
             <p>
-              Sometimes that path is straightforward. Sometimes it means comparing several calendars,
-              interpreting preferences, negotiating around constraints, changing the duration,
-              involving another participant, or asking someone to make a decision because no obvious
-              solution exists.
-            </p>
-            <p>
-              The process has to adapt to the meeting rather than forcing the meeting into a process
-              defined beforehand.
-            </p>
-            <p>
-              This distinction becomes particularly important across organizational boundaries.
-            </p>
-            <p>
-              A booking platform can find common availability among hosts who have been configured
-              into the same scheduling workflow. That can work extremely well for a sales team, a
-              recruiting team or any other group operating within a known structure.
-            </p>
-            <p>
-              But many business meetings do not begin inside a shared structure. They involve clients,
-              partners, suppliers, advisers or people whose calendars, organizations and preferences
-              were never configured together in advance.
-            </p>
-            <p>
-              The coordination challenge is no longer simply to expose an available slot. It is to
-              find a way to make the meeting happen.
+              Some of those situations can be turned into rules, but ongoing collaboration
+              continuously produces new combinations and exceptions. That is where predefined
+              scheduling processes become less natural. The question is no longer simply,{' '}
+              <strong>&ldquo;Which available slot should this person choose?&rdquo;</strong> It
+              becomes,{' '}
+              <strong>
+                &ldquo;How do we get the right people together for what we need to accomplish?&rdquo;
+              </strong>
             </p>
 
-            <h2 className="section-subheading text-ink-primary pt-4">
+            <h2 className="explanation-article-heading">
+              Meeting coordination starts with the objective
+            </h2>
+            <p>
+              A coordination request may begin with a simple instruction: &ldquo;Find thirty minutes
+              with Sarah next week.&rdquo; Or: &ldquo;Arrange a follow-up with the client after the
+              workshop.&rdquo; Or: &ldquo;Get the project team together before Thursday&apos;s
+              steering committee.&rdquo;
+            </p>
+            <p>
+              The objective is clear, but the precise path may not be. Who needs to participate? Which
+              constraints are fixed and which can move? If there is no common availability, should the
+              duration change? Should another participant be dropped? Should several alternatives be
+              proposed? Does somebody need to make a decision?
+            </p>
+            <p>
+              These questions cannot always be answered by adding another permanent scheduling rule
+              because the answers depend on the context of that particular meeting. That is why meeting
+              coordination is better understood as a{' '}
+              <strong>workflow around an objective</strong> rather than the{' '}
+              <strong>execution of a predefined process</strong>. The objective stays clear, while the
+              path can adapt.
+            </p>
+
+            <h2 className="explanation-article-heading">
               From automation to delegation
             </h2>
             <p>This is where an AI agent changes the model.</p>
             <p>
-              Instead of asking someone to design every scheduling path in advance, the user can
-              provide an objective.
-            </p>
-            <p>&ldquo;Find time with Sarah next week.&rdquo;</p>
-            <p>
-              The agent can then work through the coordination required to achieve that objective:
-              identify the relevant participants, use the calendars it is allowed to access, interpret
-              timing constraints, look for workable options and involve people when their judgment is
-              actually required.
-            </p>
-            <p>The difference is subtle but important.</p>
-            <p>A booking system automates a process that has been predefined.</p>
-            <p>
-              Meeting coordination delegates the process of figuring out how to achieve the
-              objective.
+              Meeting coordination has always been something people could delegate to another person.
+              An executive assistant, for example, does not need a complete scheduling algorithm. You
+              give them an objective, the relevant context and a few constraints, and they work out
+              how to make the meeting happen.
             </p>
             <p>
-              That does not make booking links obsolete. Far from it. For predictable inbound
-              workflows, they are often the most efficient solution available. If thousands of
-              prospects need to book the same type of thirty-minute call, there is little value in
-              turning every one of those bookings into a coordination exercise.
-            </p>
-            <p>But other meetings are not repeatable transactions.</p>
-            <p>They begin with intent rather than configuration.</p>
-            <p>
-              That is the territory{' '}
-              <Link href="/" className="text-action-primary hover:underline">
-                Ask My Envoy
-              </Link>{' '}
-              is designed for.
+              Software was historically much better at something else: executing predefined rules.
+              That is why scheduling technology developed so naturally around booking links, routing
+              logic and fixed workflows. Those systems work extremely well when the path can be
+              described in advance.
             </p>
             <p>
-              An Envoy is an AI agent that takes meeting coordination off your plate. It does not
-              begin by asking you to build another scheduling workflow. It begins with what you are
-              trying to accomplish and handles the coordination around it.
+              AI agents change that boundary. They can be given an objective, like &ldquo;Find time
+              with Sarah next week&rdquo;, and work through the coordination required to achieve it.
+              They can identify the relevant participants, use the calendars they are allowed to
+              access, interpret timing constraints, look for workable options and involve people when
+              a decision or exception requires their judgment.
             </p>
-            <p>Booking links made scheduling easier to automate.</p>
-            <p>Meeting coordination makes it possible to delegate the process itself.</p>
-            <p>The question is no longer only:</p>
             <p>
-              <strong>&ldquo;Which slot would you like?&rdquo;</strong>
+              Sometimes that workflow will be straightforward. Sometimes there will be no common slot,
+              the duration may need to change, another participant may need to be involved or
+              somebody may have to make a decision. The path can adapt because it no longer has to be
+              fully defined beforehand.
             </p>
-            <p>It can simply become:</p>
+            <p>That is the shift from automation to delegation.</p>
             <p>
-              <strong>&ldquo;Can you take care of arranging this?&rdquo;</strong>
+              With process automation, people define the path and software executes it. With meeting
+              coordination, people define the objective and the agent works out the path.
+            </p>
+            <p>
+              That does not make booking links obsolete. For a predictable inbound workflow, a
+              well-designed booking process is often exactly what you want. The value of an agent
+              appears when the meeting cannot be reduced to a repeatable process and someone, or now
+              something, needs to work through the coordination itself.
+            </p>
+
+            <h2 className="explanation-article-heading">
+              Booking links, polling, routing and meeting coordination compared
+            </h2>
+            <div className="-mx-4 sm:mx-0 overflow-x-auto">
+              <table className="w-full min-w-[640px] text-left text-sm border border-line-default">
+                <thead>
+                  <tr className="bg-surface-base border-b border-line-default">
+                    <th scope="col" className="p-3 font-semibold text-ink-primary">
+                      Approach
+                    </th>
+                    <th scope="col" className="p-3 font-semibold text-ink-primary">
+                      Familiar example
+                    </th>
+                    <th scope="col" className="p-3 font-semibold text-ink-primary">
+                      Starting point
+                    </th>
+                    <th scope="col" className="p-3 font-semibold text-ink-primary">
+                      How it works
+                    </th>
+                    <th scope="col" className="p-3 font-semibold text-ink-primary">
+                      Particularly suited to
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-line-default">
+                  <tr>
+                    <td className="p-3 align-top">
+                      <strong>Booking link</strong>
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">Calendly</td>
+                    <td className="p-3 align-top text-copy-primary">
+                      Predefined meeting type and availability
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">
+                      The invitee chooses from available times
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">
+                      Repeatable 1:1 meetings and first meetings
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 align-top">
+                      <strong>Group polling</strong>
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">Doodle</td>
+                    <td className="p-3 align-top text-copy-primary">A set of possible times</td>
+                    <td className="p-3 align-top text-copy-primary">
+                      Participants indicate which options work
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">
+                      Finding consensus among several participants
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 align-top">
+                      <strong>Routing + booking</strong>
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">Chili Piper</td>
+                    <td className="p-3 align-top text-copy-primary">
+                      A predefined business process
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">
+                      The request is qualified, routed and booked
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">
+                      Inbound sales, recruiting and repeatable team workflows
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-3 align-top">
+                      <strong>Meeting coordination</strong>
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">Ask My Envoy</td>
+                    <td className="p-3 align-top text-copy-primary">An objective</td>
+                    <td className="p-3 align-top text-copy-primary">
+                      The workflow adapts to participants, calendars, constraints and context
+                    </td>
+                    <td className="p-3 align-top text-copy-primary">
+                      Ongoing cross-company collaboration and less predictable meetings
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              The differences are not primarily about which product has the longest feature list.
+              They come from two different ways of looking at the problem.
+            </p>
+
+            <h2 className="explanation-article-heading">Process versus workflow</h2>
+            <p>
+              Booking automation asks how to make a known process as efficient as possible. Define
+              the rules once, automate the repeatable steps and remove unnecessary work from every
+              meeting that follows.
+            </p>
+            <p>
+              Meeting coordination starts from another question: what are we trying to accomplish, and
+              what needs to happen to get the right people together? That is a workflow problem. The
+              steps may be different each time because the participants, relationships, constraints
+              and context can also be different each time.
+            </p>
+            <p>
+              The distinction becomes especially visible as a business relationship develops. At the
+              beginning, you may simply need to give somebody an efficient way to book a first
+              conversation. Later, you are coordinating between people and teams who are actually
+              working together.
+            </p>
+            <p>One model optimizes a process. The other works toward an objective.</p>
+            <p>
+              Ask My Envoy is designed for the second. An Envoy is an AI agent that takes meeting
+              coordination off your plate. You tell it what meeting you are trying to make happen, and
+              it handles the coordination required to get there.
+            </p>
+            <p>
+              Booking links made predefined scheduling processes easier to automate. Meeting
+              coordination makes the workflow itself something you can delegate.
             </p>
           </article>
         </div>
