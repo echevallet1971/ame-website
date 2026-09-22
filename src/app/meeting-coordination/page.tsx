@@ -1,26 +1,14 @@
-import type { Metadata } from 'next';
 import ExplanationPageHero from '../components/ExplanationPageHero';
-import {
-  buildExplanationPageAlternates,
-  buildExplanationPageOpenGraph,
-  explanationPages,
-} from '@/lib/explanation-pages';
+import { explanationPages } from '@/lib/explanation-pages';
+import { buildReferenceArticleMetadata, ReferenceArticleJsonLd } from '@/lib/reference-article';
+import { referenceArticle } from './reference-article.config';
 
-const title = 'What Is Meeting Coordination?';
-const description =
-  "Meeting coordination is the work required to turn everyone's availability and constraints into a time that works, especially across organizations. See how Ask My Envoy handles it.";
-
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: buildExplanationPageAlternates('meetingCoordination', 'en'),
-  openGraph: buildExplanationPageOpenGraph('en', title, description),
-  robots: 'index, follow',
-};
+export const metadata = buildReferenceArticleMetadata(referenceArticle);
 
 export default function MeetingCoordinationPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
+      <ReferenceArticleJsonLd config={referenceArticle} />
       <ExplanationPageHero
         backLabel="Back to previous page"
         alternateLanguageHref={explanationPages.meetingCoordination.fr.path}
@@ -40,7 +28,7 @@ export default function MeetingCoordinationPage() {
               you can decide who you want to meet and when without working through the mechanics of
               making it happen.
             </p>
-            <h1 className="section-subheading text-ink-primary">What meeting coordination actually means</h1>
+            <h1 className="section-subheading text-ink-primary">{referenceArticle.headline}</h1>
             <p>
               Deciding who you want to meet, and when you would like that meeting to happen, is
               usually the easy part.

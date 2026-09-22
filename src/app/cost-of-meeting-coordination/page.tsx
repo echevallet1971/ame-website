@@ -1,26 +1,14 @@
-import type { Metadata } from 'next';
 import ExplanationPageHero from '../components/ExplanationPageHero';
-import {
-  buildExplanationPageAlternates,
-  buildExplanationPageOpenGraph,
-  explanationPages,
-} from '@/lib/explanation-pages';
+import { explanationPages } from '@/lib/explanation-pages';
+import { buildReferenceArticleMetadata, ReferenceArticleJsonLd } from '@/lib/reference-article';
+import { referenceArticle } from './reference-article.config';
 
-const title = 'The Hidden Cost of Meeting Coordination';
-const description =
-  'Meeting coordination looks simple because the work is fragmented across people and time. See how calendar checks, interruptions and delays create hidden costs.';
-
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: buildExplanationPageAlternates('costOfMeetingCoordination', 'en'),
-  openGraph: buildExplanationPageOpenGraph('en', title, description),
-  robots: 'index, follow',
-};
+export const metadata = buildReferenceArticleMetadata(referenceArticle);
 
 export default function CostOfMeetingCoordinationPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
+      <ReferenceArticleJsonLd config={referenceArticle} />
       <ExplanationPageHero
         backLabel="Back to previous page"
         alternateLanguageHref={explanationPages.costOfMeetingCoordination.fr.path}
@@ -39,7 +27,7 @@ export default function CostOfMeetingCoordinationPage() {
               agent handle the coordination. The value is not that the old process becomes slightly
               faster. It is that much of the process no longer needs to involve people at all.
             </p>
-            <h1 className="section-subheading text-ink-primary pt-4">The hidden cost of meeting coordination</h1>
+            <h1 className="section-subheading text-ink-primary pt-4">{referenceArticle.headline}</h1>
 
             <p>
               Planning a meeting with people outside your organization usually starts with a simple

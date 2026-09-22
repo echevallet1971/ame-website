@@ -1,26 +1,14 @@
-import type { Metadata } from 'next';
 import ExplanationPageHero from '../../components/ExplanationPageHero';
-import {
-  buildExplanationPageAlternates,
-  buildExplanationPageOpenGraph,
-  explanationPages,
-} from '@/lib/explanation-pages';
+import { explanationPages } from '@/lib/explanation-pages';
+import { buildReferenceArticleMetadata, ReferenceArticleJsonLd } from '@/lib/reference-article';
+import { referenceArticle } from './reference-article.config';
 
-const title = 'Le coût caché de la coordination de réunions';
-const description =
-  'Quelques minutes par réunion paraissent insignifiantes. Mais les emails, relances, interruptions et retards finissent par coûter du temps, ralentir les décisions et faire perdre des opportunités.';
-
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: buildExplanationPageAlternates('costOfMeetingCoordination', 'fr'),
-  openGraph: buildExplanationPageOpenGraph('fr', title, description),
-  robots: 'index, follow',
-};
+export const metadata = buildReferenceArticleMetadata(referenceArticle);
 
 export default function CoutCoordinationReunionsPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
+      <ReferenceArticleJsonLd config={referenceArticle} />
       <ExplanationPageHero
         backLabel="Retour à la page précédente"
         alternateLanguageHref={explanationPages.costOfMeetingCoordination.en.path}
@@ -40,9 +28,7 @@ export default function CoutCoordinationReunionsPage() {
               parfois dans les opportunités qui n&apos;aboutissent pas.
             </p>
 
-            <h1 className="section-subheading text-ink-primary">
-              Quelques minutes à la fois deviennent un vrai coût pour l&apos;entreprise.
-            </h1>
+            <h1 className="section-subheading text-ink-primary">{referenceArticle.headline}</h1>
             <p>
               Organiser une réunion avec des personnes extérieures à son entreprise commence
               généralement par quelque chose de très simple : on sait avec qui on veut se réunir et,
