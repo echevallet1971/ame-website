@@ -1,22 +1,7 @@
 import ExplanationPageHero from '../components/ExplanationPageHero';
 import { explanationPages } from '@/lib/explanation-pages';
-import {
-  buildReferenceArticleMetadata,
-  ReferenceArticleJsonLd,
-  type ReferenceArticleConfig,
-} from '@/lib/reference-article';
-
-const referenceArticle = {
-  metaTitle: 'The Hidden Cost of Meeting Coordination',
-  headline: 'The hidden cost of meeting coordination',
-  description:
-    'Meeting coordination looks simple because the work is fragmented across people and time. See how calendar checks, interruptions and delays create hidden costs.',
-  canonical: explanationPages.costOfMeetingCoordination.en.url,
-  datePublished: '2026-09-03',
-  dateModified: '2026-09-03',
-  language: 'en',
-  hreflang: { page: 'costOfMeetingCoordination', locale: 'en' },
-} satisfies ReferenceArticleConfig;
+import { buildReferenceArticleMetadata, ReferenceArticleJsonLd } from '@/lib/reference-article';
+import { referenceArticle } from './reference-article.config';
 
 export const metadata = buildReferenceArticleMetadata(referenceArticle);
 

@@ -113,6 +113,27 @@ export function buildReferenceArticleJsonLd(config: ReferenceArticleConfig) {
   };
 }
 
+export type ReferenceArticleSitemapEntry = {
+  path: string;
+  lastModified: string;
+};
+
+/** Derives sitemap lastmod from a reference-article page's own config. */
+export function referenceArticleSitemapEntry(
+  article: Pick<ReferenceArticleConfig, 'canonical' | 'dateModified'>,
+): ReferenceArticleSitemapEntry {
+  return {
+    path: new URL(article.canonical).pathname,
+    lastModified: article.dateModified,
+  };
+}
+
+export function referenceArticleSitemapEntries(
+  articles: Array<Pick<ReferenceArticleConfig, 'canonical' | 'dateModified'>>,
+): ReferenceArticleSitemapEntry[] {
+  return articles.map(referenceArticleSitemapEntry);
+}
+
 type ReferenceArticleJsonLdProps = {
   config: ReferenceArticleConfig;
 };
