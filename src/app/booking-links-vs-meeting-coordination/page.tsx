@@ -1,95 +1,40 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import ExplanationPageHero from '../components/ExplanationPageHero';
+import {
+  buildReferenceArticleMetadata,
+  ReferenceArticleJsonLd,
+  type ReferenceArticleConfig,
+} from '@/lib/reference-article';
+import { explanationPages } from '@/lib/explanation-pages';
 
-const PAGE_URL = 'https://askmyenvoy.com/booking-links-vs-meeting-coordination';
-const OG_IMAGE = '/og-card.png';
+const referenceArticle = {
+  metaTitle: 'Booking Links vs Meeting Coordination',
+  headline: 'Booking links vs meeting coordination: what’s the difference?',
+  description:
+    'A booking link automates a scheduling process defined in advance. Meeting coordination starts from an objective and works out the path required to make the meeting happen.',
+  canonical: explanationPages.bookingLinksVsMeetingCoordination.en.url,
+  datePublished: '2026-09-22',
+  dateModified: '2026-09-22',
+  language: 'en',
+  imageAlt: 'Ask My Envoy - Booking links vs meeting coordination',
+} satisfies ReferenceArticleConfig;
 
-const title = 'Booking Links vs Meeting Coordination';
-const metaDescription =
-  'Booking links make scheduling self-service. Meeting coordination delegates the process. Learn where each model works and why they solve different problems.';
-const ogDescription =
-  'Booking links make scheduling self-service. Meeting coordination delegates the process. Here’s why the distinction matters.';
-
-const headline = 'Booking links vs meeting coordination: what’s the difference?';
-
-const datePublished = '2026-09-20';
-const dateModified = '2026-09-20';
-
-export const metadata: Metadata = {
-  title,
-  description: metaDescription,
-  alternates: {
-    canonical: PAGE_URL,
-  },
-  openGraph: {
-    type: 'article',
-    url: PAGE_URL,
-    title,
-    description: ogDescription,
-    locale: 'en_US',
-    images: [
-      {
-        url: OG_IMAGE,
-        width: 1200,
-        height: 630,
-        alt: 'Ask My Envoy - Booking links vs meeting coordination',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title,
-    description: ogDescription,
-    images: [OG_IMAGE],
-  },
-  robots: 'index, follow',
-};
-
-const articleJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline,
-  description: metaDescription,
-  datePublished,
-  dateModified,
-  author: {
-    '@type': 'Organization',
-    name: 'Ask My Envoy',
-  },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Ask My Envoy',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://askmyenvoy.com/og-card.png',
-    },
-  },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': PAGE_URL,
-  },
-  image: `https://askmyenvoy.com${OG_IMAGE}`,
-};
+export const metadata = buildReferenceArticleMetadata(referenceArticle);
 
 export default function BookingLinksVsMeetingCoordinationPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
+      <ReferenceArticleJsonLd config={referenceArticle} />
 
       <ExplanationPageHero backLabel="Back to previous page" />
 
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <article className="max-w-3xl mx-auto stack-md text-body text-copy-primary">
-            <h1 className="explanation-article-title text-ink-primary">{headline}</h1>
-            <p className="italic text-copy-muted">
-              A booking link automates a scheduling process defined in advance. Meeting coordination
-              starts from an objective and works out the path required to make the meeting happen.
-            </p>
+            <h1 className="explanation-article-title text-ink-primary">
+              {referenceArticle.headline}
+            </h1>
+            <p className="italic text-copy-muted">{referenceArticle.description}</p>
 
             <h2 className="explanation-article-heading explanation-article-heading--first">
               Meeting coordination starts beyond your company

@@ -1,26 +1,29 @@
-import type { Metadata } from 'next';
 import ExplanationPageHero from '../../components/ExplanationPageHero';
+import { explanationPages } from '@/lib/explanation-pages';
 import {
-  buildExplanationPageAlternates,
-  buildExplanationPageOpenGraph,
-  explanationPages,
-} from '@/lib/explanation-pages';
+  buildReferenceArticleMetadata,
+  ReferenceArticleJsonLd,
+  type ReferenceArticleConfig,
+} from '@/lib/reference-article';
 
-const title = 'Coordination de réunions : pourquoi est-ce encore si compliqué ?';
-const description =
-  'Organiser une réunion avec des clients ou partenaires demande encore des emails, des relances et des échanges de disponibilités. Découvrez pourquoi la coordination de réunions reste un processus manuel, et comment l’automatiser.';
+const referenceArticle = {
+  metaTitle: 'Coordination de réunions : pourquoi est-ce encore si compliqué ?',
+  headline: 'Qu\u2019est-ce que la coordination de réunions ?',
+  description:
+    'Organiser une réunion avec des clients ou partenaires demande encore des emails, des relances et des échanges de disponibilités. Découvrez pourquoi la coordination de réunions reste un processus manuel, et comment l\u2019automatiser.',
+  canonical: explanationPages.meetingCoordination.fr.url,
+  datePublished: '2026-09-14',
+  dateModified: '2026-09-14',
+  language: 'fr',
+  hreflang: { page: 'meetingCoordination', locale: 'fr' },
+} satisfies ReferenceArticleConfig;
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: buildExplanationPageAlternates('meetingCoordination', 'fr'),
-  openGraph: buildExplanationPageOpenGraph('fr', title, description),
-  robots: 'index, follow',
-};
+export const metadata = buildReferenceArticleMetadata(referenceArticle);
 
 export default function CoordinationReunionsPage() {
   return (
     <div className="min-h-screen bg-surface-soft">
+      <ReferenceArticleJsonLd config={referenceArticle} />
       <ExplanationPageHero
         backLabel="Retour à la page précédente"
         alternateLanguageHref={explanationPages.meetingCoordination.en.path}
@@ -40,9 +43,7 @@ export default function CoordinationReunionsPage() {
               manuel, en particulier lorsque la réunion implique plusieurs entreprises.
             </p>
 
-            <h1 className="section-subheading text-ink-primary">
-              Qu&apos;est-ce que la coordination de réunions ?
-            </h1>
+            <h1 className="section-subheading text-ink-primary">{referenceArticle.headline}</h1>
             <p>
               La coordination de réunions est le travail qui consiste à faire passer une réunion de
               l&apos;intention à une date effectivement acceptée par tous les participants. Elle
