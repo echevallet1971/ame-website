@@ -17,7 +17,7 @@ const referenceArticlePages = referenceArticleSitemapEntries([
 ]);
 
 const staticPages: Array<{ path: string; lastModified: string }> = [
-  { path: '/', lastModified: '2026-09-16' },
+  { path: '/', lastModified: '2026-09-23' },
   { path: '/how-it-works', lastModified: '2026-09-03' },
   { path: '/trust-and-control', lastModified: '2026-09-03' },
   { path: '/pricing', lastModified: '2026-09-16' },

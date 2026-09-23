@@ -6,9 +6,9 @@ import Button from './components/Button';
 import LoginButton from './components/LoginButton';
 
 export const metadata: Metadata = {
-  title: 'AI meeting coordination without the back-and-forth | Ask My Envoy',
+  title: 'AI Meeting Coordination Software | Ask My Envoy',
   description:
-    'Ask My Envoy coordinates meetings across calendars and organizations, handling availability, participants and the back-and-forth so you don’t have to.',
+    'Ask My Envoy is AI meeting coordination software that handles the back-and-forth across calendars, participants and organizations so you don’t have to.',
   alternates: {
     canonical: 'https://askmyenvoy.com/',
   },
