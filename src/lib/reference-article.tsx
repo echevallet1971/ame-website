@@ -8,6 +8,8 @@ const SITE_URL = 'https://askmyenvoy.com';
 const DEFAULT_OG_IMAGE = '/og-card.png';
 const PUBLISHER_NAME = 'Ask My Envoy';
 const PUBLISHER_LOGO_URL = `${SITE_URL}/og-card.png`;
+const ORGANIZATION_URL = `${SITE_URL}/about`;
+const ORGANIZATION_ID = `${ORGANIZATION_URL}#organization`;
 
 export type ReferenceArticleLanguage = 'en' | 'fr';
 
@@ -95,11 +97,15 @@ export function buildReferenceArticleJsonLd(config: ReferenceArticleConfig) {
     inLanguage: schemaLanguage(config.language),
     author: {
       '@type': 'Organization',
+      '@id': ORGANIZATION_ID,
       name: PUBLISHER_NAME,
+      url: ORGANIZATION_URL,
     },
     publisher: {
       '@type': 'Organization',
+      '@id': ORGANIZATION_ID,
       name: PUBLISHER_NAME,
+      url: ORGANIZATION_URL,
       logo: {
         '@type': 'ImageObject',
         url: PUBLISHER_LOGO_URL,
