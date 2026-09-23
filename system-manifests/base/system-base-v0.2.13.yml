@@ -6,6 +6,7 @@ components:
 
 notes: |
   Release Notes 0.2.13
+    - Reworked the homepage narrative to focus on meeting coordination as the core problem, with updated hero, coordination section, and business-cost section
 
   Release Notes 0.2.12
    - Rewrote `/meeting-coordination` with updated editorial structure (coordination vs scheduling, cross-org workflow, AI delegation) and aligned reference-article typography with `/booking-links-vs-meeting-coordination`

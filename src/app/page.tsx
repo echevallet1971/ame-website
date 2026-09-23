@@ -23,7 +23,7 @@ export default function Home() {
         <div className="container-4xl">
           <div className="flow-md items-center">
             <h1 className="hero-heading text-center text-ink-primary max-w-3xl">
-              We still coordinate meetings as if we used paper planners.
+              We still coordinate meetings as if we used paper planners
             </h1>
 
             <div className="w-full max-w-6xl">
@@ -76,18 +76,7 @@ export default function Home() {
               <p>
                 When a meeting crosses company boundaries, we still ask: &ldquo;Are you available next Tuesday?&rdquo; as if we were still using paper planners.
               </p>
-              <p>
-                <span className="font-bold">Ask My Envoy</span> takes meeting coordination off your plate.
-              </p>
-            </div>
-
-            <div className="cta-row pt-4">
-              <LoginButton size="large" className="px-10">
-                Get your Envoy
-              </LoginButton>
-              <Button href="/pricing" variant="secondary" className="px-10">
-                See pricing
-              </Button>
+              <p>Your Envoy handles the coordination for you.</p>
             </div>
 
             <div className="cluster-center pt-2 text-copy-muted">
@@ -116,28 +105,67 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Coordination Section */}
+      {/* Booking links vs coordination */}
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <div className="flow-xl items-center">
             <h2 className="section-heading text-ink-primary text-center max-w-3xl">
-              An Envoy is an AI agent that coordinates meetings on your behalf.
+              A booking link works when the process is predictable
             </h2>
 
-            <p className="text-lead text-center text-copy-primary max-w-3xl">
-              You tell it who you want to meet. It handles the{' '}
-              <Link href="/meeting-coordination" className="text-action-primary hover:underline">
-                coordination
-              </Link>{' '}
-              with the other participants and brings you back in when your input is needed.
-            </p>
+            <div className="text-lead text-center text-copy-primary max-w-3xl stack-sm">
+              <p>
+                Booking links work well when the meeting format can be defined in advance. The duration,
+                availability, routing rules and other conditions are configured first, then the software
+                automates the process.
+              </p>
+              <p>
+                That works particularly well for repeatable meetings such as demos, recruiting calls or
+                consultations. But ongoing collaboration is less predictable. The participants, constraints
+                and context can change from one meeting to the next, especially across company boundaries.
+              </p>
+              <p>
+                That is where meeting coordination starts: not with a predefined process to automate,
+                but with the objective of getting the meeting scheduled.
+              </p>
+            </div>
 
-            <p className="text-center">
+            <p className="border-l-2 border-line-default pl-4 text-left w-full max-w-3xl">
               <Link
                 href="/booking-links-vs-meeting-coordination"
                 className="text-action-primary hover:underline"
               >
-                Learn more about booking links vs meeting coordination →
+                Booking links vs meeting coordination →
+              </Link>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Coordination Section */}
+      <section className="section-standard bg-surface-base">
+        <div className="container-4xl">
+          <div className="flow-xl items-center">
+            <h2 className="section-heading text-ink-primary text-center max-w-3xl">
+              An Envoy is an AI agent for meeting coordination
+            </h2>
+
+            <div className="text-lead text-center text-copy-primary max-w-3xl stack-sm">
+              <p>
+                Ask My Envoy is meeting coordination software built around an AI agent. You tell your
+                Envoy who you want to meet and what you&apos;re trying to arrange. It coordinates with
+                the other participants, works through calendars and constraints, and brings you back in
+                only when your input is needed.
+              </p>
+              <p>
+                Instead of giving people a predefined way to book time with you, you ask your Envoy
+                to coordinate the meeting for you.
+              </p>
+            </div>
+
+            <p className="border-l-2 border-line-default pl-4 text-left w-full max-w-3xl">
+              <Link href="/meeting-coordination" className="text-action-primary hover:underline">
+                What meeting coordination actually means →
               </Link>
             </p>
           </div>
@@ -145,19 +173,16 @@ export default function Home() {
       </section>
 
       {/* Friction Cost Section */}
-      <section className="section-standard bg-surface-base">
+      <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <div className="flow-xl items-center">
             <h2 className="section-heading text-ink-primary text-center max-w-3xl">
-              A few minutes at a time becomes a real business cost.
+              A few minutes at a time becomes a real business cost
             </h2>
 
             <p className="text-lead text-center text-copy-primary max-w-3xl">
-              Meeting coordination{' '}
-              <Link href="/cost-of-meeting-coordination" className="text-action-primary hover:underline">
-                rarely feels like a major problem
-              </Link>{' '}
-              because the cost is spread across dozens of small interruptions. But those minutes compound.
+              Meeting coordination rarely feels like a major problem because the cost is spread across
+              dozens of small interruptions. But those minutes add up.
             </p>
 
             <div className="w-full max-w-3xl divide-y divide-line-default border-y border-line-default">
@@ -191,6 +216,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <p className="border-l-2 border-line-default pl-4 text-left w-full max-w-3xl">
+              <Link
+                href="/cost-of-meeting-coordination"
+                className="text-action-primary hover:underline"
+              >
+                The hidden cost of meeting coordination →
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -200,7 +234,7 @@ export default function Home() {
         <div className="container-4xl">
           <div className="flow-lg items-center text-center">
             <h2 className="section-heading text-white max-w-3xl">
-              Stop coordinating meetings yourself.
+              Stop coordinating meetings yourself
             </h2>
             <p className="text-lead text-copy-inverse/80 max-w-2xl">
               Let your Envoy handle the coordination. Try it free for 30 days. No credit card required.
