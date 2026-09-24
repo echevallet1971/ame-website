@@ -105,7 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Booking links vs coordination */}
+      {/* Booking links and coordination */}
       <section className="section-standard bg-surface-soft">
         <div className="container-4xl">
           <div className="flow-xl items-center">
@@ -132,10 +132,10 @@ export default function Home() {
 
             <p className="border-l-2 border-line-default pl-4 text-left w-full max-w-3xl">
               <Link
-                href="/booking-links-vs-meeting-coordination"
+                href="/booking-links-and-meeting-coordination"
                 className="text-action-primary hover:underline"
               >
-                Booking links vs meeting coordination →
+                Why booking links fall short for meeting coordination →
               </Link>
             </p>
           </div>

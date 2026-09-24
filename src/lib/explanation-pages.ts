@@ -21,10 +21,10 @@ export const explanationPages = {
       url: `${BASE_URL}/fr/cout-coordination-reunions`,
     },
   },
-  bookingLinksVsMeetingCoordination: {
+  bookingLinksAndMeetingCoordination: {
     en: {
-      path: '/booking-links-vs-meeting-coordination',
-      url: `${BASE_URL}/booking-links-vs-meeting-coordination`,
+      path: '/booking-links-and-meeting-coordination',
+      url: `${BASE_URL}/booking-links-and-meeting-coordination`,
     },
   },
 } as const;
@@ -36,7 +36,7 @@ export const explanationPagePaths = [
   explanationPages.meetingCoordination.fr.path,
   explanationPages.costOfMeetingCoordination.en.path,
   explanationPages.costOfMeetingCoordination.fr.path,
-  explanationPages.bookingLinksVsMeetingCoordination.en.path,
+  explanationPages.bookingLinksAndMeetingCoordination.en.path,
 ] as const;
 
 export function buildExplanationPageAlternates(

@@ -21,6 +21,11 @@ const nextConfig = {
         destination: '/how-it-works',
         permanent: true,
       },
+      {
+        source: '/booking-links-vs-meeting-coordination',
+        destination: '/booking-links-and-meeting-coordination',
+        permanent: true,
+      },
     ];
   },
   async headers() {

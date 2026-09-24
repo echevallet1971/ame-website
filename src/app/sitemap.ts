@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { referenceArticleSitemapEntries } from '@/lib/reference-article';
-import { referenceArticle as bookingLinksVsMeetingCoordinationArticle } from './booking-links-vs-meeting-coordination/reference-article.config';
+import { referenceArticle as bookingLinksAndMeetingCoordinationArticle } from './booking-links-and-meeting-coordination/reference-article.config';
 import { referenceArticle as costOfMeetingCoordinationArticle } from './cost-of-meeting-coordination/reference-article.config';
 import { referenceArticle as meetingCoordinationArticle } from './meeting-coordination/reference-article.config';
 import { referenceArticle as coordinationReunionsArticle } from './fr/coordination-reunions/reference-article.config';
@@ -11,7 +11,7 @@ const BASE_URL = 'https://askmyenvoy.com';
 const referenceArticlePages = referenceArticleSitemapEntries([
   meetingCoordinationArticle,
   costOfMeetingCoordinationArticle,
-  bookingLinksVsMeetingCoordinationArticle,
+  bookingLinksAndMeetingCoordinationArticle,
   coordinationReunionsArticle,
   coutCoordinationReunionsArticle,
 ]);
